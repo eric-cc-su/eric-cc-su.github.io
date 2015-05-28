@@ -1,0 +1,182 @@
+body {
+  box-sizing: border-box;
+  color:#373737;
+  background: #60695C;
+  font-size: 16px;
+  font-family: 'Lato','Open Sans','Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+}
+
+footer > p > a {
+    color: #EEF5DB;
+}
+
+footer p {
+    color: #222;
+    text-align: center;
+}
+
+#footer_wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-weight: 700;
+  color:#222222;
+  font-family: 'Lato','Open Sans','Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
+}
+
+.arrowdown {
+    bottom: 50px;
+    position: absolute;
+    width: 100%;
+}
+
+.arrowdown > h2 {
+    color: #333;
+    margin-bottom: 0;
+}
+
+.arrowdown > a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
+
+.arrowdown > a > .glyphicon-chevron-down:hover {
+    color: #FFF;
+    outline: none;
+}
+
+.center-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.container-fluid:before, .nav:before {
+    display: none;
+    content: none;
+}
+
+.face {
+    border: none;
+    border-radius: 50%;
+    max-width: 250px;
+    margin: 10px 0 10px 0;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+}
+
+footer {
+    height: 100px;
+}
+
+#forkme_banner {
+  display: block;
+  position: absolute;
+  top:0;
+  right: 10px;
+  z-index: 10;
+  padding: 10px 50px 10px 10px;
+  color: #fff;
+  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+#forkme_banner > p {margin: 0;}
+
+.glyphicon-chevron-down {
+    color: #333;
+    font-size: 50px;
+}
+
+.inner > p {
+    margin-bottom: 0;
+}
+
+.maincontainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.nav > li {
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.nav > li > a,
+.nav > li > a:focus,
+.nav > li > a:visited {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+.nav > li > a:hover,
+.nav > li > a.active {
+    color: #ddd;
+    border-color: transparent;
+    background-color: transparent;
+    outline: none;
+}
+
+.nav > li > a:hover {color: #E7E8DB;}
+.nav > li > a.active {color: #6C756B;}
+
+.navbar {
+    height: 60px;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+}
+
+#project_title {
+  margin: 0;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 300;
+  text-shadow: #111 0px 0px 10px;
+}
+
+#landing {
+    background-color: #FE5F55;
+}
+
+#links-bar {
+    text-align: center;
+}
+
+#links-bar > a {
+    margin: 10px 20px;
+}
+
+#links-bar > a > h2{
+    display: inline-block;
+}
+
+#links-bar > a > h2:hover {
+    text-decoration: underline;
+}
