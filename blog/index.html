@@ -1,3 +1,8 @@
+---
+title: Eric Su | Blog
+layout: null
+---
+
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +13,7 @@
     <meta name="description" content="Eric Su of Boston, MA. Programmer, Photographer and Triathlete.">
     <meta name="copyright" content="Eric Su">
     <meta name="keywords" content="Eric Su, Github, Boston, Massachusetts, programmer, photographer, triathlete, blog">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -21,9 +26,9 @@
 
     <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">-->
     <link href='http://fonts.googleapis.com/css?family=Lato|Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/newindex.css">
-    <script src="javascripts/index.js"></script>
-    <title>Blog | Eric Su</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/newindex.css">
+    <script src="/javascripts/index.js"></script>
+    <title>Eric Su | Blog</title>
 </head>
 
 <body>
@@ -31,19 +36,39 @@
 <div class="navbar navbar-fixed-top" id="navb">
     <div class="container-fluid">
         <ul class="nav pull-left links">
-            <li><a href="/index.html" title="Home">Eric</a></li>
-            <li><a href="/blog.html" title="Blog" class="current">Blog</a></li>
-            <li><a href="/about.html" title="About">About</a></li>
+            <li><a href="/" title="Home">Eric</a></li>
+            <li><a href="/blog/" title="Blog" class="current">Blog</a></li>
+            <li><a href="/about/" title="About">About</a></li>
         </ul>
         <a id="forkme_banner" href="https://github.com/eric-cc-su"><p>View on GitHub</p></a>
     </div>
 </div>
 <div class="maincontainer" id="maincontain">
-    <div class="page" id="landing">
-        <div class="center-content" id="homecenter">
+    <!--
+    <div class="page-landing" id="landing-blog">
+        <div class="center-content" id="homecenter" style="padding-top: 100px">
             <h1 id="project_title">This blog is in the process of being set up!</h1>
+            <ul class="post_list">
+                {% for post in site.posts limit: 5 %}
+                    <li><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
+    -->
+    <div class="jumbotron" id="landing-blog">
+        <h1 id="project_title" style="text-align: center; margin-top: 30px">This blog is in the process of being set up!</h1>
+    </div>
+    <ul class="post_list">
+        {% for post in site.posts limit: 10 %}
+            <div class="row-fluid post-row">
+                <div class="span12">
+                    <h2><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></h2>
+                    <h4>{{ post.date | date_to_long_string }}</h4>
+                </div>
+            </div>
+        {% endfor %}
+    </ul>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
         <footer class="inner">

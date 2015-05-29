@@ -9,11 +9,19 @@ var screenheight = window.innerHeight;   //measures the height of the user's scr
 
 //calculate the heights of page divs and positioning of text elements
 var calculate_win = function() {
-    var lpg = document.getElementById("landing");
+    var foot = document.getElementById("footer_wrap");
+    var lpg = document.getElementsByClassName("page-landing")[0];
+    foot.style.top = lpg.clientHeight.toString() + "px";
+
+    if (window.innerHeight < 600) { //only resize elements if screen is of appropriate height (reduces f**k-ups)
+        return;
+    }
+
+    var landing = document.getElementById("homecenter");
     var mn = document.getElementById("maincontain");
     screenheight = window.innerHeight;
 
-    var landing = document.getElementById("homecenter");
+    foot.style.top = screenheight.toString() + "px";
     landing.style.marginTop = ((0.25*screenheight)-60) + "px";
 
     var reqheight = landing.scrollHeight + 60 + ((0.25*screenheight)-60);
@@ -27,11 +35,17 @@ var calculate_win = function() {
 
 var main = function() {
     screenheight = window.innerHeight;
-    calculate_win(); //initialize sizes
+    try {
+        calculate_win(); //initialize sizes
+    }
+    catch(err) {}
 
     //recalculate on window resize
     window.onresize = function() {
-        calculate_win();
+        try {
+            calculate_win();
+        }
+        catch(err) {}
     };
 
     window.onscroll = function() {

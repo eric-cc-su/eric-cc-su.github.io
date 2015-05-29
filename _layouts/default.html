@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="author" content="Eric Su">
+    <meta name="description" content="Eric Su of Boston, MA. Programmer, Photographer and Triathlete.">
+    <meta name="copyright" content="Eric Su">
+    <meta name="keywords" content="Eric Su, Github, Boston, Massachusetts, programmer, photographer, triathlete, blog">
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">-->
+    <link href='http://fonts.googleapis.com/css?family=Lato|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/newindex.css">
+    <script src="/javascripts/index.js"></script>
+    <title>{{ site.name }}</title>
+
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top" id="navb">
+        <div class="container-fluid">
+            <ul class="nav pull-left links">
+                <li><a href="/" title="Home">Eric</a></li>
+                <li><a href="/blog/" title="Blog" class="current">Blog</a></li>
+                <li><a href="/about/" title="About">About</a></li>
+            </ul>
+            <a id="forkme_banner" href="https://github.com/eric-cc-su"><p>View on GitHub</p></a>
+        </div>
+    </div>
+
+    <div class="maincontainer">
+        <div class="page">
+            {{ content }}
+        </div>
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+                <p>&copy; 2015 Eric Su</p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
