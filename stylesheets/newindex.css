@@ -66,6 +66,13 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.center-p {
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: justify;
+    width: 800px;
+}
+
 .container-fluid:before, .nav:before {
     display: none;
     content: none;
