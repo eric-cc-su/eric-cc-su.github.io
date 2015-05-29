@@ -147,10 +147,10 @@ footer {
     background-color: transparent;
     outline: none;
 }
-
+/*
 .nav > li > a:hover {color: #E7E8DB;}
 .nav > li > a.active {color: #6C756B;}
-
+*/
 .navbar {
     height: 60px;
 }
