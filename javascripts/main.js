@@ -14,27 +14,23 @@ var main = function() {
             nvb.stop().animate( {backgroundColor:'#FFF'}, {duration:300});
             nvb.css("box-shadow", "0 0 10px rgba(0,0,0,0.5)");
             $('.nav > li > a').css({color:'#60695C'}, {duration:300});
-            fork.stop().animate( {height: '60px', borderRadius: "0", right: "0"}, {duration:300});
-            fork.css("box-shadow","none");
-            if (isFirefox) {
-                $('#forkme_banner > p').css('margin', "10px 0");
-            }
-            else {
-                $('#forkme_banner > p').animate( {margin: "10px 0"}, {duration:300});
-            }
+            fork.stop().animate( {height: '60px', right: "0"}, {duration:300});
+            fork.css({
+                "box-shadow": "none",
+                "border-radius": "0"
+            });
+            $('#forkme_banner > p').css('margin', "10px 0");
         }
         else {
             nvb.stop().animate( {backgroundColor:"transparent"}, {duration:300});
             nvb.css("box-shadow", "none");
             $('.nav > li > a').css({color:''}, {duration:300});
-            fork.stop().animate( {height: '44px', borderRadius: "0 0 2px 2px", right: "10px"}, {duration:300});
-            fork.css("box-shadow", "0 0 10px rgba(0,0,0,0.5)");
-            if (isFirefox) {
-                $('#forkme_banner > p').css('margin', "0");
-            }
-            else {
-                $('#forkme_banner > p').animate( {margin: "0"}, {duration:300});
-            }
+            fork.stop().animate( {height: '44px', right: "10px"}, {duration:300});
+            fork.css({
+                "box-shadow": "",
+                "border-radius": ""
+            });
+            $('#forkme_banner > p').css('margin', "0");
         }
     };
 };

@@ -1,0 +1,23 @@
+.nav > li > a {
+    color: #60695C !important;
+}
+
+.nav > li > a:hover {
+    color: #03A9F4 !important;
+}
+
+.nav > li > a.current {
+    color: #03A9F4 !important;
+}
+
+h1 {
+    color: #03A9F4;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p.stamp {
+    color: #9E9E9E;
+}
