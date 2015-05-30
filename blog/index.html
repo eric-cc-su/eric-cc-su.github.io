@@ -44,22 +44,11 @@ layout: null
         <a id="forkme_banner" href="https://github.com/eric-cc-su"><p>View on GitHub</p></a>
     </div>
 </div>
-<div class="maincontainer" id="maincontain">
-    <!--
-    <div class="page-landing" id="landing-blog">
-        <div class="center-content" id="homecenter" style="padding-top: 100px">
-            <h1 id="project_title">This blog is in the process of being set up!</h1>
-            <ul class="post_list">
-                {% for post in site.posts limit: 5 %}
-                    <li><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-    -->
+<div class="maincontainer" id="maincontain" style="height: inherit">
     <div class="jumbotron" id="landing-blog">
         <h1 id="project_title" style="text-align: center; margin-top: 30px">This blog is in the process of being set up!</h1>
     </div>
+    <h2 style="text-align: center">Blog stuff will go here</h2>
     <ul class="post_list">
         {% for post in site.posts limit: 10 %}
             <div class="row-fluid post-row">
@@ -70,13 +59,13 @@ layout: null
             </div>
         {% endfor %}
     </ul>
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-        <footer class="inner">
-            <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-            <p>&copy; 2015 Eric Su</p>
-        </footer>
-    </div>
+</div>
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+        <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        <p>&copy; 2015 Eric Su</p>
+    </footer>
 </div>
 
 </body>

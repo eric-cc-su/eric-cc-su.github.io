@@ -3,9 +3,15 @@
  */
 var calc_foot = function() {
     var foot = document.getElementById("footer_wrap");
+    var jumbo = document.getElementById('maincontain');
     var foot_off = foot.firstElementChild.offsetHeight;
     foot.style.bottom = "0";
-    foot.style.top = (window.innerHeight - foot_off).toString() + "px";
+    if (window.innerHeight >= (jumbo.clientHeight + 100)) {
+        foot.style.top = (window.innerHeight - foot_off).toString() + "px";
+    }
+    else {
+        foot.style.top = jumbo.clientHeight.toString() + "px";
+    }
 };
 
 var main = function() {
