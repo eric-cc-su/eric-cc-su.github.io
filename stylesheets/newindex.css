@@ -60,6 +60,12 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
 }
 
+.blog-post {
+    margin: 0 auto 20px;
+    text-align: justify;
+    width: 650px;
+}
+
 .center-content {
     margin-left: auto;
     margin-right: auto;
