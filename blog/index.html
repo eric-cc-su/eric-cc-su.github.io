@@ -54,6 +54,7 @@ layout: null
                 <div class="span12">
                     <h2><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></h2>
                     <h4>{{ post.date | date_to_long_string }}</h4>
+                    {{ post.excerpt }}
                 </div>
             </div>
         {% endfor %}
