@@ -4,16 +4,15 @@ category: tech
 tags: [HTML, markdown, convenience, tech] 
 ---
 
-*DISCLAIMER: I am writing this post in Markdown*
-
 The very first language related to web design I ever learned was HTML. I had a
 textbook and every online tutorial related to beginning web design starts off
-with writing simple webpages in pure HTML. After lots of practice I have grown
+with writing simple web pages in pure HTML. After lots of practice I have grown
 comfortable with writing in HTML and containing everything in tags. So when I
 started using git (a version control system) and I ran into Markdown I thought
 "Oh great, some silly little syntax thing I have to learn to use just to write
-up a README file for git/GitHub/BitBucket...". Also while I was setting up this
-blog I read that I have the option to write my posts in either HTML or
+up a README file for git/GitHub/BitBucket...".
+
+While I was setting up this blog I read that I have the option to write my posts in either HTML or
 Markdown...with an emphasis on using Markdown. Although I wrote my initial post
 in HTML I did some thinking and decided that maybe this new Markdown language is
 worth getting accustomed to if it's meant to simplify the amount of writing I
@@ -74,4 +73,9 @@ written as: `[Jekyll](http://jekyllrb.com/docs/home/)`). Once you look over the
 basics of Markdown it is easy to see how writing in Markdown can be really
 convenient.
 
-I'm definitely still a beginner in Markdown so all of my hesitation to adopt the language comes from my need for more education. But if you would like to learn more about using Markdown you can visit [Daring Fireball](http://daringfireball.net/projects/markdown/syntax) or GitHub Guide's [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) for documentation and runthroughs.
+I'm definitely still a beginner in Markdown so all of my hesitation to adopt the language comes from my need for more
+education. But if you would like to learn more about using Markdown you can visit [Daring Fireball]
+(http://daringfireball.net/projects/markdown/syntax) or GitHub Guide's 
+[Mastering Markdown](https://guides.github.com/features/mastering-markdown/) for documentation and run-throughs.
+
+*DISCLOSURE: I am writing this post in Markdown*
