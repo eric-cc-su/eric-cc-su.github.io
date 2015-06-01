@@ -1,0 +1,22 @@
+---
+layout: blog
+---
+<!-- Credit to [Minddust](http://www.minddust.com/post/tags-and-categories-on-github-pages/) for tags&categories-->
+<h1 class="post_list posts_header">Articles tagged with
+    <span class="glyphicon glyphicon-tag"></span>{{ page.tag }}</h1>
+<hr class="post_list" style="border-color: #222;">
+<ul class="post_list">
+    {% if site.tags[page.tag] %}
+        {% for post in site.tags[page.tag] %}
+            <div class="row-fluid post-row">
+                <div class="span12">
+                    <h2><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></h2>
+                    <h4>{{ post.date | date_to_long_string }}</h4>
+                    {{ post.excerpt }}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>There are no posts for this tag.</p>
+    {% endif %}
+</ul>

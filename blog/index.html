@@ -1,72 +1,15 @@
 ---
 title: Eric Su | Blog
-layout: null
+layout: blog
 ---
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="author" content="Eric Su">
-    <meta name="description" content="Eric Su of Boston, MA. Programmer, Photographer and Triathlete.">
-    <meta name="copyright" content="Eric Su">
-    <meta name="keywords" content="Eric Su, Github, Boston, Massachusetts, programmer, photographer, triathlete, blog">
-    <script src="/javascripts/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">-->
-    <link href='http://fonts.googleapis.com/css?family=Lato|Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/newindex.css">
-    <script type="text/javascript" src="/javascripts/main.js"></script>
-    <script type="text/javascript" src="/javascripts/blog.js"></script>
-    <title>Eric Su | Blog</title>
-</head>
-
-<body>
-<!-- NAVBAR -->
-<div class="navbar navbar-fixed-top" id="navb">
-    <div class="container-fluid">
-        <ul class="nav pull-left links">
-            <li><a href="/" title="Home">Eric</a></li>
-            <li><a href="/blog/" title="Blog" class="current">Blog</a></li>
-            <li><a href="/about/" title="About">About</a></li>
-        </ul>
-        <a id="forkme_banner" href="https://github.com/eric-cc-su"><p>View on GitHub</p></a>
-    </div>
-</div>
-<div class="maincontainer" id="maincontain" style="height: inherit">
-    <div class="jumbotron" id="landing-blog">
-        <p>This blog is for my interests and experiences</p>
-    </div>
-    <ul class="post_list">
-        {% for post in site.posts limit: 10 %}
-            <div class="row-fluid post-row">
-                <div class="span12">
-                    <h2><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></h2>
-                    <h4>{{ post.date | date_to_long_string }}</h4>
-                    {{ post.excerpt }}
-                </div>
+<ul class="post_list">
+    {% for post in site.posts limit: 10 %}
+        <div class="row-fluid post-row">
+            <div class="span12">
+                <h2><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></h2>
+                <h4>{{ post.date | date_to_long_string }}</h4>
+                {{ post.excerpt }}
             </div>
-        {% endfor %}
-    </ul>
-</div>
-<!-- FOOTER  -->
-<div id="footer_wrap" class="outer">
-    <footer class="inner">
-        <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-        <p>&copy; 2015 Eric Su</p>
-    </footer>
-</div>
-
-</body>
-</html>
+        </div>
+    {% endfor %}
+</ul>

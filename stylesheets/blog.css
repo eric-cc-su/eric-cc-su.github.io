@@ -1,0 +1,38 @@
+h1 {
+    color: #03A9F4;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.label-general {
+    background-color: #8BC34A;
+}
+
+.label-tech {
+    background-color: #FF5722;
+}
+
+.nav > li > a {
+    color: #60695C !important;
+}
+
+.nav > li > a:hover {
+    color: #03A9F4 !important;
+}
+
+.nav > li > a.current {
+    color: #03A9F4 !important;
+}
+
+
+p.category {
+    display: inline-block;
+    margin: 0 0 10px 10px;
+}
+
+p.stamp {
+    color: #9E9E9E;
+    display: inline-block;
+}

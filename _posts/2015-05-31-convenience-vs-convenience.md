@@ -1,7 +1,7 @@
 ---  
 title: Convenience vs. Convenience 
 category: tech
-tags: [HTML, markdown, convenience, tech] 
+tags: [html, markdown, convenience, tech] 
 ---
 
 The very first language related to web design I ever learned was HTML. I had a

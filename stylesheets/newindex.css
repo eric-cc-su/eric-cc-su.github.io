@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
 }
 
+.archive_list {
+    list-style: none;
+}
+
 .arrowdown {
     bottom: 50px;
     position: absolute;
@@ -131,8 +135,46 @@ footer {
     font-size: 50px;
 }
 
+.glyphicon-tag {
+    font-size: small;
+}
+
 .inner > p {
     margin-bottom: 0;
+}
+
+#landing-index {
+    /*background-color: #FE5F55;*/
+    background-color: #F44336;
+}
+
+#landing-about {
+    background-color: #F44336;
+    height: 650px;
+}
+
+#landing-blog {
+    background-color: #03A9F4;
+    height: 200px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#links-bar {
+    text-align: center;
+}
+
+#links-bar > a {
+    margin: 10px 20px;
+}
+
+#links-bar > a > h2{
+    display: inline-block;
+    font-weight: 500;
+}
+
+#links-bar > a > h2:hover {
+    text-decoration: underline;
 }
 
 .maincontainer {
@@ -180,11 +222,19 @@ footer {
     text-decoration: none;
 }
 
+.post_link:hover {
+    text-decoration: none;
+}
+
 .post_list {
     margin: 50px auto;
     list-style: none;
     padding: 0px;
     width: 60%;
+}
+
+hr.post_list {
+    margin: 0 auto;
 }
 
 .post-row {
@@ -199,36 +249,26 @@ footer {
   text-shadow: #111 0 0 10px;
 }
 
-#landing-index {
-    /*background-color: #FE5F55;*/
-    background-color: #F44336;
+.posts_header {
+    color: #222;
+    margin-bottom: 20px;
 }
 
-#landing-about {
-    background-color: #F44336;
-    height: 650px;
+.tag {
+    margin-right: 5px;
 }
 
-#landing-blog {
-    background-color: #03A9F4;
-    height: 200px;
-    padding-top: 100px;
-    text-align: center;
+.tag_list {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
 }
 
-#links-bar {
-    text-align: center;
-}
-
-#links-bar > a {
-    margin: 10px 20px;
-}
-
-#links-bar > a > h2{
+.tag_list > li {
     display: inline-block;
-    font-weight: 500;
 }
 
-#links-bar > a > h2:hover {
-    text-decoration: underline;
+.tagged_post {
+    display: inline-block;
+    margin-right: 10px;
 }

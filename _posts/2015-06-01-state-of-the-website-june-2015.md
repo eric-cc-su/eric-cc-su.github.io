@@ -1,7 +1,7 @@
 ---
 title: State of the Website, June 2015
 category: tech
-tags: [State of the Website, SOTW, tech]
+tags: [state-of-the-website, sotw, tech]
 ---
 
 *"State of the Website" is meant to summarize the progress that has been made in the development of this website and
@@ -26,4 +26,7 @@ posts were written by hand, with the design for the home page and the About Me p
 * Blog posts are planned to include comment sections. The [Disqus](https://disqus.com/) service is currently being 
 researched
 * The home page will include content about my work experience, projects and education
+* The website will be migrated to a custom domain
 * The blog landing page needs to be redesigned
+* A 404 page is needed
+* A sitemap should be produced
