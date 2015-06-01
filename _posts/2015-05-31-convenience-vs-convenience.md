@@ -1,9 +1,10 @@
 ---  
-title: Convenience vs. Convenience  
-tags: [HTML, markdown, convenience,tech] 
+title: Convenience vs. Convenience 
+category: tech
+tags: [HTML, markdown, convenience, tech] 
 ---
 
-**DISCLAIMER: I am writing this post in Markdown
+*DISCLAIMER: I am writing this post in Markdown*
 
 The very first language related to web design I ever learned was HTML. I had a
 textbook and every online tutorial related to beginning web design starts off
