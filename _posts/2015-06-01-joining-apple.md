@@ -1,7 +1,7 @@
 ---
 title: My Acceptance of Apple (AKA Joining the Dark Side)
 category: tech
-tags: [apple, macbook, tech, macbook-pro]
+tags: [apple, macbook, macbook-pro]
 ---
 
 Today I picked up my very first MacBook. I've grown up as a PC person and had my typical anti-Mac phase to go along with my PC enthusiasm. However, getting into computer science and the rise of the ultrabook market had started to soften my bias against the MacBook. I used to see MacBooks solely as overpriced, pretty laptops that are used by ignorant hipsters and consumers who know nothing about computers past how sleek the casing is. But with my MacBook purchase, I'm willing to give a little leeway to the MacBook user.

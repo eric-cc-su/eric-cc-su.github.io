@@ -1,7 +1,7 @@
 ---
 title: State of the Website, June 2015
 category: tech
-tags: [state-of-the-website, sotw, tech]
+tags: [state-of-the-website, sotw]
 ---
 
 *"State of the Website" is meant to summarize the progress that has been made in the development of this website and
