@@ -212,6 +212,10 @@ footer {
     height: 60px;
 }
 
+p.category > a:hover {
+    text-decoration: none;
+}
+
 .page-landing {
     height: 600px;
     position: absolute;
