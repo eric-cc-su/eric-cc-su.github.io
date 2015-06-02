@@ -1,5 +1,5 @@
 ---
-layout: tagged
+layout: tag
 tag: convenience
 permalink: /blog/tag/convenience/
 ---

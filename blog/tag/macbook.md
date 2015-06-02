@@ -1,5 +1,5 @@
 ---
-layout: tagged
+layout: tag
 tag: macbook
 permalink: /blog/tag/macbook/
 ---

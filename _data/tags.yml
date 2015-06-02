@@ -34,3 +34,17 @@
 - slug: sotw
   name: SOTW
 
+- slug: driving
+  name: Driving
+
+- slug: safety
+  name: Safety
+
+- slug: cars
+  name: Cars
+
+- slug: test
+  name: Test
+
+- slug: testing
+  name: Testing

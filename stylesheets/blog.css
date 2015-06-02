@@ -10,6 +10,10 @@ h2 {
     margin-top: 20px;
 }
 
+.label {
+    background-color: #03A9F4;
+}
+
 .label-general {
     background-color: #8BC34A;
 }
