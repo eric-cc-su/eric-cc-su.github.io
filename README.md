@@ -10,3 +10,8 @@ The "View on Github" banner and some CSS has been taken and modified from the Gi
 
 Code for tag and category implementation in Jekyll thanks to 
 [Minddust](http://www.minddust.com/post/tags-and-categories-on-github-pages/)
+
+
+This project is licensed under the terms of the MIT license. 
+
+&copy; 2015 Eric Su
