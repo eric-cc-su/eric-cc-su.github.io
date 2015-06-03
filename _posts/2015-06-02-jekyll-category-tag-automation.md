@@ -43,11 +43,10 @@ In addition to the YAML lists, each T&C item must have its own file in the forma
     permalink: /blog/tag/*tag*/
     ---
 
-The format is the same for both tags and categories.These files produce a
-landing page for each T&C where all the corresponding articles will be
-presented. Unless you plan on using your default layout for the T&C landing
-pages you should also create and define your custom layouts, which would be
-defined in these files.
+The permalink is relative to the project root so it should start at `/blog`. The format is the same for both tags and
+ categories.These files produce a landing page for each T&C where all the corresponding articles will be presented. 
+ Unless you plan on using your default layout for the T&C landing pages you should also create and define your custom
+  layouts, which would be defined in these files.
  
 Without automation, each new T&C requires defining the T&C in the proper YAML
 file and creating its own file  by hand. Failing to update the YAML file means
@@ -70,32 +69,30 @@ Instead, the primary class is inherited from `Jekyll::Generator`. The basic
 structure of the  plugin is as follows:
 
 {% highlight ruby %}
+require 'fileutils'
 
-    require 'fileutils'
+module CatTag
+    *Some directory path logic*
     
-    module CatTag
-        *Some directory path logic*
+    class Primary < Jekyll::Generator
+    
+        def generate(site)
+            ...parses YAML data and calls the other functions...
+        end
         
-        class Primary < Jekyll::Generator
+        def check_source(rel_path)
+            ...check existing T&C names...
         
-            def generate(site)
-                ...parses YAML data and calls the other functions...
-            end
-            
-            def check_source(rel_path)
-                ...check existing T&C names...
-			
-            def compile_post_data(data_array)
-                ...check T&C used in all articles...
-            end
-    
-            def construct(type, data_array)
-                ...create the files and YAML entries...
-            end
-         
-         end
-    end
-    
+        def compile_post_data(data_array)
+            ...check T&C used in all articles...
+        end
+
+        def construct(type, data_array)
+            ...create the files and YAML entries...
+        end
+     
+     end
+end
 {% endhighlight %}
 
 ### The Constructor
@@ -117,41 +114,37 @@ that will house all of the parsed front matter, two lists that will house all
 the T&C currently implemented, and two most lists that house any T&C that needs
 to be integrated. Except for the master list, all lists will be defined by
 external methods (explained below). The only logic within the generate
-method is as follows:
+method has the following code structure:
 
 {% highlight ruby %}
-
-    Dir.foreach(*_posts directory path*){
-        |file|
-        if not ['.','..'].include?(file)            # Exclude "." and ".." 
-            data = Hash.new                         # new Hash for file
-            onepost = open(File.join(dpath, file))  # Open file
-            oneline = onepost.readline              # Start at the first line
-            if not oneline.include?('---')          
-                while not oneline.include?('---')   # Search for opening --- 
-                    oneline = onepost.readline
-                end
-            else                                    # Found the opening --- 
+Dir.foreach(*_posts directory path*){
+    |file|
+    if not ['.','..'].include?(file)            # Exclude "." and ".." 
+        data = Hash.new                         # new Hash for file
+        file_object = open(*filepath*)
+        oneline = onepost.readline              # Start at the first line
+        *if '---' not in oneline*        
+            * while '---' not in oneline *       # Search for opening --- 
                 oneline = onepost.readline
-                while not oneline.include?('---')   # Read front matter
-                    keyval = oneline.split(":")     # Split line into a list
-                    # add the key, value pair to the Hash                  
-                    data[keyval[0].strip] = keyval[1].strip     
-                    oneline = onepost.readline
-                end
             end
-            @list << data    # Append Hash to global master list
-            onepost.close    # Close file
+        else                                    # Found the opening --- 
+            oneline = onepost.readline
+            * while '---'not in oneline *       # Read front matter
+                keyval = oneline.split(":")     # Split line into a list
+                data[* key *] = data[* value *]
+                oneline = onepost.readline
+            end
         end
-    }
-    
+        * append Hash to master list *
+        file_object.close 
+    end
+}
 {% endhighlight %}
 
-All of the logic is shown above in comments. As for the motivation for single
-line reading: it allows the plugin to parse only the first bit of every post we
-need instead of flooding the memory with loads of text it's not going to use.
-Once the master list has been constructed with each file's front matter,
-`generate(list)` calls upon its sibling  methods to complete the automation.
+Any pseudo-code is contained within asterisks. The reason I read every line individually is because it allows the plugin
+ to parse only the first bit of every post we need instead of flooding the memory with loads of text it's not going 
+ to use. Once the master list has been constructed with each file's front matter, `generate(list)` calls upon its 
+ sibling methods to complete the automation.
  
 ### Checking Currently Implemented T&C
 
@@ -160,19 +153,17 @@ place, it is a good idea to first check what T&C exists. This is the first
 method below the constructor as it is the first step in adding new T&C.
 
 {% highlight ruby %}
-
-    def check_source(source_path)
-        source_list = []
-        directory_path = File.join($base, source_path)
-        Dir.foreach(directory_path){
-            |file|
-            if not ['.','..'].include?(file)
-                source_list << file.gsub(".md","")
-            end
-        }
-        return source_list
-    end
-    
+def check_source(source_path)
+    empty_array = []
+    directory_path = * $base path + file path *
+    Dir.foreach(directory_path){
+        |file|
+        * if filename is neither . nor .. *
+            * append filename (strip file ext) to empty_array *
+        end
+    }
+    return empty_array
+end
 {% endhighlight %}
 
 It is important to note that the `source_path` parameter is the path of the T&C
@@ -186,92 +177,71 @@ We must now compare the currently implemented T&C item to the T&C items we read
 from the files in order to find any discrepencies and add missing items.
 
 {% highlight ruby %}
-
-    def compile_post_data(data_array)
-        data_array.each do |item|
-            if not @cat_list.include?(item['category'])
-                @pcat_list << item['category']
-            end
-            item['tags'].gsub("[","").gsub("]","").split(",").each do |subitem|
-                subitem = subitem.strip
-                if not @tag_list.include?(subitem)
-                    @ptag_list << subitem
-                end
+def compile_post_data(data_array)
+    data_array.each do |ITEM|
+        * if CATGRY not in existing category list  *
+            * append CATGRY to @pcat_list *
+        end
+        * converted_tags_string *.split(",").each do |TAG|
+            TAG = * strip whitespace from TAG *
+            * if TAG not in existing tags list *
+                * append TAG to @ptag_list *
             end
         end
     end
-    
+end
 {% endhighlight %}
 
-`@cat_list`, `@pcat_list`, `@tag_list`, and `@ptag_list` are the four other
-class variables mentioned earlier which list either the T&C items read from the
-article files (@cat/@tag_list), or the T&C that needs to be added to the repo
-(@pcat/@ptag_list). The `data_array` parameter refers to the master list which
-is passed in and parsed. This method was written to take care of both tags and categories so it only needs to be called once.
+`@pcat_list`, `@ptag_list` are the arrays containing the respective T&C that needs to be implemented. The `data_array` 
+parameter refers to the master list which is passed in and parsed. This method was written to take care of both tags 
+and categories so it only needs to be called once.
 
 ### Constructing T&C Files and YAML Entries
 
-The `compile_post_data` function gave us the T&C items to be added in the form of the arrays `@pcat_list` and `@tcat_list`. The final step is to create a file and a YAML entry for each of the T&C items that needs to be added.
+The `compile_post_data` function gave us the T&C items to be added in the form of the arrays `@pcat_list` and 
+`@tcat_list`. The final step is to create a file and a YAML entry for each of the T&C items that needs to be added.
 
 {% highlight ruby %}
-
-    def construct(type, data_array)
-        dpath = File.join($base, "blog/", type)
-        if not File.directory?(dpath)
-            FileUtils.mkdir_p(dpath)
-        end
-    
-        ytype = type
-        case type
-        when "tag"
-            ytype = "tags"
-        when "category"
-            ytype = "categories"
-        end
-        yfname = File.join($base, "_data/", ytype+".yml")
-    
-        data_array.each do |filename|
-            fname = File.join(dpath, filename + ".md")
-            newfile = open(fname, "w")
-            newfile.puts("---")
-            newfile.puts("layout: "+type)
-            newfile.puts(type+": "+filename)
-            newfile.puts("permalink: " + File.join("/blog", type, filename)+"/")
-            newfile.puts("---")
-            newfile.close()
-    
-            ycfile = open(yfname, "a")
-            ycfile.puts("\n\n- slug: " + filename)
-            ycfile.write("  name: " + filename.capitalize.gsub("-"," "))
-            ycfile.close()
-        end
+def construct(type, data_array)
+    dpath = * path of category/tag directory *
+    * if cat/tag dir doesn't exist *
+        FileUtils.mkdir_p(* directory path *)
     end
 
+    ytype = type  # either "tag" or "category"
+    case type
+    * convert "tag"/"category" to "tags"/"categories" *
+    end
+    yfname = * ../_data/categories or ../_data/tags *
+
+    data_array.each do |ITEM|
+        fname = * ../_data/tags/ITEM.md *
+        newfile = * open file in WRITE mode *
+        * write Markdown text specified in INFRASTRUCTURE *
+        newfile.close()
+
+        ycfile = * open cats/tags.yml file in APPEND mode*
+        * write Markdown text specified in INFRASTRUCTURE *
+        ycfile.close()
+    end
+end
 {% endhighlight %}
 
-Due to the way that the YAML files were named this method requires translating "tag" and "category" to their plural tense. This is one inefficiency that I may look into should I decide to optimize the plugin. 
+Due to the way that the YAML files were named this method requires translating "tag" and "category" to their plural 
+tense. This is one inefficiency that I may look into should I decide to optimize the plugin. 
 
-In order to prevent path errors, any appropriate directories are first created
-before the T&C files are created and written into. The required YAML front
-matter is explained in the infrastructure description above. The permalink is
-relative to the project root so it should start at `/blog`. The name of the T&C
-item is also automatically capitalized and all hyphens are replaced with a
-space. If you would like to change how your T&C items are converted, you will
-need to change the line that starts with `ycfile.write("  name: "`. This method
-is also called twice, once for tags and once for categories. The `type`
+Missing directories are first created. The required YAML front
+matter is explained in the infrastructure description above. I decided to automatically capitalize T&C items and 
+replace hyphens with spaces when writing in each items `name:` attribute, but this is up to the programmer. The `type`
 parameter is a string that should have the value `tag` or `category` in order
 for the function to point to the correct YAML file in the `_data` directory.
 
 ## Implementing the Plugin
 
 As long as you have constructed the plugin as instructed by Jekyll standards, and you have placed the plugin in the 
-root `_plugins` directory, Jekyll will be able to find and execute the code when the development server is run and
- is generating the site content. If Jekyll produces any errors or files end up being created in the wrong place make 
- sure you double check your syntax and directory paths for any mistakes.
+root `_plugins` directory, Jekyll will be able to find and execute the code when the development server is run. If 
+Jekyll produces any errors, or files end up being created in the wrong place make sure you double check your syntax 
+and directory paths for any mistakes.
 
-I ended up writing a lot more than I expected so you may have noticed that my
-efforts to explain the code have dwindled further on. I may possibly revisit
-this post to explain the methods in better detail, but for now (06/02/2015) I
-leave you to cleverly reverse-engineer the code. This code was written as a hack
-to solve the automation problem and I was pretty much learning Ruby as  I went,
-so if you have any suggestions or fixes, feel free to comment.
+This code was written as a hack to solve the automation problem and I was pretty much learning Ruby as I went, so if 
+you have any suggestions or fixes, feel free to comment.
