@@ -5,11 +5,17 @@
 
 var main = function() {
     var fork_banner = true;
+    var check_fork = function() {
+        if (window.innerWidth < 768) {
+            $('#forkme_banner').css("display","none");
+            fork_banner = false;
+        }
+    };
 
-    if (window.innerWidth < 768) {
-        $('#forkme_banner').css("display","none");
-        fork_banner = false;
-    }
+    check_fork();
+    window.onresize = function() {
+        check_fork();
+    };
 
     window.onscroll = function() {
         var fork = $('#forkme_banner');
@@ -43,6 +49,18 @@ var main = function() {
             }
         }
     };
+
+    $('button[class="navbar-toggle collapsed"]').on('click', function() {
+        var navb = $('#navb');
+        if ($('#navco').css('display') == 'none') {
+            navb.css('background-color','#FFF');
+        }
+        else {
+            if ($(window).scrollTop() == 0) {
+                navb.stop().animate({backgroundColor:"transparent"}, {duration:300});
+            }
+        }
+    })
 };
 
 $(document).ready(main);

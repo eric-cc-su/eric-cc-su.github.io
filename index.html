@@ -32,35 +32,57 @@
 </head>
 
 <body>
-{% include navbar.html %}
-
-<div class="maincontainer" id="maincontain">
-    <div class="page-landing" id="landing-index">
-        <div class="center-content" id="homecenter">
-            <img src="images/esu2.jpg" class="face" alt="face">
-
-            <h1 id="project_title">Eric Su</h1>
-            <!--<h2 id="project_tagline">Student, Programmer, Photographer, and Triathlete</h2>-->
-            <div id="links-bar">
-                <a href="https://www.linkedin.com/pub/eric-su/68/205/141"><h2>Student</h2></a>
-                <a href="https://github.com/eric-cc-su"><h2>Programmer</h2></a>
-                <a href="http://suphotography.tumblr.com/"><h2>Photographer</h2></a>
-                <a href="http://nutriathlon.wix.com/triforlife"><h2>Triathlete</h2></a>
+    <!-- NAVBAR -->
+    <div class="navbar navbar-fixed-top" id="navb">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/" class="navtext" title="Home">Eric</a>
+                <!-- Taken from getBootstrap.com -->
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar navtext"></span>
+                    <span class="icon-bar navtext"></span>
+                    <span class="icon-bar navtext"></span>
+                </button>
+                <!-- getBootstrap.com -->
             </div>
-        </div>
-        <div class="center-content" id="education">
-
+            <nav class="navbar-collapse collapse" id="navco">
+                <ul class="nav pull-left links">
+                    <li><a href="/blog/" class="navtext" title="Blog">Blog</a></li>
+                    <li><a href="/about/" class="navtext" title="About">About</a></li>
+                </ul>
+            </nav>
+            <a class="collapse" id="forkme_banner" href="https://github.com/eric-cc-su"><p>View on GitHub</p></a>
         </div>
     </div>
-</div>
-<!-- FOOTER  -->
-<div id="footer_wrap" class="outer">
-    <footer class="inner">
-        <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-        <p>&copy; 2015 Eric Su</p>
-        <p>Licensed under MIT license.</p>
-    </footer>
-</div>
+
+    <div class="maincontainer" id="maincontain">
+        <div class="page-landing" id="landing-index">
+            <div class="center-content" id="homecenter">
+                <img src="images/esu2.jpg" class="face" alt="face">
+
+                <h1 id="project_title">Eric Su</h1>
+                <!--<h2 id="project_tagline">Student, Programmer, Photographer, and Triathlete</h2>-->
+                <div id="links-bar">
+                    <a href="https://www.linkedin.com/pub/eric-su/68/205/141"><h2>Student</h2></a>
+                    <a href="https://github.com/eric-cc-su"><h2>Programmer</h2></a>
+                    <a href="http://suphotography.tumblr.com/"><h2>Photographer</h2></a>
+                    <a href="http://nutriathlon.wix.com/triforlife"><h2>Triathlete</h2></a>
+                </div>
+            </div>
+            <div class="center-content" id="education">
+
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+            <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+            <p>&copy; 2015 Eric Su</p>
+            <p>Licensed under MIT license.</p>
+        </footer>
+    </div>
 
 </body>
 </html>

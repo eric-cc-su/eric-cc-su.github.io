@@ -214,6 +214,10 @@ footer {
     padding: 17px 15px 0;
 }
 
+.navbar-header {
+    margin-left: 0 !important;
+}
+
 .navbar-toggle {
     margin-top: 15px;
 }
