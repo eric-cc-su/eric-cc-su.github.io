@@ -23,7 +23,7 @@ posts were written by hand, with the design for the home page and the About Me p
 ## Planning Ahead
 
 * <strike>Functionality for blog post category and tags will be added</strike>
-* <strike>Blog posts will include comment sections. [Disqus](https://disqus.com/) will most likely be used</strike>
+* <strike>Blog posts will include comment sections. <a href="https://disqus.com/">Disqus</a> will most likely be used</strike>
 * The home page will include content about my work experience, projects and education
 * The website will be migrated to a custom domain
 * <strike>The blog landing page needs to be redesigned</strike>
