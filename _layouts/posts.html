@@ -28,8 +28,8 @@ layout: blog
         {% endfor %}
         {% if tag %}
             {% capture tags_content_temp %}
-                {{ tags_content }}<a href="/blog/tag/{{ tag.slug }}/" style="margin-right: 2px">
-                    <span class="glyphicon glyphicon-tag" style="font-size: small"></span>{{ tag.name }}</a>
+                {{ tags_content }}<a href="/blog/tag/{{ tag.slug }}/" class="bpost_tlink">
+                    <span class="glyphicon glyphicon-tag"></span>{{ tag.name }}</a>
                 {% if forloop.last == false %} {% endif %}
             {% endcapture %}
             {% assign tags_content = tags_content_temp %}

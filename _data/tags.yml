@@ -48,3 +48,21 @@
 
 - slug: testing
   name: Testing
+
+- slug: jekyll
+  name: Jekyll
+
+- slug: programming
+  name: Programming
+
+- slug: automation
+  name: Automation
+
+- slug: ruby
+  name: Ruby
+
+- slug: tags
+  name: Tags
+
+- slug: categories
+  name: Categories

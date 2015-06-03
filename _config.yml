@@ -1,6 +1,7 @@
 name: "Eric Su"
 description: "Eric Su of Boston, MA. Programmer, Photographer and Triathlete."
 
+highlighter: "pygments"
 paginate: 10
 
 defaults:

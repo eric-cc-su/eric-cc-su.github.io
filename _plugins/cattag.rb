@@ -2,7 +2,6 @@ require 'fileutils'
 
 module CatTag
 	$base = Dir.pwd()  #Save the project root directory
-	puts $base
 	if not $base.split("/")[-1].include?('.github')
 		Dir.chdir("../")
 		$base = Dir.pwd()
