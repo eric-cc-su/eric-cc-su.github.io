@@ -4,41 +4,38 @@ category: tech
 tags: [jekyll, programming, automation, ruby, tags, categories]
 ---
 
-For those who don't know, this website and blog is built with the static web page generator 
-[Jekyll](http://jekyllrb.com/) and published through GitHub Pages. Jekyll is blog aware and facilitates the 
-conversion of HTML or Markdown files into the proper HTML files needed for the front end. Because it is blog aware
-Jekyll has built in support for tags and categories (let's call it T&C for short), however this is a feature that needs to be manually implemented 
-by the user and there are certain workarounds required if the user is publishing through GitHub Pages since the user 
-does not get to control the deployment of the pages once they are pushed up to GitHub. 
+This website and blog is built with the static web page generator 
+[Jekyll](http://jekyllrb.com/) and published through GitHub Pages. Jekyll is a blog aware static site generator that provides support for tags and categories, but this is a feature that needs to be manually implemented 
+by the user.
 
 I used instructions and code provided by
 [Minddust](http://www.minddust.com/post/tags-and-categories-on-github-pages/) to put together the infrastructure 
-needed for tags and categories to be useful so **this is not about how to set up tags and categories with Jekyll**.
+needed for tags and categories (T&C) so **this is not about how to set up tags and categories with Jekyll**.
 
-This is also not for beginner programmers, if you don't have experience in Ruby but are proficient in something else 
-like Python (like me) you should be able to figure everything out just fine if you reference the Ruby documentation. 
-I may write other beginner-friendly articles but trying to explain everything here will take up way too much time.
+This is not particularly for beginner programmers since I tend to write a lot and I can't go through every detail here. **BUT** I am a newbie to Ruby and I basically learned Ruby as I was coding this...or I coded this to learn Ruby... however you want to see it. So if you have experience in programming logic you should be fine. 
  
-This is about automating the addition of T&C once the infrastructure has been set up. Before 
-we begin it must also be noted that this automation only works **if you render the website in development**. GitHub 
-Pages deploys all Pages repositories in safe mode which bars custom plugins, meaning that any Ruby code written
- will not do anything if you push your changes to GitHub without first running a local Jekyll development server.
+This article is solely about how I automated Minddust's approach to Jekyll T&C.
+The approach here may not be the most efficient, but keep in mind that this is
+my first full Ruby program so I just hacked together whatever worked. It must
+also be noted that this automation only works **if you render the website in
+development**. GitHub Pages deploys all Pages repositories in safe mode, which
+prevents custom plugins (this automation code) from running on GitHub's end.
+
+For those people who like to skip to the end, you can view the plugin code via [this gist](https://gist.github.com/eric-cc-su/c4f637f769cd85615225)
+
+and you can view my site's repo [right here](https://github.com/eric-cc-su/eric-cc-su.github.io)
 
 ## The Infrastructure 
 
-Since Minddust is the source of the infrastructure code/logic I highly recommend first reading how he implements T&C 
-to comply with GitHub Pages. 
+**Since Minddust is the source of the infrastructure code/logic I highly recommend reading how he implements T&C first.**
 
-In short, all T&C must be defined in YAML lists (one for tags, one for categories) kept in the root `_data` directory
+In short, all T&C items must be defined in their respective YAML lists (one for tags, one for categories), which are kept in the root `_data` directory
 . Within the YAML list, each T&C is defined with a `slug` field and a `name` field as so:
  
     - slug: general
       name: General
  
-In addition to the YAML lists, there needs to be directories or subdirectories labelled for "tag" and "category". My 
-directories exist under `username.github.io/blog/tag` and `username.github.io/blog/category`. I believe this is also 
-the way Minddust implemented his/her infrastructure so I just went along with it. Within both directories exist 
-Markdown files for each T&C with the following content:
+In addition to the YAML lists, each T&C item must have its own file in the format `(T&C item).(extension)`. For example a tag of "programming" would need a file `programming.md`. These files exist in `/blog/tag/` or `/blog/category/` as appropriate. Each of these files contains the following front matter:
 
     ---
     layout: *layout*
@@ -46,25 +43,31 @@ Markdown files for each T&C with the following content:
     permalink: /blog/tag/*tag*/
     ---
 
-The format is the same for both tags and categories with categories replacing everything that says `tag`. These files
- are to produce a landing page for each T&C. Unless you plan on using your default layout for the T&C landing pages, 
- you should create and define your custom layouts in these files. 
+The format is the same for both tags and categories.These files produce a
+landing page for each T&C where all the corresponding articles will be
+presented. Unless you plan on using your default layout for the T&C landing
+pages you should also create and define your custom layouts, which would be
+defined in these files.
  
-Without automation, each new T&C requires defining the T&C in the proper YAML file and creating its own Markdown file
- by hand. Failing to update the YAML file means that the tag may not show up in blog posts while failing to create a 
- Markdown file means that there will be nowhere to compile the articles that belong to the T&C.
+Without automation, each new T&C requires defining the T&C in the proper YAML
+file and creating its own file  by hand. Failing to update the YAML file means
+that the tag may not show up in blog posts while failing to create T&C file
+means that there will be no web page to compile the articles that belong to the
+T&C.
 
 ## Automation
 
-So there are two things that have to be automated for each T&C, the YAML entry and the Markdown file.
- The plugin is written in Ruby in order to easily integrate the plugin with the development Jekyll 
- environment and is kept in the root `_plugin` directory for Jekyll's access, it does not matter what the file is named.
-The only Ruby module required is `fileutils` for path lookups. 
+So there are two things that have to be automated for each T&C: the YAML entry
+and the Markdown file.  The plugin is written in Ruby in order to easily
+integrate the plugin with the development Jekyll environment and is kept in
+the root `_plugin` directory for Jekyll's access, it does not matter what the
+file is named. The only Ruby module required is `fileutils` for path lookups.
 
-We are techincally writing a generator for Jekyll, so the Jekyll-recommended structure is to 
-define everything within one module. I decided not to name the module as `Jekyll` because I was too afraid of any 
-possible side effects. Instead, the primary class is inherited from `Jekyll::Generator`. The basic structure of the 
-plugin is as follows:
+We are techincally writing a generator for Jekyll, so the Jekyll-recommended
+structure is to define everything within one module. I decided not to name the
+module as `Jekyll` because I was too afraid of any possible side effects.
+Instead, the primary class is inherited from `Jekyll::Generator`. The basic
+structure of the  plugin is as follows:
 
 {% highlight ruby %}
 
@@ -103,14 +106,18 @@ the `_plugins` directory, it will need to work in the root project directory to 
 is a good idea to save the root project path into a global variable so that it can used to construct the other paths 
 needed. 
 
-Next is the `generate(site)` function. This is the only function that is required by Jekyll so the name of this 
-function **can not be changed**. The `site` parameter is actually not needed in this code, but it is required by Jekyll 
-since we are inheriting from its Generator. This function acts as the class' constructor, so class-wide variables will
- be defined here and I have also written the function to parse through all of the posts in the `_posts` directory and
-  save their YAML front matter. I have defined one master list that will house all of the parsed front matter, two 
-  lists that will house all the T&C currently implemented, and two most lists that house any T&C that needs to be 
-  integrated. Except for the master list, all lists will be defined by external methods, to be explained soon. The 
-  only logic within the generate method is as follows:
+Next is the `generate(site)` function. This is the only function that is
+required by Jekyll so the name of this  function **can not be changed**. The
+`site` parameter is actually not needed in this code, but it is required by
+Jekyll  since we are inheriting from its Generator. This function acts as the
+class' constructor, so class-wide variables will  be defined here and I have
+also written the function to parse through all of the posts in the `_posts`
+directory and   save their YAML front matter. I have defined one master list
+that will house all of the parsed front matter, two lists that will house all
+the T&C currently implemented, and two most lists that house any T&C that needs
+to be integrated. Except for the master list, all lists will be defined by
+external methods (explained below). The only logic within the generate
+method is as follows:
 
 {% highlight ruby %}
 
@@ -128,7 +135,7 @@ since we are inheriting from its Generator. This function acts as the class' con
                 oneline = onepost.readline
                 while not oneline.include?('---')   # Read front matter
                     keyval = oneline.split(":")     # Split line into a list
-                    # add the key, value pair to the file's Hash                    
+                    # add the key, value pair to the Hash                  
                     data[keyval[0].strip] = keyval[1].strip     
                     oneline = onepost.readline
                 end
@@ -140,15 +147,17 @@ since we are inheriting from its Generator. This function acts as the class' con
     
 {% endhighlight %}
 
-All of the logic is shown above in comments. As for the motivation for single line reading: it allows the plugin to 
-parse only the first bit of every post we need instead of flooding the memory with loads of text it's not going to 
-use. Once the master list has been constructed with each file's front matter, `generate(list)` calls upon its sibling
- methods to complete the automation.
+All of the logic is shown above in comments. As for the motivation for single
+line reading: it allows the plugin to parse only the first bit of every post we
+need instead of flooding the memory with loads of text it's not going to use.
+Once the master list has been constructed with each file's front matter,
+`generate(list)` calls upon its sibling  methods to complete the automation.
  
 ### Checking Currently Implemented T&C
 
-In order to avoid rewriting or corrupting existing files for the T&C already in place, it is a good idea to first 
-check what T&C exists. This is the first method below the constructor as it is the first step in adding new T&C.
+In order to avoid rewriting or corrupting existing files for the T&C already in
+place, it is a good idea to first check what T&C exists. This is the first
+method below the constructor as it is the first step in adding new T&C.
 
 {% highlight ruby %}
 
@@ -166,16 +175,15 @@ check what T&C exists. This is the first method below the constructor as it is t
     
 {% endhighlight %}
 
-It is important to note that the `source_path` parameter is the path of the T&C directory currently being searched 
-through *relative* to the root project path. `$base` is the global directory holding the root directory path. We are 
-simply constructing the T&C directory path, reading the file names, and shaving off the file extensions to give us 
-the T&C name. This method is meant to be reusable for any T&C directory, therefore it needs to be called separately 
-for tags and categories.
+It is important to note that the `source_path` parameter is the path of the T&C
+directory currently being searched, *relative* to the root project path.
+`$base` is the global directory holding the root directory path. We are simply
+constructing the T&C directory path, reading the file names, and shaving off the file extensions to give us  the T&C name. This method needs to be called twice, once for tags and once for categories.
 
 ### Compare Current and Needed T&C
 
-We must now compare the currently implemented T&C to the T&C we read from the files in order to find any 
-discrepencies and add anything missing.
+We must now compare the currently implemented T&C item to the T&C items we read
+from the files in order to find any discrepencies and add missing items.
 
 {% highlight ruby %}
 
@@ -195,16 +203,15 @@ discrepencies and add anything missing.
     
 {% endhighlight %}
 
-`@cat_list`, `@pcat_list`, `@tag_list`, and `@ptag_list` are the four other class variables mentioned earlier which 
-hold either the P&C read from the article files, or the T&C that needs to be added to the repo. The `data_array` 
-parameter refers to the master list which is passed in and parsed. This method, is meant to compare all of the T&C so 
-that it doesn't have to be called multiple times.
+`@cat_list`, `@pcat_list`, `@tag_list`, and `@ptag_list` are the four other
+class variables mentioned earlier which list either the T&C items read from the
+article files (@cat/@tag_list), or the T&C that needs to be added to the repo
+(@pcat/@ptag_list). The `data_array` parameter refers to the master list which
+is passed in and parsed. This method was written to take care of both tags and categories so it only needs to be called once.
 
 ### Constructing T&C Files and YAML Entries
 
-With the completion of the `compile_post_data` function, we now have the arrays `@pcat_list` and `@tcat_list` which 
-contain the T&C that needs to be integrated into the repo. The final method takes care of both creating the Markdown 
-file and writing in a new YAML entry for the T&C item.
+The `compile_post_data` function gave us the T&C items to be added in the form of the arrays `@pcat_list` and `@tcat_list`. The final step is to create a file and a YAML entry for each of the T&C items that needs to be added.
 
 {% highlight ruby %}
 
@@ -242,24 +249,29 @@ file and writing in a new YAML entry for the T&C item.
 
 {% endhighlight %}
 
-The construction of the YAML entry is the only point in this entire plugin where the labels "tag" and "category" need
- to be re-written to their plural selves. It's possible that the YAML filenames can be changed...but I simply haven't
-  looked into it and opted for this hack instead. In construct you can see that the directory for the T&C file will be 
-  made if needed and the file is written with front matter defining the layout, the T&C item and its permalink. The 
-  permalink is relative to the project root so it should start at `/blog`. The name of the T&C item is automatically 
-  converted to be capitalized and to have all hyphens replaced with a space. If you would like to change how your T&C
-   items are converted, you will need to change the line that starts with `ycfile.write("  name: "`. This method is 
-   also called twice, once for tags and once for categories. The `type` parameter is a string that should have the 
-   value `tag` or `category` in order for the function to point to the correct YAML file in the `_data` directory.
+Due to the way that the YAML files were named this method requires translating "tag" and "category" to their plural tense. This is one inefficiency that I may look into should I decide to optimize the plugin. 
+
+In order to prevent path errors, any appropriate directories are first created
+before the T&C files are created and written into. The required YAML front
+matter is explained in the infrastructure description above. The permalink is
+relative to the project root so it should start at `/blog`. The name of the T&C
+item is also automatically capitalized and all hyphens are replaced with a
+space. If you would like to change how your T&C items are converted, you will
+need to change the line that starts with `ycfile.write("  name: "`. This method
+is also called twice, once for tags and once for categories. The `type`
+parameter is a string that should have the value `tag` or `category` in order
+for the function to point to the correct YAML file in the `_data` directory.
 
 ## Implementing the Plugin
 
 As long as you have constructed the plugin as instructed by Jekyll standards, and you have placed the plugin in the 
-root `_plugins` directory, Jekyll will be able to find and execute the code when the development server is run and it
+root `_plugins` directory, Jekyll will be able to find and execute the code when the development server is run and
  is generating the site content. If Jekyll produces any errors or files end up being created in the wrong place make 
  sure you double check your syntax and directory paths for any mistakes.
 
-I ended up writing a lot more than I expected so you may have noticed that my efforts to explain the code have 
-dwindled further on. I will revisit this post to edit it (today is 06/02/15) and provide more explanation for the 
-later methods. This code was written as a hack to solve the automation problem and I was pretty much learning Ruby as
- I went, so if you have any suggestions or fixes, feel free to comment.
+I ended up writing a lot more than I expected so you may have noticed that my
+efforts to explain the code have dwindled further on. I may possibly revisit
+this post to explain the methods in better detail, but for now (06/02/2015) I
+leave you to cleverly reverse-engineer the code. This code was written as a hack
+to solve the automation problem and I was pretty much learning Ruby as  I went,
+so if you have any suggestions or fixes, feel free to comment.
