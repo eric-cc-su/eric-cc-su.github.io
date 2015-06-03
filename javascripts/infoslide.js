@@ -14,7 +14,7 @@ var calculate_win = function() {
     }
 
     var landing = document.getElementById("homecenter");
-    //var mn = document.getElementById("homecenter");
+    var mn = document.getElementById("maincontain");
     screenheight = window.innerHeight;
 
     foot.style.top = screenheight.toString() + "px";
@@ -22,10 +22,10 @@ var calculate_win = function() {
 
     var reqheight = landing.scrollHeight + 60 + ((0.25*screenheight)-60);
     lpg.style.height = reqheight.toString() + "px";
-    // mn.style.height = reqheight.toString() + "px";
+    mn.style.height = reqheight.toString() + "px";
     if (screenheight > reqheight) {
         lpg.style.height =  screenheight.toString() + "px";
-        // mn.style.height =  screenheight.toString() + "px";
+        mn.style.height =  screenheight.toString() + "px";
     }
 };
 

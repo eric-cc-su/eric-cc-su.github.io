@@ -1,3 +1,11 @@
+a[title="Home"], .nav > li > a {
+    color: #60695C !important;
+}
+
+a[title="Home"]:hover, .nav > li > a:hover, .nav > li > a.current {
+    color: #03A9F4 !important;
+}
+
 .bpost_tlink {
     margin-right: 5px;
 }
@@ -26,18 +34,13 @@ h2 {
     background-color: #FF5722;
 }
 
-.nav > li > a {
-    color: #60695C !important;
+.navbar-toggle .icon-bar {
+    background-color: #60695C !important;
 }
 
-.nav > li > a:hover {
+.navbar-toggle .icon-bar:hover {
     color: #03A9F4 !important;
 }
-
-.nav > li > a.current {
-    color: #03A9F4 !important;
-}
-
 
 p.category {
     display: inline-block;

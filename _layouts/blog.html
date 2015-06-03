@@ -35,16 +35,8 @@
 </head>
 <body>
 
-    <div class="navbar navbar-fixed-top" id="navb">
-        <div class="container-fluid">
-            <ul class="nav pull-left links">
-                <li><a href="/" title="Home">Eric</a></li>
-                <li><a href="/blog/" title="Blog">Blog</a></li>
-                <li><a href="/about/" title="About">About</a></li>
-            </ul>
-            <a id="forkme_banner" href="https://github.com/eric-cc-su"><p>View on GitHub</p></a>
-        </div>
-    </div>
+    {% include navbar.html %}
+
     {% assign post = page %}
     <div class="maincontainer" id="maincontain" style="padding-top: 60px; height: inherit">
         {{ content }}

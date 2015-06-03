@@ -7,7 +7,7 @@ layout: blog
         <div class="row-fluid post-row">
             <div class="span12">
                 <h2><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></h2>
-                <h4>{{ post.date | date_to_long_string }}</h4>
+                <h4>{{ post.date | date: "%B %d, %Y" }}</h4>
                 {{ post.excerpt }}
             </div>
         </div>
