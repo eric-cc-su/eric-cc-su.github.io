@@ -22,11 +22,13 @@ posts were written by hand, with the design for the home page and the About Me p
  
 ## Planning Ahead
 
-* Functionality for blog post category and tags will be added
-* Blog posts are planned to include comment sections. The [Disqus](https://disqus.com/) service is currently being 
-researched
+* <strike>Functionality for blog post category and tags will be added</strike>
+* <strike>Blog posts will include comment sections. [Disqus](https://disqus.com/) will most likely be used</strike>
 * The home page will include content about my work experience, projects and education
 * The website will be migrated to a custom domain
-* The blog landing page needs to be redesigned
-* A 404 page is needed
+* <strike>The blog landing page needs to be redesigned</strike>
+* <strike>404 page is needed</strike>
 * A sitemap should be produced
+* The site will be made more mobile-friendly (as a way for me to learn responsive web design)
+
+*Edit: Updated list of upcoming features (06/03/2015)*
