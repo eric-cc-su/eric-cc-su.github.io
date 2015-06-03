@@ -54,10 +54,14 @@ var main = function() {
         var navb = $('#navb');
         if ($('#navco').css('display') == 'none') {
             navb.css('background-color','#FFF');
+            $('.navtext').css('color','#60695C');
+            $('.icon-bar').css('background-color','#60695C');
         }
         else {
             if ($(window).scrollTop() == 0) {
                 navb.stop().animate({backgroundColor:"transparent"}, {duration:300});
+                $('.navtext').css('color','');
+                $('.icon-bar').css('background-color','');
             }
         }
     })

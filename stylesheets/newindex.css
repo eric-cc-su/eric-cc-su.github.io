@@ -111,7 +111,7 @@ footer {
     border-radius: 0 0 2px 2px;
 }
 
-@media all and (min-width: 768px) {
+@media screen and (min-device-width: 768px) {
     #forkme_banner {
         display: block;
     }
@@ -177,7 +177,7 @@ footer {
     margin-right: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-device-width: 768px) {
     .nav li {
         float: left;
     }
