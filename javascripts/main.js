@@ -32,11 +32,16 @@ var main = function() {
 
     $('button[class="navbar-toggle collapsed"]').on('click', function() {
         var navb = $('#navb');
-        var nav_eric = $('a[title="Home"]');
+        var nehid= document.getElementById('naveric');
+        console.log(nehid);
+        if (nehid.hidden) {
+            nehid.hidden = false;
+        }
+        else {
+            nehid.hidden = true;
+        }
+
         if ($('#navco').css('display') == 'none') {
-            if (nav_eric.hasClass('home')) {
-                nav_eric.show();
-            }
             navb.css('background-color','#FFF');
             navb.css("box-shadow", "0 0 10px rgba(0,0,0,0.5)");
             $('.navtext').css('color','#60695C');
@@ -44,9 +49,6 @@ var main = function() {
         }
         else {
             if ($(window).scrollTop() == 0) {
-                if (nav_eric.hasClass('home')) {
-                    nav_eric.hide();
-                }
                 navb.stop().animate({backgroundColor:"transparent"}, {duration:300});
                 navb.css("box-shadow", "none");
                 $('.navtext').css('color','');

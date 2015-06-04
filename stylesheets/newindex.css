@@ -1,5 +1,6 @@
 a[title="Home"] {
     color: #FFF;
+    float: left;
     font-size: 37px;
     padding-top: 0 !important;
     text-decoration: none;
