@@ -21,7 +21,8 @@ body {
 
 footer {
     background: #60695C;
-    position: absolute;
+    display: inherit;
+    height: inherit;
     width: 100%;
 }
 
@@ -35,8 +36,7 @@ footer p {
 }
 
 #footer_wrap {
-    position: absolute;
-    top: 600px;
+    display: inline-block;
     width: 100%;
 }
 
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 .center-content {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 60px;
+    padding-top: 100px;
     text-align: center;
 }
 
@@ -75,7 +75,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 25px;
     margin: 0 auto;
     text-align: justify;
-    width: 800px;
+    width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+    .center-p {
+        width: 800px;
+    }
 }
 
 .container-fluid:before, .nav:before {
@@ -99,30 +105,6 @@ h1, h2, h3, h4, h5, h6 {
     -o-box-shadow: none;
     -ms-box-shadow: none;
 }
-
-footer {
-    height: 100px;
-}
-/*
-#forkme_banner {
-    display: none;
-    position: absolute;
-    top:0;
-    right: 10px;
-    z-index: 10;
-    padding: 10px 50px 10px 10px;
-    color: #fff;
-    background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-    border-radius: 0 0 2px 2px;
-}
-
-@media screen and (min-width: 768px) {
-    #forkme_banner {
-        display: block;
-    }
-}
-*/
 
 #forkme_banner > p {margin: 0;}
 
@@ -174,7 +156,7 @@ footer {
 }
 
 .maincontainer {
-    position: absolute;
+    display: inline-block;
     height: inherit;
     width: 100%;
 }
@@ -205,10 +187,7 @@ footer {
     background-color: transparent;
     outline: none;
 }
-/*
-.nav > li > a:hover {color: #E7E8DB;}
-.nav > li > a.active {color: #6C756B;}
-*/
+
 .navbar {
     height: inherit;
 }
@@ -219,13 +198,13 @@ footer {
 
 @media screen and (min-width: 768px) {
     .navbar-collapse ul{
-        margin-left: 25px;
+        margin-left: 40px;
         margin-bottom: inherit;
     }
 }
 
 .navbar-collapse ul li a{
-    padding: 17px 15px 0 0;
+    padding: 17px 25px 0 0;
 }
 
 .navbar-header {
@@ -245,8 +224,8 @@ p.category > a:hover {
 }
 
 .page-landing {
+    display: inherit;
     height: 600px;
-    position: absolute;
     width: 100%;
 }
 

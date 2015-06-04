@@ -29,6 +29,7 @@ posts were written by hand, with the design for the home page and the About Me p
 * <strike>The blog landing page needs to be redesigned</strike>
 * <strike>404 page is needed</strike>
 * A sitemap should be produced
-* The site will be made more mobile-friendly (as a way for me to learn responsive web design)
+* <strike>The site will be made more mobile-friendly (as a way for me to learn responsive web design)</strike>
 
+*Edit: Responsive design has been implemented (06/04/2015)*
 *Edit: Updated list of upcoming features to reflect the features that have been implemented (06/03/2015)*

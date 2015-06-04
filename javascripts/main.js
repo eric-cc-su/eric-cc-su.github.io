@@ -7,18 +7,20 @@ var main = function() {
     window.onscroll = function() {
         var nvb = $('#navb');
         if ($(window).scrollTop() != 0) {
-            if (window.innerWidth >= 768) {nvb.stop().animate({backgroundColor: '#FFF'}, {duration: 300});}
-            else {nvb.css("background-color","#FFF");}
-            nvb.css("box-shadow", "0 0 10px rgba(0,0,0,0.5)");
+            nvb.css({
+                "background-color": "#FFF",
+                "box-shadow": "0 0 10px rgba(0,0,0,0.5)"
+            });
             $('.navtext').css('color','#60695C');
             $('.icon-bar').css('background-color','#60695C');
         }
         else {
             var nvb_height = Number(nvb.css('height').replace("px",""));
             if (nvb_height <= 61) {
-                if (window.innerWidth >= 768) {nvb.stop().animate( {backgroundColor:"transparent"}, {duration:300});}
-                else {nvb.css("background-color","");}
-                nvb.css("box-shadow", "none");
+                nvb.css({
+                    "background-color": "",
+                    "box-shadow": "none"
+                });
                 $('.navtext').css('color','');
                 $('.icon-bar').css('background-color','');
             }
