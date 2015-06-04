@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 768px) {
     .center-p {
-        width: 800px;
+        width: 700px;
     }
 }
 
@@ -122,18 +122,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #landing-index {
-    /*background-color: #FE5F55;*/
     background-color: #F44336;
 }
 
 #landing-about {
     background-color: #F44336;
-    height: 650px;
 }
 
 #landing-blog {
     background-color: #03A9F4;
-    height: 200px;
     padding-top: 100px;
     text-align: center;
 }
@@ -225,7 +222,8 @@ p.category > a:hover {
 
 .page-landing {
     display: inherit;
-    height: 600px;
+    height: inherit;
+    padding-bottom: 20px;
     width: 100%;
 }
 

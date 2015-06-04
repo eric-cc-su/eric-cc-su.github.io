@@ -40,8 +40,17 @@
     {% include navbar.html %}
 
     {% assign post = page %}
-    <div class="maincontainer" id="maincontain" style="padding-top: 60px; height: inherit">
+    <div class="maincontainer" id="maincontain" style="padding-top: 60px;">
         {{ content }}
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+            <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+            <p>&copy; 2015 Eric Su</p>
+            <p>Licensed under MIT license.</p>
+        </footer>
     </div>
 </body>
 </html>
