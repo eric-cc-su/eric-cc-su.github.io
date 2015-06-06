@@ -16,7 +16,7 @@ that the previous designs were not mobile-friendly. However now, mobile users sh
 toolbar and nicely formatted web content. 
 
 <p style="text-align: center">
-<img src="images/mobile_nav.PNG" alt="responsive navbar" style="max-height: 400px">
+<img src="/images/mobile_nav.png" alt="responsive navbar" style="height: 400px">
 </p>
 
 Text should now be fit to the users screen so mobile users will not have to do any left-right scrolling 
