@@ -32,14 +32,17 @@ var main = function() {
 
     $('button[class="navbar-toggle collapsed"]').on('click', function() {
         var navb = $('#navb');
-        var nehid= document.getElementById('naveric');
-        console.log(nehid);
-        if (nehid.hidden) {
-            nehid.hidden = false;
+        try{
+          var nehid= document.getElementById('naveric');
+            console.log(nehid);
+            if (nehid.hidden) {
+                nehid.hidden = false;
+            }
+            else {
+                nehid.hidden = true;
+            }
         }
-        else {
-            nehid.hidden = true;
-        }
+        catch(err){}
 
         if ($('#navco').css('display') == 'none') {
             navb.css('background-color','#FFF');
