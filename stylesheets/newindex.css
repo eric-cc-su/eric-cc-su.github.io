@@ -93,14 +93,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #emc_description {
-    padding-top: 40px;
+    margin-top: 40px;
+}
+
+#emc_logo {
+    padding: 90px;
+    height: 270px;
 }
 
 @media screen and (max-width: 768px) {
-    #emc_description {
-        margin: 0 auto;
+    .job_description {
+        margin: 40px auto 0;
         padding-top: 0;
-        width: 60%;
+        width: 70%;
+    }
+
+    #emc_description {
+        margin-top: 0;
+    }
+
+    #emc_logo {
+        padding: 40px;
+        height: 120px;
     }
 }
 
@@ -309,6 +323,18 @@ hr.post_list {
 .posts_header {
     color: #222;
     margin-bottom: 20px;
+}
+
+#seagate_logo {
+     width:400px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    #seagate_logo {
+        margin-top: 0;
+        width: 205px;
+    }
 }
 
 .tag {
