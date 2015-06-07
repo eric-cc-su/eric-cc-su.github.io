@@ -6,7 +6,7 @@ layout: blog
     {% for post in paginator.posts %}
         <div class="row-fluid post-row">
             <div class="span12">
-                <h2><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></h2>
+                <h2 style="font-weight: 700"><a href="{{ post.url }}" class="post_link">{{ post.title }}</a></h2>
                 <h4>{{ post.date | date: "%B %d, %Y" }}</h4>
                 {{ post.excerpt }}
             </div>

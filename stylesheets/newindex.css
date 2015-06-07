@@ -43,7 +43,6 @@ footer p {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
-  font-weight: 700;
   color:#222222;
   font-family: 'Lato','Open Sans','Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
   letter-spacing: -1px;
@@ -93,6 +92,18 @@ h1, h2, h3, h4, h5, h6 {
     color: #BDBDBD !important;
 }
 
+#emc_description {
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    #emc_description {
+        margin: 0 auto;
+        padding-top: 0;
+        width: 60%;
+    }
+}
+
 .face {
     border: none;
     border-radius: 50%;
@@ -117,8 +128,27 @@ h1, h2, h3, h4, h5, h6 {
     font-size: small;
 }
 
+@media screen and (max-width: 768px) {
+    .graphics {
+        text-align: center;
+    }
+}
+
+.infosection {
+    margin-bottom: 50px;
+}
+
 .inner > p {
     margin-bottom: 0;
+}
+
+.job_subhead *{
+    color: #989b95;
+}
+
+.job_subhead :hover {
+    color: #07bdfd !important;
+    text-decoration: none !important;
 }
 
 #landing-index {
@@ -135,9 +165,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+#linkedIn :hover {
+    background-color: #07bdfd ;
+    text-decoration: none;
+}
+/*
 @media screen and (max-width: 415px) {
     #links-bar {
-        text-align: left; /*Fixes mismatch lineup w/title and links */
+        text-align: left; /*Fixes mismatch lineup w/title and links
     }
 
     #links-bar a {
@@ -161,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 #links-bar > a > h2:hover {
     text-decoration: underline;
 }
-
+*/
 .maincontainer {
     display: inline-block;
     height: inherit;
@@ -293,4 +328,8 @@ hr.post_list {
 .tagged_post {
     display: inline-block;
     margin-right: 10px;
+}
+
+.trail {
+    margin-top: 40px;
 }
