@@ -32,19 +32,15 @@
 <body>
     {% include navbar.html %}
 
-    <div class="maincontainer" id="maincontain">
-        <div class="page-landing" id="landing-about">
-            <div class="center-content" id="homecenter">
-                {{ content }}
-            </div>
+    <div class="col-md-12" style="padding: 0;">
+        <div class="landing landing-top">
+            {{ content }}
         </div>
-    </div>
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-        <footer class="inner">
-            <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+
+        <footer>
+            <p style="padding-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
             <p>&copy; 2015 Eric Su</p>
-            <p>Licensed under MIT license.</p>
+            <p style="padding-bottom: 10px;">Licensed under MIT license.</p>
         </footer>
     </div>
 </body>

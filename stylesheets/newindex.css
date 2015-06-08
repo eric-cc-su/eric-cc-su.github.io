@@ -11,41 +11,20 @@ a[title="Home"]:hover {
 }
 
 body {
-  box-sizing: border-box;
-  color:#373737;
-  background: #E0E0E0;
-  font-size: 16px;
-  font-family: 'Lato','Open Sans','Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-footer {
-    background: #60695C;
-    display: inherit;
-    height: inherit;
-    width: 100%;
-}
-
-footer > p > a {
-    color: #EEF5DB;
-}
-
-footer p {
-    color: #222;
-    text-align: center;
-}
-
-#footer_wrap {
-    display: inline-block;
-    width: 100%;
+    box-sizing: border-box;
+    color:#373737;
+    background: #E0E0E0;
+    font-size: 16px;
+    font-family: 'Lato','Open Sans','Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
-  color:#222222;
-  font-family: 'Lato','Open Sans','Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
-  letter-spacing: -1px;
+    margin: 10px 0;
+    color:#222222;
+    font-family: 'Lato','Open Sans','Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+    letter-spacing: -1px;
 }
 
 .archive_list {
@@ -53,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-post {
-    margin: 20px auto 50px;
+    margin: 30px auto 50px;
     text-align: left;
     width: 70%;
 }
@@ -64,28 +43,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.center-content {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
 .center-p {
-    font-size: 28px;
     margin: 0 auto;
-    text-align: justify;
-    width: 90%;
+    width: 70%;
 }
 
 @media screen and (min-width: 768px) {
     .center-p {
-        width: 700px;
+        font-size: 28px;
     }
-}
-
-.container-fluid:before, .nav:before {
-    display: none;
-    content: none;
 }
 
 .nav > li > a.current {
@@ -131,20 +97,39 @@ h1, h2, h3, h4, h5, h6 {
     -ms-box-shadow: none;
 }
 
-#forkme_banner > p {margin: 0;}
 
-.glyphicon-chevron-down {
-    color: #333;
-    font-size: 50px;
+footer {
+    background: #60695C;
+}
+
+footer > p > a {
+    color: #EEF5DB;
+}
+
+footer p {
+    color: #222;
+    text-align: center;
+    margin: 0;
+    padding: 2px;
 }
 
 .glyphicon-tag {
     font-size: small;
 }
 
-@media screen and (max-width: 768px) {
+.mobile-section-title {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
     .graphics {
         text-align: center;
+    }
+    .mobile-section-title {
+        display: block;
+    }
+    .section-title {
+        display: none;
     }
 }
 
@@ -152,30 +137,39 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 50px;
 }
 
-.inner > p {
-    margin-bottom: 0;
+/*thanks to http://stackoverflow.com/questions/218760/how-do-you-keep-parents-of-floated-elements-from-collapsing */
+.infosection:after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
 }
 
-.job_subhead *{
+.job_subhead {
     color: #989b95;
 }
 
-.job_subhead :hover {
+.jobhead,
+:hover, :active, :focus {
+    text-decoration: none;
+}
+
+.jobhead:hover,
+.jobhead h3:hover{
     color: #07bdfd !important;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
-#landing-index {
+.landing-blog {
+    height: inherit;
+    padding-bottom: 50px;
+}
+
+.landing-top {
     background-color: #F44336;
-}
-
-#landing-about {
-    background-color: #F44336;
-}
-
-#landing-blog {
-    background-color: #03A9F4;
-    padding-top: 100px;
+    height: inherit;
+    padding-top: 65px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -183,39 +177,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #07bdfd ;
     text-decoration: none;
 }
-/*
-@media screen and (max-width: 415px) {
-    #links-bar {
-        text-align: left; /*Fixes mismatch lineup w/title and links
-    }
 
-    #links-bar a {
-        display: block;
-    }
-}
-
-#links-bar {
-    margin-top: 15px;
-}
-
-#links-bar > a {
-    margin: 10px 20px;
-}
-
-#links-bar > a > h2{
-    display: inline-block;
-    font-weight: 500;
-}
-
-#links-bar > a > h2:hover {
-    text-decoration: underline;
-}
-*/
-.maincontainer {
-    display: inline-block;
-    height: inherit;
-    width: 100%;
-}
 
 .nav > li {
     font-size: 28px;
@@ -244,9 +206,6 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
 }
 
-.navbar {
-    height: inherit;
-}
 
 .navbar-collapse ul {
     margin-bottom: 20px;
@@ -280,13 +239,6 @@ p.category > a:hover {
     text-decoration: none;
 }
 
-.page-landing {
-    display: inherit;
-    height: inherit;
-    padding-bottom: 20px;
-    padding-top: 60px;
-    width: 100%;
-}
 
 .post_link {
     text-decoration: none;
@@ -297,7 +249,7 @@ p.category > a:hover {
 }
 
 .post_list {
-    margin: 100px auto 50px;
+    margin: 50px auto;
     list-style: none;
     padding: 0;
     width: 60%;
@@ -311,6 +263,7 @@ hr.post_list {
     margin: 30px;
 }
 
+
 #project_title {
   margin: 0;
   color: #fff;
@@ -323,6 +276,7 @@ hr.post_list {
 .posts_header {
     color: #222;
     margin-bottom: 20px;
+    margin-top: 100px;
 }
 
 #seagate_logo {
@@ -336,6 +290,15 @@ hr.post_list {
         width: 205px;
     }
 }
+
+.section-title,
+.mobile-section-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+}
+
 
 .tag {
     margin-right: 5px;
