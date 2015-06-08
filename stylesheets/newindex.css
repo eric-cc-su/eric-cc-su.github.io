@@ -174,12 +174,6 @@ footer p {
     text-align: center;
 }
 
-#linkedIn :hover {
-    background-color: #07bdfd ;
-    text-decoration: none;
-}
-
-
 .nav > li {
     font-size: 28px;
     margin-right: 10px;
@@ -264,6 +258,30 @@ hr.post_list {
     margin: 30px;
 }
 
+.proflink button {
+    background-color: #989b95;
+    margin: 10px;
+}
+
+.proflink :hover {
+    text-decoration: none;
+}
+
+#github :hover {
+    background-color: #c35acf;
+}
+
+#linkedin :hover {
+    background-color: #07bdfd ;
+}
+
+#tumblr {
+    display: block;
+}
+
+#tumblr :hover {
+    background-color: #FFF;
+}
 
 #project_title {
   margin: 0;
