@@ -7,6 +7,16 @@ var screenheight = window.innerHeight;   //measures the height of the user's scr
 var calculate_win = function() {
     screenheight = window.innerHeight;
 
+    var landing = $('.landing-top:first');
+
+    if (screenheight > landing.outerHeight()) {
+        var diff2 = (screenheight - landing.height())/2;
+        landing.css("height", screenheight.toString() + "px");
+        if (window.innerWidth > 768) {
+            landing.css("padding-top", (diff2 - 60).toString() + "px");
+        }
+    }
+    /*
     var landing = $(".page-landing:first");
     var content = $("#homecenter");
     var difference = landing.outerHeight() - content.outerHeight();
@@ -27,6 +37,7 @@ var calculate_win = function() {
         });
 
     }
+    */
 };
 
 var main = function() {

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--Much credit to Andrew Munsell's Jekyll tutorial: http://learn.andrewmunsell.com/learn/jekyll-by-example/tutorial-->
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Eric Su">
+    <meta name="description" content="Eric Su of Boston, MA. Programmer, Photographer and Triathlete.">
+    <meta name="copyright" content="Eric Su">
+    <meta name="keywords" content="Eric Su, Github, Boston, Massachusetts, programmer, photographer, triathlete">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">-->
+    <link href='http://fonts.googleapis.com/css?family=Lato|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/newindex.css">
+    <script type="text/javascript" src="javascripts/main.js"></script>
+    <script type="text/javascript" src="javascripts/infoslide.js"></script>
+    <title>Eric Su</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar navbar-fixed-top" id="navb">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/" class="navtext home" id="naveric" title="Home" hidden>Eric</a>
+                <!-- Taken from getBootstrap.com -->
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar navtext"></span>
+                    <span class="icon-bar navtext"></span>
+                    <span class="icon-bar navtext"></span>
+                </button>
+                <!-- getBootstrap.com -->
+            </div>
+            <nav class="navbar-collapse collapse" id="navco">
+                <ul class="nav pull-left links" style="margin-left: 0">
+                    <li><a href="/blog/" class="navtext" title="Blog">Blog</a></li>
+                    <li><a href="/about/" class="navtext" title="About">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="maincontainer" id="maincontain">
+        <div class="page-landing" id="landing-index">
+            <div class="center-content" id="homecenter">
+                <img src="images/esu2.jpg" class="face" alt="face">
+
+                <h1 id="project_title">Eric Su</h1>
+                <!--<h2 id="project_tagline">Student, Programmer, Photographer, and Triathlete</h2>-->
+                <h3 style="margin-top: 25px;color:#444">Computer Engineering & Computer Science</h3>
+                <h3 style="color:#444">Northeastern University, Boston MA</h3>
+                <!--
+                <div id="links-bar">
+                    <a href="https://www.linkedin.com/pub/eric-su/68/205/141"><h2>Student</h2></a>
+                    <a href="https://github.com/eric-cc-su"><h2>Programmer</h2></a>
+                    <a href="http://suphotography.tumblr.com/"><h2>Photographer</h2></a>
+                    <a href="http://nutriathlon.wix.com/triforlife"><h2>Triathlete</h2></a>
+                </div>
+                -->
+            </div>
+        </div>
+        <div class="infosection" id="experience">
+            <h1 class="section-title">I've worked as a...</h1>
+            <div class="col-md-12">
+                <div class="col-md-5 graphics">
+                    <a href="http://www.emc.com/index.htm">
+                        <img src="images/index/BlueLogoLarge.png" alt="EMC" id="emc_logo">
+                    </a>
+                </div>
+                <div class="col-md-7 job_description" id="emc_description">
+                    <h3>Firmware Intern</h3>
+                    <a href="https://www.linkedin.com/pub/eric-su/68/205/141" class="job_subhead">
+                        <h4>EMC | Hopkinton, MA | January 2015 - Present</h4>
+                    </a>
+                    <p>
+                        - Intern of the Global Hardware Engineering Quality Assurance (GHE QA) department at EMC.<br>
+                        - Assist in writing test cases in Python to automate system testing<br>
+                        - Assist in Python development of system fuzzing tool<br>
+                        - Responsible for developing features for test logging, log formatting, and test replication
+                        within the fuzzing tool<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-12 trail">
+                <div class="col-md-5 graphics">
+                    <a href="http://www.seagate.com/">
+                        <img src="images/index/seagate_col.png" alt="Seagate" id="seagate_logo">
+                    </a>
+                </div>
+                <div class="col-md-7 job_description">
+                    <h3>Firmware Intern</h3>
+                    <a href="https://www.linkedin.com/pub/eric-su/68/205/141" class="job_subhead">
+                        <h4>Seagate | Shrewsbury, MA | January 2014 - August 2014</h4>
+                    </a>
+                    <p>
+                        - Full stack developer of company web tool to track firmware revisions and configurations<br>
+                        - Worked with firmware development and system test engineers to qualify disk drive products in
+                        enterprise class systems.<br>
+                        - Administer and track testing on various system platforms<br>
+                        - System level debug and analysis involving tools such as logic analyzers, and logging
+                        information from both the disk drives and the systems
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-12 trail" style="text-align: center; margin-bottom: 30px;">
+                <a id="linkedIn" href="https://www.linkedin.com/pub/eric-su/68/205/141">
+                    <button class="btn btn-group" style="padding: 20px;">
+                        <img src="images/index/linkedIn.png" alt="LinkedIn Logo" style="display:inline; height: 40px">
+                        <h3 style="display: inline; vertical-align: middle;">Go to my LinkedIn
+                            <sup style="font-size: 10px">&reg;</sup></h3>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="infosection" id="code">
+            <h1 class="section-title">I Code...</h1>
+            <h2>Back-End</h2>
+        </div>
+        <div class="center-content" id="projects">
+
+        </div>
+        <div class="center-content" id="education">
+
+        </div>
+    </div><div id="footer_wrap" class="outer">
+        <footer class="inner">
+            <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+            <p>&copy; 2015 Eric Su</p>
+            <p>Licensed under MIT license.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
