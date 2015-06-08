@@ -6,10 +6,6 @@ a[title="Home"]:hover, .nav > li > a:hover, .nav > li > a.current {
     color: #03A9F4 !important;
 }
 
-.bpost_tlink {
-    margin-right: 5px;
-}
-
 #disqus_thread {
     margin-top: 50px;
 }

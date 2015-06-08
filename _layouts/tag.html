@@ -3,7 +3,7 @@ layout: blog
 ---
 <!-- Credit to [Minddust](http://www.minddust.com/post/tags-and-categories-on-github-pages/) for tags&categories-->
 <h1 class="post_list posts_header">Articles tagged with
-    <span class="glyphicon glyphicon-tag"></span>{{ page.tag }}</h1>
+    <span class="glyphicon glyphicon-tag"></span>{{ page.tag | replace:'-',' ' }}</h1>
 <hr class="post_list" style="border-color: #222;">
 <ul class="post_list">
     {% if site.tags[page.tag] %}
