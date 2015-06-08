@@ -28,10 +28,11 @@
 
     <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">-->
     <link href='http://fonts.googleapis.com/css?family=Lato|Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/newindex_t.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/newindex.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/blog.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/pygments/default.css">
     <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/infoslide.js"></script>
     <title>{{ site.name }}</title>
 
 </head>
@@ -40,16 +41,15 @@
     {% include navbar.html %}
 
     {% assign post = page %}
-    <div class="maincontainer" id="maincontain">
-        {{ content }}
-    </div>
+    <div class="col-md-12" style="padding: 0;">
+        <div class="landing landing-blog">
+            {{ content }}
+        </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-        <footer class="inner">
-            <p style="margin-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        <footer>
+            <p style="padding-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
             <p>&copy; 2015 Eric Su</p>
-            <p>Licensed under MIT license.</p>
+            <p style="padding-bottom: 10px;">Licensed under MIT license.</p>
         </footer>
     </div>
 </body>
