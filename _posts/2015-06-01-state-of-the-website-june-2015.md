@@ -25,11 +25,14 @@ posts were written by hand, with the design for the home page and the About Me p
 * <strike>Functionality for blog post category and tags will be added</strike>
 * <strike>Blog posts will include comment sections. <a href="https://disqus.com/">Disqus</a> will most likely be used</strike>
 * The home page will include content about my work experience, projects and education
-* The website will be migrated to a custom domain
+* <strike>The website will be migrated to a custom domain</strike>
 * <strike>The blog landing page needs to be redesigned</strike>
 * <strike>404 page is needed</strike>
-* A sitemap should be produced
+* <strike>A sitemap should be produced</strike
 * <strike>The site will be made more mobile-friendly (as a way for me to learn responsive web design)</strike>
 
+*Edit: Website migrated to custom domain and sitemap generated (06/09/2015)*
+
 *Edit: Responsive design has been implemented (06/04/2015)*
+
 *Edit: Updated list of upcoming features to reflect the features that have been implemented (06/03/2015)*
