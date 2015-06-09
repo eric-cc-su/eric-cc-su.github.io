@@ -1,6 +1,6 @@
 ---
 title: Configuration Updates
-category: general
+category: tech
 tags: [sotw, state-of-the-website, update]
 ---
 

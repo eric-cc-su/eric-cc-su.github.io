@@ -84,3 +84,9 @@
 
 - slug: update
   name: Update
+
+- slug: windows
+  name: Windows
+
+- slug: microsoft
+  name: Microsoft

@@ -31,6 +31,19 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
 }
 
+.blog-image {
+    font-size: 14px;
+    font-style: italic;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.blog-image img {
+    display: block;
+    max-height: 300px;
+    margin: 0 auto;
+}
+
 .blog-post {
     margin: 30px auto 50px;
     text-align: left;
