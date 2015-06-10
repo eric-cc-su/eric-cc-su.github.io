@@ -67,6 +67,41 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+#code {
+    background-color: #82c856;
+}
+
+#code h1 {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 2px 3px #555; /*http://line25.com/tutorials/create-a-letterpress-effect-with-css-text-shadow*/
+    /*text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);*/
+
+}
+
+.info{
+    text-align: center;
+}
+
+.info h2 {
+    /*color: #E0E0E0;*/
+    /*font-weight: 700;*/
+}
+
+.info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info ul li {
+    font-size: 25px;
+    text-align: left
+}
+
+.info ul ul {
+    padding-left: 20px;
+}
+
 .nav > li > a.current {
     color: #BDBDBD !important;
 }
@@ -131,24 +166,18 @@ footer p {
     margin-left: 5px;
 }
 
-.mobile-section-title {
-    display: none;
-}
-
 @media screen and (max-width: 1000px) {
     .graphics {
         text-align: center;
     }
-    .mobile-section-title {
-        display: block;
-    }
-    .section-title {
-        display: none;
-    }
 }
 
 .infosection {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.infosection-footer {
+    text-align: center;
 }
 
 /*thanks to http://stackoverflow.com/questions/218760/how-do-you-keep-parents-of-floated-elements-from-collapsing */
@@ -185,6 +214,19 @@ footer p {
     padding-top: 65px;
     padding-bottom: 50px;
     text-align: center;
+}
+
+.left-title {
+    text-align: right;
+}
+
+.left-title h2 {
+    font-weight: 700;
+    /*http://www.hongkiat.com/blog/css-text-effects/*/
+    /*http://codepen.io/ThatGuySam*/
+    /*http://codepen.io/ThatGuySam/pen/CytDA*/
+    text-shadow: 0 1px 0 #222222, 0 2px 0 #333333, 0 1px 3px rgba(51, 51, 51, 0.3), 0 3px 5px rgba(153, 153, 153, 0.36), 0 5px 10px rgba(255, 255, 255, 0.37), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+
 }
 
 .nav > li {
@@ -280,6 +322,12 @@ hr.post_list {
     text-decoration: none;
 }
 
+#github button,
+#tumblr button {
+    background-color: rgba(221,221,221,0.9);
+    border: 1px solid rgba(152, 155, 149, 0.71);
+}
+
 #github :hover {
     background-color: #c35acf;
 }
@@ -327,7 +375,8 @@ hr.post_list {
 .mobile-section-title {
     font-size: 50px;
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 0;
+    padding-top: 30px;
     text-align: center;
 }
 
