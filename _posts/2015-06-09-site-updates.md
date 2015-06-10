@@ -2,6 +2,7 @@
 title: Configuration Updates
 category: tech
 tags: [sotw, state-of-the-website, update]
+mtime: 14:10
 ---
 
 The exciting news today is that the website is now being hosted on the custom domain (ericsu.me)[http://ericsu.me/]

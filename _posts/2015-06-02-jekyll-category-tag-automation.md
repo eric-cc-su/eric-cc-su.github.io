@@ -2,6 +2,7 @@
 title: Automating the Implementation of Tags and Categories in Jekyll
 category: tech
 tags: [jekyll, programming, automation, ruby, tags, categories]
+mtime: 12:00
 ---
 
 This website and blog is built with the static web page generator 

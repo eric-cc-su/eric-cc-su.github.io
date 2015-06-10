@@ -2,6 +2,7 @@
 title: Why I Upgraded to Mac OS X Instead of Windows 8 (Part 1)
 category: tech
 tags: [apple, macbook, OS-X, macbook-pro, windows, microsoft]
+mtime: 16:25
 ---
 
 As if I needed another article on why I'm so excited to be on a Mac now, here are my thoughts on why Microsoft 

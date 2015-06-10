@@ -2,6 +2,7 @@
 title: Welcome to Responsive Design
 category: tech
 tags: [programming, web-design, responsive-design, state-of-the-website, sotw]
+mtime: 12:00
 ---
 
 As of June 4, 2015 the website was transferred to a responsive design that will allow mobile users to comfortably 
