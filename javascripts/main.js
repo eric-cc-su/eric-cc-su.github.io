@@ -4,11 +4,18 @@
  */
 
 var main = function() {
-    var nvb = $('#navb');
-    var nvb_orig_height = Number(nvb.css('height').replace("px",""));
     window.onscroll = function() {
+        var nvb = $('#navb');
+        var nvb_orig_height = Number(nvb.css('height').replace("px",""));
+
         if (document.getElementById('navb').className != "navbar navbar-static-top"){
             if ($(window).scrollTop() != 0) {
+                if (window.innerWidth < 768){
+                    try{
+                        document.getElementById('naveric').hidden = false;
+                    }
+                    catch(err){}
+                }
                 nvb.css({
                     "background-color": "#FFF",
                     "box-shadow": "0 0 10px rgba(0,0,0,0.5)"
@@ -18,6 +25,12 @@ var main = function() {
             }
             else {
                 var nvb_height = Number(nvb.css('height').replace("px",""));
+                if (window.innerWidth < 768){
+                    try{
+                        document.getElementById('naveric').hidden = true;
+                    }
+                    catch(err){}
+                }
                 if (nvb_height <= nvb_orig_height) {
                     nvb.css({
                         "background-color": "",
@@ -32,15 +45,16 @@ var main = function() {
 
     $('button[class="navbar-toggle collapsed"]').on('click', function() {
         var navb = $('#navb');
-        try{
-          var nehid= document.getElementById('naveric');
-            console.log(nehid);
-            if (nehid.hidden) {
-                nehid.hidden = false;
-            }
-            else {
-                nehid.hidden = true;
-            }
+        try {
+            var nehid= document.getElementById('naveric');
+                if ($(window).scrollTop() == 0) {
+                    if (nehid.hidden) {
+                        nehid.hidden = false;
+                    }
+                    else {
+                        nehid.hidden = true;
+                    }
+                }
         }
         catch(err){}
 
