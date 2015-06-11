@@ -4,15 +4,17 @@
  */
 
 var main = function() {
-    var nvb = $('#navb');
-    var nvb_orig_height = Number(nvb.css('height').replace("px",""));
     window.onscroll = function() {
-        var nehid= document.getElementById('naveric');
+        var nvb = $('#navb');
+        var nvb_orig_height = Number(nvb.css('height').replace("px",""));
 
         if (document.getElementById('navb').className != "navbar navbar-static-top"){
             if ($(window).scrollTop() != 0) {
-                if ($(window).clientWidth < 768){
-                    nehid.hidden = false;
+                if (window.innerWidth < 768){
+                    try{
+                        document.getElementById('naveric').hidden = false;
+                    }
+                    catch(err){}
                 }
                 nvb.css({
                     "background-color": "#FFF",
@@ -23,10 +25,13 @@ var main = function() {
             }
             else {
                 var nvb_height = Number(nvb.css('height').replace("px",""));
-                if (nvb_height <= nvb_orig_height) {
-                    if ($(window).clientWidth < 768){
-                        nehid.hidden = true;
+                if (window.innerWidth < 768){
+                    try{
+                        document.getElementById('naveric').hidden = true;
                     }
+                    catch(err){}
+                }
+                if (nvb_height <= nvb_orig_height) {
                     nvb.css({
                         "background-color": "",
                         "box-shadow": "none"
