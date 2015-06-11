@@ -4,6 +4,8 @@
  */
 
 var main = function() {
+    var navopen = false;
+
     window.onscroll = function() {
         var nvb = $('#navb');
         var nvb_orig_height = Number(nvb.css('height').replace("px",""));
@@ -23,7 +25,7 @@ var main = function() {
                 $('.navtext').css('color','#60695C');
                 $('.icon-bar').css('background-color','#60695C');
             }
-            else {
+            else if (navopen == false){
                 var nvb_height = Number(nvb.css('height').replace("px",""));
                 if (window.innerWidth < 768){
                     try{
@@ -40,25 +42,21 @@ var main = function() {
                     $('.icon-bar').css('background-color','');
                 }
             }
+            else {
+                console.log(navopen);
+            }
         }
     };
 
     $('button[class="navbar-toggle collapsed"]').on('click', function() {
         var navb = $('#navb');
-        try {
-            var nehid= document.getElementById('naveric');
-                if ($(window).scrollTop() == 0) {
-                    if (nehid.hidden) {
-                        nehid.hidden = false;
-                    }
-                    else {
-                        nehid.hidden = true;
-                    }
-                }
-        }
-        catch(err){}
 
         if ($('#navco').css('display') == 'none') {
+            navopen = true;
+            try{
+                document.getElementById('naveric').hidden = false;
+            }
+            catch(err){}
             navb.css('background-color','#FFF');
             navb.css("box-shadow", "0 0 10px rgba(0,0,0,0.5)");
             $('.navtext').css('color','#60695C');
@@ -66,6 +64,11 @@ var main = function() {
         }
         else {
             if ($(window).scrollTop() == 0) {
+                navopen = false;
+                try{
+                    document.getElementById('naveric').hidden = true;
+                }
+                catch(err){}
                 navb.stop().animate({backgroundColor:"transparent"}, {duration:300});
                 navb.css("box-shadow", "none");
                 $('.navtext').css('color','');
