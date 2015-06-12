@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (max-width: 768px) {
-    .job_description {
+    .job_description, .project_description {
         margin: 40px auto 0;
         padding-top: 0;
         width: 70%;
@@ -349,12 +349,37 @@ hr.post_list {
     text-decoration: none;
 }
 
+.project_description {
+    padding: 0 5%;
+}
+
+.project_description_center {
+    padding: 0 10%;
+    text-align: center;
+}
+
+.project_description_center p {
+    text-align: left;
+}
+
+.project_image {
+    border: 1px solid rgba(152, 155, 149, 0.71);
+    border-radius: 2px;
+    /*box-shadow: 1px 1px 4px #111;*/
+    box-shadow: 0 0 1px #111;
+    max-width: 400px;
+}
+
+.project_image:hover {
+    box-shadow: 0 0 10px #111;
+}
+/*
 #github button,
 #tumblr button {
     background-color: rgba(221,221,221,0.9);
     border: 1px solid rgba(152, 155, 149, 0.71);
 }
-
+*/
 #github :hover {
     background-color: #c35acf;
 }
