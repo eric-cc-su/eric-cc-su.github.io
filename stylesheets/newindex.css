@@ -56,6 +56,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.carousel-inner>.item>img {
+    height: 100%;
+    width: 100%;
+}
+
+#carousel-projects {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+#carousel-projects img {
+    max-width: 700px;
+    height: auto;
+    width: auto;
+}
+
 .center-p {
     margin: 0 auto;
     width: 70%;
