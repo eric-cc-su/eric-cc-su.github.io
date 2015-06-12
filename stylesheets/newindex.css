@@ -50,12 +50,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 70%;
 }
 
-@media screen and (min-width: 768px) {
-    .blog-post {
-        width: 650px;
-    }
-}
-
 .carousel-inner>.item>img {
     height: 100%;
     width: 100%;
@@ -75,12 +69,6 @@ h1, h2, h3, h4, h5, h6 {
 .center-p {
     margin: 0 auto;
     width: 70%;
-}
-
-@media screen and (min-width: 768px) {
-    .center-p {
-        font-size: 28px;
-    }
 }
 
 #code {
@@ -131,23 +119,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 270px;
 }
 
-@media screen and (max-width: 768px) {
-    .job_description, .project_description {
-        margin: 40px auto 0;
-        padding-top: 0;
-        width: 70%;
-    }
-
-    #emc_description {
-        margin-top: 0;
-    }
-
-    #emc_logo {
-        padding: 40px;
-        height: 120px;
-    }
-}
-
 .face {
     border: none;
     border-radius: 50%;
@@ -180,12 +151,6 @@ footer p {
 .glyphicon-tag {
     font-size: small;
     margin-left: 5px;
-}
-
-@media screen and (max-width: 1000px) {
-    .graphics {
-        text-align: center;
-    }
 }
 
 .infosection {
@@ -232,24 +197,6 @@ footer p {
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    .left-title h2 {
-        text-align: center;
-    }
-
-    .right-skill h2 {
-        text-align: center;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .left-title h2 {
-        text-align: right;
-    }
-    .right-skill h2 {
-        text-align: left;
-    }
-}
 .left-title h2 {
     font-weight: 700;
     text-shadow: 0 2px 2px rgba(145, 145, 145, 0.45);
@@ -286,13 +233,6 @@ footer p {
 
 .navbar-collapse ul {
     margin-bottom: 20px;
-}
-
-@media screen and (min-width: 768px) {
-    .navbar-collapse ul{
-        margin-left: 35px;
-        margin-bottom: inherit;
-    }
 }
 
 .navbar-collapse ul li a{
@@ -416,13 +356,6 @@ hr.post_list {
     margin-top: 40px;
 }
 
-@media screen and (max-width: 768px) {
-    #seagate_logo {
-        margin-top: 0;
-        width: 205px;
-    }
-}
-
 .section-title,
 .mobile-section-title {
     font-size: 50px;
@@ -454,4 +387,77 @@ hr.post_list {
 
 .trail {
     margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {  /*large screens*/
+    .blog-post {
+        width: 650px;
+    }
+
+    .center-p {
+        font-size: 28px;
+    }
+
+    .left-title h2 {
+        text-align: right;
+    }
+
+    .mobile_hide {
+        display: inherit;
+    }
+
+    .mobile_show {
+        display: none;
+    }
+
+    .navbar-collapse ul{
+        margin-left: 35px;
+        margin-bottom: inherit;
+    }
+
+    .right-skill h2 {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {  /*small screens*/
+    .job_description, .project_description {
+        margin: 40px auto 0;
+        padding-top: 0;
+        width: 70%;
+    }
+
+    #emc_description {
+        margin-top: 0;
+    }
+
+    #emc_logo {
+        padding: 40px;
+        height: 120px;
+    }
+
+    .graphics {
+        text-align: center;
+    }
+
+    .left-title h2 {
+        text-align: center;
+    }
+
+    .mobile_hide {
+        display: none;
+    }
+
+    .mobile_show {
+        display: inherit;
+    }
+
+    .right-skill h2 {
+        text-align: center;
+    }
+
+    #seagate_logo {
+        margin-top: 0;
+        width: 205px;
+    }
 }
