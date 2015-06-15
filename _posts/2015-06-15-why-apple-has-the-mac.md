@@ -7,12 +7,13 @@ mtime: 12:40
 ---
 
 *This is my response to the Wall Street Journal article 
-["Why Apple Should Kill Off the Mac"](http://www.wsj.com/article_email/why-apple-should-kill-off-the-mac-1434321848-lMyQjAxMTA1MzE3NTcxNjUwWj)*
+**"Why Apple Should Kill Off the Mac"**
+I encourage readers NOT to read the WSJ article as it will only boost the articles "popularity"*
 
 DISCLAIMER: *I am not a professional developer...I just code enough to be pro-PC industry*
 
-One of Wall Street Journal's tech columnists just wrote
- [this article](http://www.wsj.com/article_email/why-apple-should-kill-off-the-mac-1434321848-lMyQjAxMTA1MzE3NTcxNjUwWj)
+One of Wall Street Journal's tech columnists just wrote an article titled
+ **Why Apple Should Kill Off the Mac**
  where he states his belief that Apple's Mac line (their computer/PC product line) is unnecessary and acts as a 
  distraction to Apple's business and innovation. Yes, this is another article that brings up the decline of the PC 
  industry and the prominence of mobile devices. However, this is also an article that talks specifically about Apple's 
