@@ -40,6 +40,7 @@ layout: blog
 {% endif %}
 <div class="blog-post">
     <h1 style="font-weight: 700">{{ post.title }}</h1>
+    <h2 style="font-weight: 700">{{ post.subtitle }}</h2>
     <p class="stamp">{{ page.date | date: "%B %d, %Y" }}</p>
     {% if post.category %}
         <p class="category">
