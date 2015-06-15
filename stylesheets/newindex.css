@@ -60,10 +60,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #code {
-    background-color: #82c856;
+    background-color: #81D2C7;
 }
 
-#code h1 {
+#code h1, #interests h1 {
     color: #fff;
     font-weight: bold;
     text-shadow: 0 2px 3px #555; /*http://line25.com/tutorials/create-a-letterpress-effect-with-css-text-shadow*/
@@ -275,6 +275,10 @@ hr.post_list {
 
 .proflink :hover {
     text-decoration: none;
+}
+
+#interests {
+    background-color: #C4D6B0;
 }
 
 .project_description {
