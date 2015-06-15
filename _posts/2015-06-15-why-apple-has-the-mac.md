@@ -12,6 +12,8 @@ I encourage readers NOT to read the WSJ article as it will only boost the articl
 
 DISCLAIMER: *I am not a professional developer...I just code enough to be pro-PC industry*
 
+*"PC" in this article refers to all personal computers: Mac, Windows, Linux, etc.*
+
 One of Wall Street Journal's tech columnists just wrote an article titled
  **Why Apple Should Kill Off the Mac**
  where he states his belief that Apple's Mac line (their computer/PC product line) is unnecessary and acts as a 
@@ -33,7 +35,7 @@ was founded to build personal computers. While their first product was a simple 
 computers that have redefined affordability, user interaction, and design in both hardware and design. Today, Apple's 
 Mac products are highly competitive against the PC competition thanks to its unique industry defining features such as 
  sleek aluminum bodies, fiercely useful touch-pads and peripherals, high quality screens, and amazing battery life 
- in its laptops. These features continue to define Macs as Apple's game changer to the industry, but the core computing
+ in its laptops. These features continue to define Macs as PC game changers, but the core computing
  function of Macs are what make them irreplaceable in today's digital world.
 
 ##The PC Industry
@@ -41,7 +43,7 @@ Mac products are highly competitive against the PC competition thanks to its uni
 Let's sidestep for one minute and talk about the PC industry as a whole. It is true that PC sales are declining as more 
 consumers are realizing they don't necessarily need a full fledged PC just to browse websites and watch Netflix. 
 However, if any such consumers were to call for the end of the PC industry they would receive a very hard slap across
-the face from me, followed by an hour long lecture about how PCs create the nice mobile world they enjoy so much.
+the face from me, followed by a serious lecture about how PCs are the mother of the mobile world they enjoy so much.
 
 My argument sums up to this: Computers can code, tablets and smartphones cannot. You cannot run web servers, code
 compilers, or supercomputers with smartphones. With the rise of smart devices such as smart TVs and Nest's smart 
@@ -76,7 +78,7 @@ most sought after employees and each of those software developers needs at least
  definitely a Mac if their company targets iOS or OS X. I suppose I should address the argument about Macs holding back
  Apple's innovation and I'll say this: 
  
- **No, Macs are not holding back Apple. Computers may not be the most glamorous thing anymore, but Apple 
+ **No, Macs are not holding back Apple. PCs may not be the most glamorous thing anymore, but Apple 
  still defines the PC market and they need them to create the rest of their products.**
  
 I would also like to address his statement "Is it really a good idea for Apple to continue to put resources against 
