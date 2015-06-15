@@ -20,6 +20,11 @@ One of Wall Street Journal's tech columnists just wrote an article titled
  product line and speculates about its future as a tech company and I think the columnist has a dead wrong point of view 
  about the role of Macs, and of PCs in general, in today's world. 
 
+<p class="blog-image">
+<img class="img-responsive" src="/images/blog/posts/macpage.png" alt="Windows 7">
+(source: <a href="https://www.apple.com/mac/" alt="Mac website">Apple.com</a>)
+</p>
+
 ##The Mac in Brief
 
 Apple is well known for its innovative and sleek mobile products such as the iPhone, the new Watch, and the old iPods. 
@@ -44,6 +49,10 @@ thermostat, it is necessary to remind the public that the software and/or firmwa
 be developed on a PC. Everything digital, from alarm clocks to automobiles, depends on software nowadays and computers
 are needed to develop all of that software. 
 
+<p class="blog-image">
+<img class="img-responsive" src="https://www.apple.com/v/osx/c/images/overview/design_large.png" alt="Mac OS X ">
+(source: <a href="https://www.apple.com/osx/" alt="Mac website">Apple.com</a>)
+</p>
 
 ##What Macs Bring to the Table
 
