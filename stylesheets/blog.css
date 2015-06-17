@@ -1,8 +1,9 @@
-a[title="Home"], .nav > li > a {
+.navtext {
     color: #60695C !important;
 }
 
-a[title="Home"]:hover, .nav > li > a:hover, .nav > li > a.current {
+.nav > li > a:hover,
+.nav > li > a.current {
     color: #03A9F4 !important;
 }
 

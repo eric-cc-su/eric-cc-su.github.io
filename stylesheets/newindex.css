@@ -1,3 +1,4 @@
+/*
 a[title="Home"] {
     color: #FFF;
     float: left;
@@ -9,6 +10,7 @@ a[title="Home"] {
 a[title="Home"]:hover {
     color: #DDD !important;
 }
+*/
 
 body {
     box-sizing: border-box;
@@ -52,6 +54,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-post p {
     font-size: 18px;
+}
+
+#blog-title {
+    color: #000;
+    font-size: 60px;
+    text-shadow: 1px 3px 2px #BDBDBD;
 }
 
 .center-p {
@@ -193,7 +201,6 @@ footer p {
 
 .nav > li {
     font-size: 28px;
-    margin-right: 10px;
 }
 
 @media (min-width: 768px) {
@@ -202,16 +209,24 @@ footer p {
     }
 }
 
-.nav > li > a,
-.nav > li > a:focus,
-.nav > li > a:visited {
+.nav > li > a {
+    color: #FFF;
+}
+
+.nav li a:hover {
+    background-color: transparent;
+}
+
+.navtext,
+.navtext:focus,
+.navtext:visited {
     background-color: transparent;
     color: #fff;
     text-decoration: none;
     outline: none;
 }
-.nav > li > a:hover,
-.nav > li > a.active {
+.navtext:hover,
+.navtext.active {
     color: #ddd !important;
     border-color: transparent;
     background-color: transparent;
@@ -221,11 +236,6 @@ footer p {
 
 .navbar-collapse ul {
     margin-bottom: 20px;
-}
-
-.navbar-collapse ul li a{
-    padding-left: 0;
-    padding-right: 25px;
 }
 
 .navbar-header {
@@ -403,7 +413,7 @@ hr.post_list {
     }
 
     .navbar-collapse ul{
-        margin-left: 35px;
+        /*margin-left: 35px;*/
         margin-bottom: inherit;
     }
 
