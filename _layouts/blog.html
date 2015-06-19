@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/blog.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/pygments/default.css">
     <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/infoslide.js"></script>
     <title>{{ page.title }}</title>
 
     <!-- Analytics -->
@@ -55,11 +56,7 @@
             {{ content }}
         </div>
 
-        <footer>
-            <p style="padding-top: 20px">Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-            <p>&copy; 2015 Eric Su</p>
-            <p style="padding-bottom: 10px;">Licensed under MIT license.</p>
-        </footer>
+        {% include footer.html %}
     </div>
 </body>
 </html>

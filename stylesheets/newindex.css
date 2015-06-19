@@ -131,6 +131,14 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
     background: #60695C;
+    padding-top: 20px;
+}
+
+footer:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 footer > p > a {
@@ -139,9 +147,20 @@ footer > p > a {
 
 footer p {
     color: #222;
-    text-align: center;
+    display: block;
+    float: right;
+    text-align: left;
     margin: 0;
     padding: 2px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    color: #FFF;
+    text-decoration: none;
 }
 
 .glyphicon-tag {
