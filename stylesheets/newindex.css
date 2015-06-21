@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #code {
     background-color: #81D2C7;
+    padding-top: 25px;
 }
 
 #code h1, #interests h1 {
@@ -252,10 +253,11 @@ footer ul li a {
     outline: none;
 }
 
-
+/*
 .navbar-collapse ul {
     margin-bottom: 20px;
 }
+*/
 
 .navbar-header {
     margin-left: 0 !important;
@@ -372,6 +374,10 @@ hr.post_list {
     margin-top: 100px;
 }
 
+.right-skill ul {
+    list-style: none;
+}
+
 #seagate_logo {
      width:400px;
     margin-top: 40px;
@@ -410,7 +416,7 @@ hr.post_list {
     margin-top: 40px;
 }
 
-@media screen and (min-width: 768px) {  /*large screens*/
+@media screen and (min-width: 995px) {  /*large screens*/
     .blog-post {
         width: 650px;
     }
@@ -441,7 +447,7 @@ hr.post_list {
     }
 }
 
-@media screen and (max-width: 768px) {  /*small screens*/
+@media screen and (max-width: 995px) {  /*small screens*/
     .job_description, .project_description {
         margin: 40px auto 0;
         padding-top: 0;
@@ -485,4 +491,18 @@ hr.post_list {
         margin-top: 0;
         width: 205px;
     }
+
+    .left-title h2 {
+        text-align: center;
+    }
+
+    .right-skill ul {
+        padding-left: 0;
+        text-align: center;
+    }
 }
+/*
+@media screen and (max-width: 995px) {
+
+}
+*/
