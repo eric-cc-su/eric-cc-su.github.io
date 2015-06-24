@@ -7,13 +7,16 @@ var screenheight = window.innerHeight;   //measures the height of the user's scr
 var calculate_win = function() {
     screenheight = window.innerHeight;
 
-    var landing = $('.landing:first');
+    var landing = [$('.landing:first'), $('.infoslide')];
+    console.log(landing);
 
-    if (screenheight > landing.outerHeight()) {
-        var diff2 = (screenheight - landing.height())/2;
-        landing.css("height", screenheight.toString() + "px");
-        if (window.innerWidth > 768 && (diff2 - 60) > 60) {
-            landing.css("padding-top", (diff2 - 60).toString() + "px");
+    if (screenheight > landing[0].outerHeight()) {
+        for (i=0; i<landing.length; i++) {
+            var diff2 = (screenheight - landing[i].height())/2;
+            landing[i].css("height", screenheight.toString() + "px");
+            if (window.innerWidth > 768 && (diff2 - 60) > 60) {
+                landing[i].css("padding-top", (diff2 - 60).toString() + "px");
+            }
         }
     }
 };

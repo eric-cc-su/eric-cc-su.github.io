@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #code {
     background-color: #81D2C7;
+    padding-top: 25px;
 }
 
 #code h1, #interests h1 {
@@ -112,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #emc_logo {
     padding: 90px;
-    height: 270px;
+    max-height: 270px;
 }
 
 .face {
@@ -128,6 +129,13 @@ h1, h2, h3, h4, h5, h6 {
     -ms-box-shadow: none;
 }
 
+#fcopy {
+    bottom: 0;
+    float: right;
+    position: absolute;
+    right: 15px;
+    text-align: right;
+}
 
 footer {
     background: #60695C;
@@ -252,10 +260,11 @@ footer ul li a {
     outline: none;
 }
 
-
+/*
 .navbar-collapse ul {
     margin-bottom: 20px;
 }
+*/
 
 .navbar-header {
     margin-left: 0 !important;
@@ -328,7 +337,7 @@ hr.post_list {
     border-radius: 2px;
     /*box-shadow: 1px 1px 4px #111;*/
     box-shadow: 0 0 1px #111;
-    max-width: 400px;
+    width: 400px;
 }
 
 .project_image:hover {
@@ -372,6 +381,11 @@ hr.post_list {
     margin-top: 100px;
 }
 
+.right-skill ul {
+    font-size: 20px;
+    list-style: none;
+}
+
 #seagate_logo {
      width:400px;
     margin-top: 40px;
@@ -386,6 +400,10 @@ hr.post_list {
     text-align: center;
 }
 
+.smlogo {
+    display: inline-block;
+    width: 35px;
+}
 
 .tag {
     margin-right: 5px;
@@ -410,7 +428,17 @@ hr.post_list {
     margin-top: 40px;
 }
 
-@media screen and (min-width: 768px) {  /*large screens*/
+@media screen and (max-width: 500px) {
+    #fcopy {
+        clear: both;
+        float: left;
+        position: relative;
+        right: 0;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 995px) {  /*large screens*/
     .blog-post {
         width: 650px;
     }
@@ -420,6 +448,7 @@ hr.post_list {
     }
 
     .left-title h2 {
+        margin: 0;
         text-align: right;
     }
 
@@ -441,7 +470,7 @@ hr.post_list {
     }
 }
 
-@media screen and (max-width: 768px) {  /*small screens*/
+@media screen and (max-width: 995px) {  /*small screens*/
     .job_description, .project_description {
         margin: 40px auto 0;
         padding-top: 0;
@@ -450,11 +479,6 @@ hr.post_list {
 
     #emc_description {
         margin-top: 0;
-    }
-
-    #emc_logo {
-        padding: 40px;
-        height: 120px;
     }
 
     .graphics {
@@ -473,16 +497,16 @@ hr.post_list {
         display: inherit;
     }
 
-    .project_image {
-        max-width: 100%;
-    }
-
     .right-skill h2 {
         text-align: center;
     }
 
-    #seagate_logo {
-        margin-top: 0;
-        width: 205px;
+    .left-title h2 {
+        text-align: center;
+    }
+
+    .right-skill ul {
+        padding-left: 0;
+        text-align: center;
     }
 }
