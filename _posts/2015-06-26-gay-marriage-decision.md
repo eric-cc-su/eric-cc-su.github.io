@@ -23,11 +23,11 @@ voted against the decision, a [potentially huge problem](http://www.businessinsi
 
 Among the justices who voted against the ruling, there are two common themes within their dissents:
 
-1. The justices are unelected (They specifically use the number 5 to refer to the pro-gay-marriage justices)
-2. The right to marry may or may not be theirs to judge because of point #1 and [THE CONSTITUTION](http://www.businessinsider.com/chief-justice-roberts-on-gay-marriage-ruling-just-who-do-we-think-we-are-2015-6)
+1. **The justices are unelected** (They specifically use the number 5 to refer to the pro-gay-marriage justices)
+2. **The right to marry may or may not be theirs to judge because of point #1 and [THE CONSTITUTION](http://www.businessinsider.com/chief-justice-roberts-on-gay-marriage-ruling-just-who-do-we-think-we-are-2015-6)**
 
-The first point is important to remember since this means that the SCOTUS
-technically doesn't represent the peoples' decision in an accurate way (that's
+The first point is important to remember since this means that the **SCOTUS
+technically doesn't represent the peoples' decision in an accurate way** (that's
 what the Senate and House of Representatives are for). Which is obviously the
 first point that the opposition for any SCOTUS decision may bring up because
 they can argue that it's easy for SCOTUS to not take into account the thoughts
@@ -35,7 +35,7 @@ of the entire nation. This is why many are outraged that SCOTUS could make
 such a decision instead of the states or perhaps the legislative branch.
 
 The Constitution (point #2) basically emphasizes the significance of point #1
-because the Constitution states that the power belongs to the people. Once
+because **the Constitution states that the power belongs to the people**. Once
 again, because SCOTUS does not accurately represent the people, the opposition
 is arguing that they should not have had the power to make any decision on
 gay-marriage at all. Instead gay marriage should have been a policy dealt with
@@ -77,6 +77,11 @@ dignity.
 While I am happy for those who are positively affected by the SCOTUS decision
 today, I wrote this to address those who may not quite understand the entire
 situation behind the opposition.
+
+***TL;DR:*** *The SCOTUS justices who opposed the decision to legalize gay marriage
+across the country are opposed to the judiciary power to make such a
+decision. The justices do not represent the people and the Constitution
+states that the power belongs to the people.*
 
 *Sources*: 
 * [*Chief Justice Roberts on gay-marriage ruling: 'Just who do we think we are?'*](http://www.businessinsider.com/chief-justice-roberts-on-gay-marriage-ruling-just-who-do-we-think-we-are-2015-6)
