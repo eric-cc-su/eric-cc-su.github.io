@@ -1,7 +1,7 @@
 ---
 title: Apple's Response to the Charleston's Shooting Is Wrong
 category: general
-tags: [apple, Charleston, confederate flag]
+tags: [apple, Charleston, confederate-flag]
 mtime: 10:09
 ---
 
@@ -18,7 +18,7 @@ nor did I really retain my U.S. History knowledge from high school, so I won't
 get into the history of the Civil War and the Union vs. the Confederacy, but you
 should Google it if you have no idea what the Confederacy represented.
 
-##In My Opinion
+#In My Opinion
 
 To cut to the chase: I believe that some people, companies, and even the government might need to
 tone down the attack on the Confederacy for the sake of free speech and
@@ -43,7 +43,7 @@ and civil rights and society may start to regress. Preserving the history of
 the Confederacy is the only way to stop such a thing from happening and to
 make sure American society continues moving forward.
 
-##This Is Where Apple Comes In...
+#This Is Where Apple Comes In...
 
 It has been recently announced that 
 [Apple has pulled apps from the app store that contain the Confederate Flag](http://rt.com/usa/269779-apple-civil-war-games/). 
