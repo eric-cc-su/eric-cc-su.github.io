@@ -84,6 +84,7 @@ decision. The justices do not represent the people and the Constitution
 states that the power belongs to the people.*
 
 *Sources*: 
+
 - *[Chief Justice Roberts on gay-marriage ruling: 'Just who do we think we are?'](http://www.businessinsider.com/chief-justice-roberts-on-gay-marriage-ruling-just-who-do-we-think-we-are-2015-6)*
 - *[SCALIA: The Supreme Court is a 'threat to American democracy'](http://www.businessinsider.com/scalia-gay-marriage-dissent-2015-6)*
 - *[Clarence Thomas invokes comparison to slavery in raging gay-marriage dissent](http://www.businessinsider.com/clarence-thomas-dissent-gay-marriage-case-2015-6)*
