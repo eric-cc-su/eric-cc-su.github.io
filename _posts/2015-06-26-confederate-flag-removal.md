@@ -14,7 +14,7 @@ shooting. It was found that the suspect had racist motives for the shooting and
 was found in pictures with Confederate flags, indicating possible ties to a
 radically conservative mindset. As a result of the shooting, many have called
 for the removal of Confederate flags from
-[landmarks](http://www.nytimes.com/2015/06/23/us/south-carolina-confederate-flag-dylann-roof.html) and 
+[landmarks](http://www.nytimes.com/2015/06/23/us/south-carolina-confederate-flag-dylann-roof.html) and
 [sales](http://www.huffingtonpost.com/2015/06/23/retailers-ban-confederate-flags_n_7648614.html) due to its ties to the Confederacy/secessionists of the American Civil War. I am not a history buff,
 nor did I really retain my U.S. History knowledge from high school, so I won't
 get into the history of the Civil War and the Union vs. the Confederacy, but you
@@ -47,8 +47,8 @@ make sure American society continues moving forward.
 
 ##This Is Where Apple Comes In...
 
-It has been recently announced that 
-[Apple has pulled apps from the app store that contain the Confederate Flag](http://rt.com/usa/269779-apple-civil-war-games/). 
+It has been recently announced that
+[Apple has pulled apps from the app store that contain the Confederate Flag](http://rt.com/usa/269779-apple-civil-war-games/).
 While their reaction to the Charleston shooting certainly makes
 sense, it also reeks of blunt force rather than thoughtful finesse. In the
 case of HexWar, the developer of a Civil War game series, Apple notified the
@@ -58,7 +58,7 @@ Civil War game developer, had their game 'Ultimate General: Gettysburg' pulled
 from the app store and both Game Labs and HexWar note that their games were
 made for historical purposes and not to display the Confederate flag in a way
 that promotes its views or offends individuals. While both developers have
-accepted Apple's actions, HexWar has said that it will ammend its game to use
+accepted Apple's actions, HexWar has said that it will amend its game to use
 a different variant of the Confederate flag while **Game Labs has declared
 that it will not change the flags in its game for the sake of historical
 accuracy** and their reaction is exactly how developers and history advocates

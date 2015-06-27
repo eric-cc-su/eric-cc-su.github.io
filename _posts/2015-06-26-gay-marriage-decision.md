@@ -1,19 +1,19 @@
 ---
 title: The Gay Marriage Decision is not Solely About Gay Rights
 category: general
-tags:
+tags: [gay-marriage, gay-rights]
 mtime: 12:56
 ---
 
 *Note: This is about addressing the concerns about the judiciary system, not political views.*
 
 Today, June 26th, 2015, marks the day that the United States Supreme Court
-ruled that  [gay marriage is legalnationwide](http://www.cnn.com/2015/06/26/politics/supreme-court-same-sex-marriage-ruling/index.html). 
+ruled that  [gay marriage is legal nationwide](http://www.cnn.com/2015/06/26/politics/supreme-court-same-sex-marriage-ruling/index.html).
 As a resident of Massachusetts who shares the
 state's primarily liberal and progressive ideals, I am happy to hear the news.
 Of course there are many who disapprove of the decision (the decision itself
 was close with a 5-4 majority). However **let us back away from the assumption
-that those who disapprove are solely those who are against gay rights**. Looking at 
+that those who disapprove are solely those who are against gay rights**. Looking at
 the front page of [Business Insider](http://www.businessinsider.com/), there
 are several articles about the rational of some of the justices behind the
 supreme court (SCOTUS) decision. Once you read the articles about those who
@@ -61,17 +61,17 @@ taken from the Business Insider articles I mention earlier.
  Independence and won in the Revolution of 1776: the freedom to govern
  themselves."
 
-and 
+and
 
 >"To allow the policy question of same-sex marriage to be considered and
  resolved by a select, patrician, highly unrepresentative panel of nine is to
  violate a principle even more fundamental than no taxation without
  representation: no social transformation without representation"
 
-[Justice Clarence Thomas also argues](http://www.businessinsider.com/clarence-thomas-dissent-gay-marriage-case-2015-6) 
-that those petitioning for gay marriage were not deprived of their liberty. 
-Furthermore, the pro-gay-marriage justices' decision for the sake of dignity is 
-constitutionally unfounded since the government cannot grant or take away a peoples' 
+[Justice Clarence Thomas also argues](http://www.businessinsider.com/clarence-thomas-dissent-gay-marriage-case-2015-6)
+that those petitioning for gay marriage were not deprived of their liberty.
+Furthermore, the pro-gay-marriage justices' decision for the sake of dignity is
+constitutionally unfounded since the government cannot grant or take away a peoples'
 dignity.
 
 While I am happy for those who are positively affected by the SCOTUS decision
@@ -83,7 +83,7 @@ across the country are opposed to the judiciary power to make such a
 decision. The justices do not represent the people and the Constitution
 states that the power belongs to the people.*
 
-*Sources*: 
+*Sources*:
 
 - *[Chief Justice Roberts on gay-marriage ruling: 'Just who do we think we are?'](http://www.businessinsider.com/chief-justice-roberts-on-gay-marriage-ruling-just-who-do-we-think-we-are-2015-6)*
 - *[SCALIA: The Supreme Court is a 'threat to American democracy'](http://www.businessinsider.com/scalia-gay-marriage-dissent-2015-6)*
