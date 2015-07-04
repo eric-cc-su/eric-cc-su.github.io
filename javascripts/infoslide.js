@@ -8,7 +8,6 @@ var calculate_win = function() {
     screenheight = window.innerHeight;
 
     var landing = [$('.landing:first'), $('.infoslide')];
-    console.log(landing);
 
     if (screenheight > landing[0].outerHeight()) {
         for (i=0; i<landing.length; i++) {
@@ -18,6 +17,9 @@ var calculate_win = function() {
                 landing[i].css("padding-top", (diff2 - 60).toString() + "px");
             }
         }
+    }
+    else {
+      $('.invisible-infoslide').css("height", (landing[0].outerHeight()).toString() + "px");
     }
 };
 

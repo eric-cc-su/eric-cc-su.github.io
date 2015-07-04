@@ -1,17 +1,3 @@
-/*
-a[title="Home"] {
-    color: #FFF;
-    float: left;
-    font-size: 37px;
-    padding-top: 0 !important;
-    text-decoration: none;
-}
-
-a[title="Home"]:hover {
-    color: #DDD !important;
-}
-*/
-
 body {
     box-sizing: border-box;
     color:#373737;
@@ -80,6 +66,34 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+/*https://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website/*/
+.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+}
+.hsContent {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ebebeb;
+    padding: 0 8%;
+    text-align: center
+}
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
 .info{
     text-align: center;
 }
@@ -112,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #emc_logo {
-    padding: 90px;
+    padding: 70px;
     max-height: 270px;
 }
 
@@ -130,10 +144,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fcopy {
-    bottom: 0;
+    /*bottom: 0;*/
     float: right;
-    position: absolute;
-    right: 15px;
+    /*position: absolute;*/
+    /*right: 15px;*/
+    padding-right: 15px;
+    padding-top: 50px;
     text-align: right;
 }
 
@@ -176,7 +192,12 @@ footer ul li a {
     margin-left: 5px;
 }
 
+#home-top {
+  background-color: #F44336;
+}
+
 .infosection {
+    background-color: #E0E0E0;
     padding-bottom: 50px;
 }
 
@@ -192,6 +213,11 @@ footer ul li a {
    clear: both;
 }
 
+.invisible-photoslide {
+    background-color: transparent;
+    width: 100%;
+}
+
 .job_subhead {
     color: #989b95;
 }
@@ -199,6 +225,10 @@ footer ul li a {
 .jobhead,
 :hover, :active, :focus {
     text-decoration: none;
+}
+
+.jobhead h3 {
+    display: inline-block;
 }
 
 .jobhead:hover,
@@ -210,10 +240,10 @@ footer ul li a {
 .landing-blog {
     height: inherit;
     padding-bottom: 50px;
+    padding-top: 20px;
 }
 
 .landing-top {
-    background-color: #F44336;
     height: inherit;
     padding-top: 65px;
     padding-bottom: 50px;
@@ -248,7 +278,6 @@ footer ul li a {
 .navtext:focus,
 .navtext:visited {
     background-color: transparent;
-    color: #fff;
     text-decoration: none;
     outline: none;
 }
@@ -436,6 +465,19 @@ hr.post_list {
         right: 0;
         text-align: left;
     }
+
+    #navb {
+        background-color: #FFF;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .nav li a{
+        color: #60695C;
+    }
+
+    .navbar-toggle .icon-bar {
+        background-color: #60695C;
+    }
 }
 
 @media screen and (min-width: 995px) {  /*large screens*/
@@ -470,7 +512,7 @@ hr.post_list {
     }
 }
 
-@media screen and (max-width: 995px) {  /*small screens*/
+@media screen and (max-width: 995px) {  /*semi-small screens*/
     .job_description, .project_description {
         margin: 40px auto 0;
         padding-top: 0;
