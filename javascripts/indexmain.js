@@ -4,7 +4,7 @@
  */
 
 var topslide;
-const photo_dims = [[]];
+var photo_dims = [[]];
 const windowheight = window.innerHeight;
 const topslide_height = windowheight;
 const s_factor = Math.round((windowheight/topslide_height)*100)/100;
@@ -13,6 +13,7 @@ const s_factor = Math.round((windowheight/topslide_height)*100)/100;
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
+// Thanks to http://davidwalsh.name/function-debounce
 function debounce(func, wait, immediate) {
     var timeout;
     return function() {
@@ -35,10 +36,11 @@ var calc_consts = function() {
 
     //slide_photos
     var slide_photos = document.getElementsByClassName('photoslide');
-
     for (var p=0; p < slide_photos.length; p++) {
-        var indiv_photo_dim = [slide_photos[p].offsetTop, slide_photos[p].clientHeight-60];
-        photo_dims.push(indiv_photo_dim);
+        var indiv_photo_dim = [slide_photos[p].offsetTop, slide_photos[p].clientHeight];
+        if (slide_photos[p].offsetTop > 0){
+            photo_dims.push(indiv_photo_dim);
+        }
     }
     //end slide_photos
 };
@@ -77,6 +79,7 @@ var calc_cphoto = function() {
 };
 
 var main = function() {
+    $(window).scrollTop(0);
     window.addEventListener("resize", calc_cphoto);
     window.addEventListener("resize", calc_consts);
 
@@ -91,36 +94,22 @@ var main = function() {
     var topfade = document.getElementById('home-fade');
     var stickies = document.getElementsByClassName('sticky');
 
-    var def_nshow = function() {
-        if (window.innerWidth < 768){
-            try{
-                document.getElementById('naveric').hidden = false;
+    var nav_min = function(color, minimize) {
+        if (window.innerWidth >= 500) {
+            var navbar = document.getElementById('navb');
+            if (color == undefined) {
+                color = "#FFF";
             }
-            catch(err){}
-        }
-        nvb.css({
-            "background-color": "#FFF",
-            "box-shadow": "0 0 10px rgba(0,0,0,0.5)",
-        });
-        $('.navtext').css('color','#07bdfd');
-        $('.icon-bar').css('background-color','#60695C');
-    };
+            navbar.style.backgroundColor = color;
 
-    var def_nhide = function() {
-        var nvb_height = Number(nvb.css('height').replace("px",""));
-        if (window.innerWidth < 768){
-            try{
-                document.getElementById('naveric').hidden = true;
+            if (minimize || minimize == undefined) {
+                if (navbar.className.indexOf('navmin') < 0) {
+                    navbar.className = navbar.className + " navmin";
+                }
             }
-            catch(err){}
-        }
-        if (nvb_height <= nvb_orig_height) {
-            nvb.css({
-                "background-color": "transparent",
-                "box-shadow": "none",
-            });
-            $('.navtext').css('color','');
-            $('.icon-bar').css('background-color','');
+            else {
+                navbar.className = navbar.className.replace(" navmin", "");
+            }
         }
     };
 
@@ -143,19 +132,18 @@ var main = function() {
         //End TopSlide
 
         if (document.getElementById('navb').className != "navbar navbar-static-top"){
-            if (win_stop >= windowheight - 80) {
-                def_nshow();
+            if (win_stop >= windowheight - 30) {
+                //def_nshow();
+                nav_min("#07bdfd");
                 if (win_stop >= windowheight) {
                     document.getElementById('home-top').style.display = "none";
                 }
                 if (win_stop >= codelist.offsetTop && win_stop <= (codelist.offsetTop + codelist.clientHeight)) {
-                    $('.navtext').css('color','#60695C');
+                    nav_min('#60695C');
                 }
             }
             else if (navopen == false || win_stop <= windowheight - 80){
-                if (window.innerWidth >= 500) {
-                    def_nhide();
-                }
+                nav_min("transparent",false);
                 if (win_stop <= windowheight) {
                     document.getElementById('home-top').style.display = "";
                 }
@@ -165,10 +153,8 @@ var main = function() {
             }
             //hide navbar background
             for (var i=0; i < photo_dims.length; i++) {
-                if (win_stop >= photo_dims[i][0]-60 && win_stop <= (photo_dims[i][0] + photo_dims[i][1])) {
-                    if (window.innerWidth >= 500) {
-                        def_nhide();
-                    }
+                if (win_stop >= photo_dims[i][0] && win_stop <= (photo_dims[i][0] + photo_dims[i][1])) {
+                    nav_min("#CCC");
                 }
             }
             //end hide navbar background
@@ -176,6 +162,12 @@ var main = function() {
 
         //stickies
         for (var s=0; s < stickies.length; s++) {
+            //fix load-on-photo-navbar-color bug step2
+            for (var st=0; st < photo_dims.length; st++) {
+                if (photo_dims[st][1] == stickies[s].children[0].naturalHeight){
+                    photo_dims[st][1] = stickies[s].clientHeight;
+                }
+            }
             const stickytop = stickies[s].nextElementSibling.offsetTop;
             if (win_stop >= stickies[s].offsetTop) {
                 var t_offset = stickies[s].offsetTop;
@@ -188,6 +180,14 @@ var main = function() {
                 }
                 if (sfactor >= stickystart && sfactor <= (Math.max(t_offset, stickytop) + stickies[s].clientHeight)) {
                     stickies[s].style.top = (-sfactor).toString() + "px";
+                    //Fixes tearing on load
+                    if (stickies[s].clientHeight == stickies[s].children[0].naturalHeight) {
+                        stickies[s].style.top = -((win_stop - t_offset)*0.2).toString() + "px";
+                        //load-on-photo-navbar-color bug step1
+                        if (t_offset > 0) {
+                            photo_dims = [[t_offset, stickies[s].clientHeight]];
+                        }
+                    }
                 }
                 if (win_stop <= stickytop) {
                     stickies[s].style.position = "relative";
