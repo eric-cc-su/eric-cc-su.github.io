@@ -98,7 +98,6 @@ var main = function() {
     var trylast = 0;
 
     topslide = document.getElementById('home-top');
-    var topfade = document.getElementById('home-fade');
     var stickies = document.getElementsByClassName('sticky');
 
     var nav_min = function(color, minimize) {
@@ -127,84 +126,100 @@ var main = function() {
     window.onscroll = debounce(function() {
         var win_stop = $(window).scrollTop();
         var scroll_delta = win_stop - trylast;
+        if (window.innerWidth >= 500) {
+            //Progress bar
+            var progress = (win_stop / body_scroll_height) * 100;
+            brobar.style.width = progress.toString() + "%";
 
-        //Progress bar
-        var progress = (win_stop / body_scroll_height)*100;
-        brobar.style.width = progress.toString() + "%";
+            //TopSlide stuff
+            var ovalue = 1 - ((win_stop * 1.3) / topslide_height);
+            var work_text = document.getElementById("work").children;
+            if (ovalue >= 0) {
+                topslide.style.opacity = ovalue.toString();
+                for (var i = 0; i < work_text.length; i++) {
 
-        //TopSlide stuff
-        var ovalue = Math.round( ((topslide_height-win_stop)/topslide_height)*100 )/100;
-        if (ovalue >= 0) {
-            topfade.style.opacity = ovalue.toString();
-        }
-
-        if (windowheight < topslide_height) {
-            topslide.style.top = (-(win_stop*s_factor)).toString() + "px";
-        }
-        else { topslide.style.top = (-(win_stop*0.4)).toString() + "px"; }
-        //End TopSlide
-
-        if (document.getElementById('navb').className != "navbar navbar-static-top"){
-            if (win_stop >= windowheight - 30) {
-                nav_min("#60695C");
-                bcolor_transform(brobar, "#AAA");
-                if (win_stop >= windowheight) {
-                    document.getElementById('home-top').style.display = "none";
                 }
             }
-            else if (navopen == false || win_stop <= windowheight - 80){
-                nav_min("transparent",false);
-                if (win_stop <= windowheight) {
-                    bcolor_transform(brobar, "transparent");
-                    document.getElementById('home-top').style.display = "";
-                }
+            else if (ovalue < 0) {
+                console.log("negative");
+                topslide.style.opacity = "0";
+            }
+
+            if (windowheight < topslide_height) {
+                topslide.style.top = (-(win_stop * s_factor)).toString() + "px";
             }
             else {
-                console.log(navopen);
+                topslide.style.top = (-(win_stop * 0.4)).toString() + "px";
             }
-        }
+            //End TopSlide
 
-        //stickies
-        for (var s=0; s < stickies.length; s++) {
-            //fix load-on-photo-navbar-color bug step2
-            for (var st=0; st < photo_dims.length; st++) {
-                if (photo_dims[st][1] == stickies[s].children[0].naturalHeight){
-                    photo_dims[st][1] = stickies[s].clientHeight;
-                }
-            }
-            const stickytop = stickies[s].nextElementSibling.offsetTop;
-            if (win_stop >= stickies[s].offsetTop) {
-                var t_offset = stickies[s].offsetTop;
-                var sfactor = Math.min(Math.max((win_stop-stickytop)*0.2, 0), stickies[s].clientHeight*0.2);
-                stickies[s].style.position = "fixed";
-                stickies[s].nextElementSibling.style.display = "";
-                if (sfactor != (win_stop - stickytop)*0.2 &&  (win_stop - stickytop)*0.2 > (win_stop - stickies[s].offsetTop)*0.2) {
-                    sfactor = scroll_delta*1.3;
-                    stickystart = sfactor;
-                }
-                if (sfactor >= stickystart && sfactor <= (Math.max(t_offset, stickytop) + stickies[s].clientHeight)) {
-                    stickies[s].style.top = (-sfactor).toString() + "px";
-                    //Fixes tearing on load
-                    if (stickies[s].clientHeight == stickies[s].children[0].naturalHeight) {
-                        stickies[s].style.top = -((win_stop - t_offset)*0.2).toString() + "px";
-                        //load-on-photo-navbar-color bug step1
-                        if (t_offset > 0) {
-                            photo_dims = [[t_offset, stickies[s].clientHeight]];
-                        }
+            if (document.getElementById('navb').className != "navbar navbar-static-top") {
+                if (ovalue < 0) {
+                    nav_min("#60695C");
+                    bcolor_transform(brobar, "#F44336");
+                    document.getElementById('home-top').style.display = "";
+                    console.log("hello");
+                    if (win_stop >= windowheight) {
+                        document.getElementById('home-top').style.display = "none";
                     }
                 }
-                if (win_stop <= stickytop) {
-                    stickies[s].style.position = "relative";
-                    stickies[s].style.top = "";
-                    stickies[s].nextElementSibling.style.display = "none";
+                else if (navopen == false || win_stop <= windowheight - 80) {
+                    nav_min("transparent", false);
+                    nvb.css("box-shadow","none");
+                    $('.navtext').css('color','');
+                    $('.icon-bar').css('background-color','');
+
+                    if (win_stop <= windowheight) {
+                        bcolor_transform(brobar, "transparent");
+                        document.getElementById('home-top').style.display = "";
+                    }
                 }
-                else if (win_stop > (Math.max(t_offset, stickytop) + stickies[s].clientHeight)){
-                    sfactor = stickies[s].clientHeight*0.2;
+                else {
+                    console.log(navopen);
                 }
             }
-            console.log(win_stop, stickies[s].offsetTop);
+
+            //stickies
+            for (var s = 0; s < stickies.length; s++) {
+                //fix load-on-photo-navbar-color bug step2
+                for (var st = 0; st < photo_dims.length; st++) {
+                    if (photo_dims[st][1] == stickies[s].children[0].naturalHeight) {
+                        photo_dims[st][1] = stickies[s].clientHeight;
+                    }
+                }
+                const stickytop = stickies[s].nextElementSibling.offsetTop;
+                if (win_stop >= stickies[s].offsetTop) {
+                    var t_offset = stickies[s].offsetTop;
+                    var sfactor = Math.min(Math.max((win_stop - stickytop) * 0.2, 0), stickies[s].clientHeight * 0.2);
+                    stickies[s].style.position = "fixed";
+                    stickies[s].nextElementSibling.style.display = "";
+                    if (sfactor != (win_stop - stickytop) * 0.2 && (win_stop - stickytop) * 0.2 > (win_stop - stickies[s].offsetTop) * 0.2) {
+                        sfactor = scroll_delta * 1.3;
+                        stickystart = sfactor;
+                    }
+                    if (sfactor >= stickystart && sfactor <= (Math.max(t_offset, stickytop) + stickies[s].clientHeight)) {
+                        stickies[s].style.top = (-sfactor).toString() + "px";
+                        //Fixes tearing on load
+                        if (stickies[s].clientHeight == stickies[s].children[0].naturalHeight) {
+                            stickies[s].style.top = -((win_stop - t_offset) * 0.2).toString() + "px";
+                            //load-on-photo-navbar-color bug step1
+                            if (t_offset > 0) {
+                                photo_dims = [[t_offset, stickies[s].clientHeight]];
+                            }
+                        }
+                    }
+                    if (win_stop <= stickytop) {
+                        stickies[s].style.position = "relative";
+                        stickies[s].style.top = "";
+                        stickies[s].nextElementSibling.style.display = "none";
+                    }
+                    else if (win_stop > (Math.max(t_offset, stickytop) + stickies[s].clientHeight)) {
+                        sfactor = stickies[s].clientHeight * 0.2;
+                    }
+                }
+            }
+            //end stickies
         }
-        //end stickies
 
         trylast = win_stop;
     }, 0.5);
@@ -222,14 +237,15 @@ var main = function() {
             $('.icon-bar').css('background-color','#60695C');
         }
         else {
-            if ($(window).scrollTop() == 0) {
+            //if ($(window).scrollTop() == 0 || window.innerWidth <= 500) {
+            if (window.innerWidth <= 500) {
                 navopen = false;
                 try{
                     document.getElementById('naveric').hidden = true;
                 }
                 catch(err){}
-                nvb.stop().animate({backgroundColor:"transparent"}, {duration:300});
-                nvb.css("box-shadow", "none");
+                nvb.stop().animate({backgroundColor:""}, {duration:300});
+                //nvb.css("box-shadow", "none");
                 $('.navtext').css('color','');
                 $('.icon-bar').css('background-color','');
             }

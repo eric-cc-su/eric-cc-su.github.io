@@ -496,6 +496,10 @@ hr.post_list {
     .navbar-toggle .icon-bar {
         background-color: #60695C;
     }
+
+    .sticky {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 995px) {  /*large screens*/

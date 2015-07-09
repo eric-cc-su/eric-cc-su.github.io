@@ -1,3 +1,15 @@
+=begin
+
+CatTag
+
+author: eric-cc-su
+
+This plugin is built specifically for jekyll static blogs run through GitHub Pages since GitHub runs in safe mode.
+This plugin needs to be run in development to apply changes. CatTag will read all blog posts and categorize
+each blog post into their respective categories and tags, creating new categories and tags as necessary.
+
+=end
+
 require 'fileutils'
 
 module CatTag
