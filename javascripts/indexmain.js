@@ -3,11 +3,12 @@
  * Takes care of toolbar animation on scroll
  */
 
+var body_scroll_height;
 var topslide;
 var photo_dims = [[]];
-const windowheight = window.innerHeight;
-const topslide_height = windowheight;
-const s_factor = Math.round((windowheight/topslide_height)*100)/100;
+var s_factor;
+var windowheight = window.innerHeight;
+var topslide_height = windowheight;
 
 // Returns a function, that, as long as it continues to be invoked, will not
 // be triggered. The function will be called after it stops being called for
@@ -27,12 +28,13 @@ function debounce(func, wait, immediate) {
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
     };
-};
+}
 
 var calc_consts = function() {
-    const windowheight = window.innerHeight;
-    const topslide_height = topslide.clientHeight;
-    const s_factor = Math.round((windowheight/topslide_height)*100)/100;
+    windowheight = window.innerHeight;
+    topslide_height = topslide.clientHeight;
+    s_factor = Math.round((windowheight/topslide_height)*100)/100;
+    body_scroll_height = document.getElementById("index-body").scrollHeight - windowheight;
 
     //slide_photos
     var slide_photos = document.getElementsByClassName('photoslide');
@@ -50,11 +52,12 @@ var calc_cphoto = function() {
 
     for (var i=0; i < photos.length; i++) {
         var child_img = photos[i].children[0];
+        photos[i].style.height = (windowheight + 60).toString() + "px";
+
         var child_ar = child_img.naturalWidth/child_img.naturalHeight;
         var invisidiv = photos[i].nextSibling.nextSibling;
 
 
-        photos[i].style.height = (windowheight + 60).toString() + "px";
         if (window.innerWidth >= 500) {
             if ((window.innerWidth/(window.innerHeight+60)) >= child_ar) {
             photos[i].children[0].style.maxWidth = "100%";
@@ -78,18 +81,22 @@ var calc_cphoto = function() {
     }
 };
 
+function bcolor_transform(element, color) {
+    element.style.backgroundColor = color;
+}
+
 var main = function() {
     $(window).scrollTop(0);
-    window.addEventListener("resize", calc_cphoto);
-    window.addEventListener("resize", calc_consts);
+    window.addEventListener("resize", function() {
+        calc_consts();
+        calc_cphoto();
+    });
 
     var nvb = $('#navb');
-    var nvb_orig_height = Number(nvb.css('height').replace("px",""));
 
     var navopen = false;
     var trylast = 0;
 
-    var codelist = document.getElementById('code');
     topslide = document.getElementById('home-top');
     var topfade = document.getElementById('home-fade');
     var stickies = document.getElementsByClassName('sticky');
@@ -100,6 +107,7 @@ var main = function() {
             if (color == undefined) {
                 color = "#FFF";
             }
+
             navbar.style.backgroundColor = color;
 
             if (minimize || minimize == undefined) {
@@ -114,16 +122,21 @@ var main = function() {
     };
 
     var stickystart = 0;
+    var brobar = document.getElementsByClassName('brogress-top')[0];
+
     window.onscroll = debounce(function() {
         var win_stop = $(window).scrollTop();
         var scroll_delta = win_stop - trylast;
+
+        //Progress bar
+        var progress = (win_stop / body_scroll_height)*100;
+        brobar.style.width = progress.toString() + "%";
 
         //TopSlide stuff
         var ovalue = Math.round( ((topslide_height-win_stop)/topslide_height)*100 )/100;
         if (ovalue >= 0) {
             topfade.style.opacity = ovalue.toString();
         }
-
 
         if (windowheight < topslide_height) {
             topslide.style.top = (-(win_stop*s_factor)).toString() + "px";
@@ -133,31 +146,22 @@ var main = function() {
 
         if (document.getElementById('navb').className != "navbar navbar-static-top"){
             if (win_stop >= windowheight - 30) {
-                //def_nshow();
-                nav_min("#07bdfd");
+                nav_min("#60695C");
+                bcolor_transform(brobar, "#AAA");
                 if (win_stop >= windowheight) {
                     document.getElementById('home-top').style.display = "none";
-                }
-                if (win_stop >= codelist.offsetTop && win_stop <= (codelist.offsetTop + codelist.clientHeight)) {
-                    nav_min('#60695C');
                 }
             }
             else if (navopen == false || win_stop <= windowheight - 80){
                 nav_min("transparent",false);
                 if (win_stop <= windowheight) {
+                    bcolor_transform(brobar, "transparent");
                     document.getElementById('home-top').style.display = "";
                 }
             }
             else {
                 console.log(navopen);
             }
-            //hide navbar background
-            for (var i=0; i < photo_dims.length; i++) {
-                if (win_stop >= photo_dims[i][0] && win_stop <= (photo_dims[i][0] + photo_dims[i][1])) {
-                    nav_min("#CCC");
-                }
-            }
-            //end hide navbar background
         }
 
         //stickies
@@ -198,6 +202,7 @@ var main = function() {
                     sfactor = stickies[s].clientHeight*0.2;
                 }
             }
+            console.log(win_stop, stickies[s].offsetTop);
         }
         //end stickies
 

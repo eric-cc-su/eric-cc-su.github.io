@@ -48,6 +48,11 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 1px 3px 2px #BDBDBD;
 }
 
+.brogress-top {
+    position: fixed;
+    top: 0;
+}
+
 .center-p {
     margin: 0 auto;
     width: 70%;
@@ -281,6 +286,10 @@ footer ul li a {
 
 .navmin:hover {
     top: 0;
+}
+
+.navmin:hover .brogress-top {
+    display: none;
 }
 
 .navtext,
