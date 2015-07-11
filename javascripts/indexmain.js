@@ -32,7 +32,9 @@ function debounce(func, wait, immediate) {
 
 var calc_consts = function() {
     windowheight = window.innerHeight;
-    topslide_height = topslide.clientHeight;
+    if (topslide.clientHeight > 0) {
+        topslide_height = topslide.clientHeight;
+    }
     s_factor = Math.round((windowheight/topslide_height)*100)/100;
     body_scroll_height = document.getElementById("index-body").scrollHeight - windowheight;
 
@@ -141,7 +143,6 @@ var main = function() {
                 }
             }
             else if (ovalue < 0) {
-                console.log("negative");
                 topslide.style.opacity = "0";
             }
 
@@ -158,7 +159,6 @@ var main = function() {
                     nav_min("#60695C");
                     bcolor_transform(brobar, "#F44336");
                     document.getElementById('home-top').style.display = "";
-                    console.log("hello");
                     if (win_stop >= windowheight) {
                         document.getElementById('home-top').style.display = "none";
                     }
