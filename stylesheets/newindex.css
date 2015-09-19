@@ -550,6 +550,10 @@ hr.post_list {
         text-align: right;
     }
 
+    .job_description, .project_description {
+      text-align: left;
+    }
+
     #midstrip {
         background-color: rgba(121, 255, 49, 0.51);
         padding: 30px;
