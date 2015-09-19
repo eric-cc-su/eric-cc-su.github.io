@@ -3,7 +3,7 @@ body {
     color:#373737;
     background: #E0E0E0;
     font-size: 16px;
-    font-family: 'Open Sans','Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+    font-family: 'Lato','Open Sans','Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
@@ -11,7 +11,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
     color:#222222;
-    font-family: 'Oswald','Open Sans','Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+    font-family: 'Lato','Open Sans','Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
     letter-spacing: -1px;
 }
 
@@ -131,14 +131,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #emc_logo {
-    margin: 70px;
-    max-height: 115px;
+    padding: 70px;
+    max-height: 270px;
 }
 
 .face {
     border: none;
     border-radius: 50%;
-    max-width: 150px;
+    max-width: 200px;
     margin: 10px 0 10px 0;
 
     box-shadow: none;
@@ -198,14 +198,7 @@ footer ul li a {
 }
 
 #home-top {
-    padding-top: 65px;
-  /*background-color: #F44336;*/
-}
-
-.hidden-face {
-    display: none;
-    margin-top: -60px;
-    opacity: 0;
+  background-color: #F44336;
 }
 
 .infosection {
@@ -215,7 +208,6 @@ footer ul li a {
 
 .infosection-footer {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 /*thanks to http://stackoverflow.com/questions/218760/how-do-you-keep-parents-of-floated-elements-from-collapsing */
@@ -231,13 +223,8 @@ footer ul li a {
     width: 100%;
 }
 
-.job_details {
-    text-align: left;
-}
-
 .job_subhead {
     color: #989b95;
-    font-family: 'Open Sans','Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
 }
 
 .jobhead,
@@ -263,7 +250,7 @@ footer ul li a {
 
 .landing-top {
     height: inherit;
-    /*padding-top: 65px;*/
+    padding-top: 65px;
     padding-bottom: 50px;
     text-align: center;
 }
@@ -290,11 +277,6 @@ footer ul li a {
 
 .nav li a:hover {
     background-color: transparent;
-}
-
-#navd {
-    margin: 0;
-    padding: 0;
 }
 
 .navmin {
@@ -419,7 +401,7 @@ hr.post_list {
     background-color: #c35acf;
 }
 
-#linkedin :hover, #resume :hover {
+#linkedin :hover {
     background-color: #07bdfd ;
 }
 
@@ -432,9 +414,11 @@ hr.post_list {
 }
 
 #project_title {
-  margin: 30px 0;
-  font-size: 90px;
+  margin: 0;
+  color: #fff;
+  font-size: 67px;
   font-weight: 300;
+  text-shadow: #111 0 0 10px;
 }
 
 
@@ -445,6 +429,7 @@ hr.post_list {
 }
 
 .right-skill ul {
+    font-size: 20px;
     list-style: none;
 }
 
@@ -460,15 +445,6 @@ hr.post_list {
     margin-top: 0;
     padding-top: 30px;
     text-align: center;
-}
-
-#showHome {
-    color: #BDBDBD;
-    padding-bottom: 0;
-}
-
-#navd div div ul :hover {
-    color: #07bdfd;
 }
 
 .smlogo {
@@ -532,10 +508,11 @@ hr.post_list {
     }
 
     .center-p {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .left-title h2 {
+        margin: 0;
         text-align: right;
     }
 
@@ -596,31 +573,4 @@ hr.post_list {
         padding-left: 0;
         text-align: center;
     }
-}
-
-#midstrip {
-    background-color: rgba(121, 255, 49, 0.51);
-    bottom: 50px;
-    margin-top: 60px;
-    padding: 30px;
-}
-
-#midstrip ul {
-    list-style: none;
-    padding: 0;
-}
-
-#midstrip ul li {
-    display: inline-block;
-    font-size: 20px;
-    padding: 0 50px;
-}
-
-#midstrip ul li a {
-    color: #000;
-    text-decoration: none;
-}
-
-#midstrip ul li a:hover {
-    color: #a9aba7;
 }
