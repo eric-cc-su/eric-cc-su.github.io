@@ -1,0 +1,167 @@
+---
+---
+
+<!DOCTYPE html>
+<!--Much credit to Andrew Munsell's Jekyll tutorial: http://learn.andrewmunsell.com/learn/jekyll-by-example/tutorial-->
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Eric Su">
+    <meta name="description" content="Eric Su of Boston, MA. Programmer, Photographer and Triathlete.">
+    <meta name="copyright" content="Eric Su">
+    <meta name="keywords" content="Eric Su, Github, Boston, Massachusetts, programmer, photographer, triathlete">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Lato|Open+Sans'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/newindex.css">
+    <script type="text/javascript"
+               src="../javascripts/infoslide.js"></script>
+    <script type="text/javascript" src="../javascripts/indexmain.js"></script>
+    <title>Eric Su</title>
+
+    <!-- Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-63928844-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body>
+{% include navbar-static.html %}
+<div class="col-md-12" id="index-body" style="padding: 0 margin-top: -30px;">
+    <div class="navbar navbar-static-top" id="navd" style="display: none">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav links" style="float: left;">
+                    <li><a href="/"
+                           title="Home" id="showHome"><span
+                            class="glyphicon glyphicon-menu-left"
+                            aria-hidden="true"
+                            style="vertical-align: middle; top:-1px;"></span>
+                        Back
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="landing fit-info" style="width: 100%; display: inline-block">
+        <h1 class="section-title">Projects</h1>
+
+        <div class="col-md-12 trail">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 graphics" style="padding: 0 5%;">
+                <a href="https://github.com/eric-cc-su/locker" class="trail">
+                    <img src="../images/index/locker.png" alt="Locker" class="img-responsive center-block project_image">
+                </a>
+            </div>
+            <div class="col-md-5 project_description">
+                <a href="https://github.com/eric-cc-su/locker" class="jobhead">
+                    <h3>Locker</h3>
+                </a>
+                <h4 class="job_subhead">Python</h4>
+                <p>
+                    A Python console program to encrypt and decrypt passwords and/or files using the Python <a href="https://cryptography.io/en/latest/" alt="Python Cryptography library">cryptography</a> library.
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="col-md-12 trail">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 graphics">
+                <a href="http://chefversity.com/" class="trail">
+                    <img src="../images/index/chefversity.png" alt="chefversity" class="img-responsive center-block project_image">
+                </a>
+            </div>
+            <div class="col-md-5 project_description">
+                <a href="https://bitbucket.org/eric-cc-su/staticnbc" class="jobhead">
+                    <h3>Chefversity Teaser Site</h3>
+                </a>
+                <h4 class="job_subhead">HTML, CSS, Javascript, jQuery, Bootstrap</h4>
+                <p>
+                    A static custom teaser website designed for Chefversity.com. The entirety of the website was
+                    written from scratch using the Bootstrap framework.
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="col-md-12 trail">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 graphics" style="padding: 0 5%;">
+                <a href="http://ericsu.me/blog" class="trail">
+                    <img src="../images/index/ericsu.png" alt="Eric Su" class="img-responsive center-block project_image">
+                </a>
+            </div>
+            <div class="col-md-5 project_description">
+                <a href="https://github.com/eric-cc-su/eric-cc-su.github.io" class="jobhead">
+                    <h3>ericsu.me Personal Website/Blog</h3>
+                </a>
+                <h4 class="job_subhead">HTML, CSS, Javascript, jQuery, Bootstrap, (Ruby)</h4>
+                <p>
+                    This website was produced using the Jekyll static content generator and Liquid template engine
+                    via GitHub Pages. The entire front-end has been written from scratch and a <a href="http://ericsu.me/tech/2015/06/02/jekyll-category-tag-automation.html">developer-side
+                    Ruby Jekyll plugin</a> was written to automate the implementation of tags and
+                    categories.
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="col-md-12 trail project_description_center">
+            <a href="https://github.com/eric-cc-su/MoveIt" class="jobhead">
+                <h3>MoveIt File Utility</h3>
+            </a>
+            <h4 class="job_subhead">Python</h4>
+            <p>
+                A script with a graphical user interface that easily transfers and backs up files to multiple
+                directories</p>
+            <p>
+                MoveIt was conceived in order to automate transferring photos from an SD card to a primary and
+                secondary hard drive, while sorting the photos into different subdirectories based on their creation
+                dates.
+            </p>
+        </div>
+
+        <div class="col-md-12 trail infosection-footer">
+            <a class="proflink" id="github" href="https://github.com/eric-cc-su">
+                <button class="btn btn-group" style="padding: 20px;">
+                    <img src="../images/index/GitHub-Mark-64px.png" alt="GitHub Logo" style="display:inline; height: 40px">
+                    <h3 style="display: inline; vertical-align: middle;">More on GitHub</h3>
+                </button>
+            </a>
+            <a class="proflink" id="github" href="https://gist.github.com/eric-cc-su">
+                <button class="btn btn-group" style="padding: 20px;">
+                    <img src="../images/index/GitHub-Mark-64px.png" alt="GitHub Logo" style="display:inline; height: 40px">
+                    <h3 style="display: inline; vertical-align: middle;">...and GitHub Gist</h3>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    {% include footer.html %}
+</div>
+</body>
+</html>

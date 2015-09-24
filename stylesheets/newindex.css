@@ -507,6 +507,14 @@ hr.post_list {
         text-align: left;
     }
 
+    .hmobile {
+        display: initial;
+    }
+
+    .hnorm {
+        display: none;
+    }
+
     #midstrip {
         padding: 0;
     }
@@ -534,6 +542,16 @@ hr.post_list {
 
     .sticky {
         display: none;
+    }
+}
+
+@media screen and (min-width: 500px) { /*non-phone screens*/
+    .hmobile {
+        display: none;
+    }
+
+    .hnorm {
+        display: initial;
     }
 }
 
