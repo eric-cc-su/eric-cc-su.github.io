@@ -118,3 +118,12 @@
 
 - slug: design
   name: Design
+
+- slug: bar
+  name: Bar
+
+- slug: barcrawl
+  name: Barcrawl
+
+- slug: app
+  name: App
