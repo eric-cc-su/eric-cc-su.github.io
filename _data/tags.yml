@@ -133,3 +133,12 @@
 
 - slug: co-op
   name: Co op
+
+- slug: database
+  name: Database
+
+- slug: mysql
+  name: Mysql
+
+- slug: back-end
+  name: Back end
