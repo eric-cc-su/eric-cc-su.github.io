@@ -4,6 +4,9 @@ category: tech
 tags: [python, django, web-development, MySQL]
 ---
 
+UPDATE: Thanks to reddit user awesomeo1989's idea, I've turned this article into it's own 
+[Git repository](https://github.com/eric-cc-su/common-web-dev-issues) so others can contribute.
+
 So you're having some issues in your web environment. Before you start diving
 deep into documentation and Stack Overflow, check this guide to make sure you're not
 experiencing one of the really simple configuration issues that countless people have most likely experienced
