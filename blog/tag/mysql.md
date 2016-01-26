@@ -1,5 +1,5 @@
 ---
 layout: tag
-tag: mysql
-permalink: /blog/tag/mysql/
+tag: MySQL
+permalink: /blog/tag/MySQL/
 ---
