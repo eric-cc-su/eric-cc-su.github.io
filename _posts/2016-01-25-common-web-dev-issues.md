@@ -13,7 +13,7 @@ experiencing one of the really simple configuration issues that countless people
 before. This is basically a reminder to myself for stupid things that I personally run into, so I might have left
 out some other issues that other developers or other configurations usually run into.
 
-## **General**
+# **General**
 
 ### Browser shows "502 Bad Gateway" 
 
@@ -32,7 +32,7 @@ is being sent to the intended port on your localhost. (My environments typically
 1. Check your credentials: username, host, password
 2. Check the port you're connecting to: `ssh user@host -p 2222` connects through port 2222
 
-## **Django**
+# **Django**
 
 **TIP**: Make sure you set `DEBUG = True` in your settings file if you're testing on your local environment
 
@@ -49,6 +49,14 @@ Then try installing the module with pip or another appropriate package manager.
 
 UNIX: `sudo pip install module`
 
+### Static Files Issues
+
+- Make sure STATIC_URL in your settings file(s) is properly set. Typically to `/static/`
+- Check that your templates call on your static files with `{% load staticfiles %}` at the top of the file
+- Make sure you're not accidentally including your STATIC_URL in your HTML links (e.g. `href="static/css/file.css"`)
+
+[Django docs](https://docs.djangoproject.com/en/1.9/howto/static-files/)
+
 ### MySQL errors
 
 If you've made any changes to your models you will have to make and apply 
@@ -58,7 +66,7 @@ unless you have a custom configuration.
 - make migrations - `python manage.py makemigrations`
 - apply migrations - `python manage.py migrate`
 
-## **MySQL**
+# **MySQL**
 
 ### Can't connect to local MySQL server
 
