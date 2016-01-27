@@ -52,7 +52,7 @@ UNIX: `sudo pip install module`
 ### Static Files Issues
 
 - Make sure STATIC_URL in your settings file(s) is properly set. Typically to `/static/`
-- Check that your templates call on your static files with `{% load staticfiles %}` at the top of the file
+- Check that your templates call on your static files with `{{ "{% load staticfiles" }} %}` at the top of the file
 - Make sure you're not accidentally including your STATIC_URL in your HTML links (e.g. `href="static/css/file.css"`)
 
 [Django docs](https://docs.djangoproject.com/en/1.9/howto/static-files/)
@@ -86,6 +86,9 @@ explicitly tell MySQL to log you in with a username and password using the -u an
 
 **But I swear my credentials are right!** - If you're using a virtual machine, make sure you're SSH'd into your machine
 before you try logging in to MySQL. (Yes, I've done this before)
+
+EDIT: You should also make sure that any users you set up in MySQL have proper permissions to access or edit the
+database you need.
 
 ### "Field Doesn't Have a Default Value"
 
