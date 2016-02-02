@@ -137,9 +137,6 @@
 - slug: database
   name: Database
 
-- slug: mysql
-  name: Mysql
-
 - slug: back-end
   name: Back end
 
@@ -152,5 +149,11 @@
 - slug: web-development
   name: Web development
 
-- slug: MySQL
-  name: Mysql
+- slug: mysql
+  name: MySQL
+
+- slug: migrations
+  name: Migrations
+
+- slug: git
+  name: Git

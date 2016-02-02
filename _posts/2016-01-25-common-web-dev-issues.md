@@ -1,7 +1,7 @@
 ---
 title: Common Web Dev Issues and Solutions
 category: tech
-tags: [python, django, web-development, MySQL]
+tags: [python, django, web-development, mysql]
 ---
 
 UPDATE: Thanks to reddit user awesomeo1989's idea, I've turned this article into it's own 
