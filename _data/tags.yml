@@ -157,3 +157,6 @@
 
 - slug: git
   name: Git
+
+- slug: pycharm
+  name: Pycharm
