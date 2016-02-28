@@ -1,0 +1,144 @@
+a {
+    color: #FFF;
+}
+
+body {
+    font-family: Muli,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #FFF;
+    font-family: Comfortaa,"Poiret One",sans-serif;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #222;
+    text-align: center;
+}
+
+.arrowdown {
+    bottom: 50px;
+    position: absolute;
+    width: 100%;
+}
+
+.arrowdown > h2 {
+    color: #333;
+    margin-bottom: 0;
+}
+
+.arrowdown > a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
+
+.arrowdown > a > .glyphicon-chevron-down:hover {
+    color: #FFF;
+    outline: none;
+}
+
+#fullrt {
+    display: none;
+}
+
+.glyphicon-chevron-down {
+    color: #333;
+}
+
+#mblt li {
+    display: block;
+}
+
+.nav > li {
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.nav > li > a,
+.nav > li > a:focus,
+.nav > li > a:visited, {
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+}
+.nav > li > a:hover,
+.nav > li > a.active {
+    color: #ddd;
+    border-color: transparent;
+    background-color: transparent;
+    outline: none;
+}
+
+.nav > li > a:hover {color: #E7E8DB;}
+.nav > li > a.active {color: #6C756B;}
+
+.navbar-fixed-top {
+    background-color: #555;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+
+.center-content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+    text-align: center;
+}
+
+#home {
+
+}
+
+#pg1 {
+    background-color: #ff8530;
+}
+
+#pg2 {
+    background-color: #8CE742;
+}
+
+#pg4 {
+    background-color: #FDDD4E;
+}
+
+#pg4 > .center-content > h1,
+#pg4 > .center-content > h3 {
+    color: #6C756B;
+}
+
+#pg3 {
+    background-color: #34D7E2;
+}
+
+@media screen and (min-width: 768px) {
+    h1 { font-size: 100px; }
+
+    h3 { font-size: 35px; }
+
+    #fullrt { display: block; }
+    .glyphicon-chevron-down { font-size: 50px; }
+    #mblt { display: none; }
+    .navbar-fixed-top { background-color: transparent; }
+    .navbar-brand { display: none; }
+}
+@media screen and (max-width: 450px) {
+  #navbar { background-color: #555; }
+}

@@ -149,13 +149,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fcopy {
-    /*bottom: 0;*/
-    float: right;
-    /*position: absolute;*/
-    /*right: 15px;*/
-    padding-right: 15px;
-    padding-top: 50px;
-    text-align: right;
+    bottom: 0;
+    /*float: right;*/
+    position: absolute;
+    right: 15px;
+    /*padding-right: 15px;*/
+    /*padding-top: 50px;*/
+    /*text-align: right;*/
 }
 
 footer {
@@ -470,9 +470,22 @@ hr.post_list {
     color: #07bdfd;
 }
 
+.navtext {
+    color: #60695C !important;
+}
+
+.nav > li > a:hover,
+.nav > li > a.current {
+    color: #03A9F4 !important;
+}
+
 .smlogo {
     display: inline-block;
     width: 35px;
+}
+
+.smlogo > img {
+    max-height: 19px;
 }
 
 .tag {
