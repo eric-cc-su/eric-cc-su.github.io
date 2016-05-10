@@ -512,6 +512,13 @@ hr.post_list {
 }
 
 @media screen and (max-width: 500px) {
+    .blog-post {
+        margin-top: 0;
+        padding: 0 15px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
     #fcopy {
         clear: both;
         float: left;
@@ -569,10 +576,6 @@ hr.post_list {
 }
 
 @media screen and (min-width: 995px) {  /*large screens*/
-    .blog-post {
-        width: 650px;
-    }
-
     .center-p {
         font-size: 20px;
     }
