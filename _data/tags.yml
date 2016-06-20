@@ -172,3 +172,15 @@
 
 - slug: virtual-machine
   name: Virtual machine
+
+- slug: JSON
+  name: Json
+
+- slug: dictionaries
+  name: Dictionaries
+
+- slug: dict
+  name: Dict
+
+- slug: dump
+  name: Dump
