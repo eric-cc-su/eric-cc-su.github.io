@@ -11,6 +11,16 @@
     <meta name="keywords" content="Eric Su, Eric C Su, Github, Boston, Massachusetts, Chefversity, developer, programmer, photographer, triathlete, full stack">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta property="og:url"                content="{{ page.url }}" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="{{ page.title }}" />
+    <meta property="og:description"        content="{{ page.excerpt | remove: '<p>' | remove: '</p>' }}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@chefversity">
+    <meta name="twitter:creator" content="@chefversity">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.excerpt | remove: '<p>' | remove: '</p>' }}">
+
     <script src="/javascripts/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
     <!-- Latest compiled and minified CSS -->
