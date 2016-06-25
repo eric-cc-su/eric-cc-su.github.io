@@ -44,7 +44,10 @@ p.category {
     margin: 0 0 10px 10px;
 }
 
-p.stamp {
+p.referrer, p.stamp {
     color: #9E9E9E;
+}
+
+p.stamp {
     display: inline-block;
 }

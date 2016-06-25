@@ -14,13 +14,21 @@
     <meta property="og:url"                content="http://ericsu.me{{ page.url }}" />
     <meta property="og:type"               content="article" />
     <meta property="og:title"              content="{{ page.title }}" />
-    <meta property="og:description"        content="{{ page.excerpt | remove: '<p>' | remove: '</p>' }}" />
+    {% if page.meta_description %}
+        <meta property="og:description"        content="{{ page.meta_description }}" />
+    {% else %}
+        <meta property="og:description"        content="{{ page.excerpt | remove: '<p>' | remove: '</p>' }}" />
+    {% endif %}
     <meta property="og:image"              content="http://ericsu.me/images/esu2.jpg" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@chefversity">
     <meta name="twitter:creator" content="@chefversity">
     <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.excerpt | remove: '<p>' | remove: '</p>' }}">
+    {% if page.meta_description %}
+        <meta property="twitter:description"        content="{{ page.meta_description }}" />
+    {% else %}
+        <meta property="twitter:description"        content="{{ page.excerpt | remove: '<p>' | remove: '</p>' }}" />
+    {% endif %}
     <script src="/javascripts/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
     <!-- Latest compiled and minified CSS -->

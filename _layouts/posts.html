@@ -48,6 +48,12 @@ layout: blog
                  style="margin-right: 2px"><span class="label label-{{post.category}}">{{post.category | capitalize}}</span></a>
         </p>
     {% endif %}
+    {% if post.referrer %}
+        <p class="referrer" style="margin-bottom: 0;margin-top: 0;">{{ post.referrer }}</p>
+    {% endif %}
+    {% if post.referrer_author %}
+        <p class="referrer">{{ post.referrer_author }}</p>
+    {% endif %}
     {{ content }}
     <p id="post-meta" style="margin-top: 20px">{{ tags_content }}</p>
     <script>
