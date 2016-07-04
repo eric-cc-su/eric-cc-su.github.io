@@ -6,8 +6,9 @@ mtime: 15:11
 ---
 
 As if I needed another article on why I'm so excited to have a Mac now, here are my thoughts on why Microsoft 
-screwed up so badly with Windows and how I moved on to buy a new Macbook running OS X. This is a continuation of 
-[part 1]({% post_url 2015-06-09-os-x-upgrade %}) 
+screwed up so badly with Windows and how I moved on to buy a new Macbook running OS X. 
+
+You can read [part 1 here]({% post_url 2015-06-09-os-x-upgrade %})
 
 ##Linux/UNIX
 

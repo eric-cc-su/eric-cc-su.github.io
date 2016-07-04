@@ -4,8 +4,9 @@ category: tech
 tags: [python, django, web-development, reactjs]
 ---
 
-If you're familiar with the Javascript community there's a chance you've heard of [ReactJS](https://facebook.github.io/react/),
-a Javascript library developed by Facebook. It's supposed to make for quick front end development using a virtual DOM of sorts.
+If you're familiar with the Javascript community, there's a chance you've heard of ReactJS, a Javascript
+library developed by Facebook. It's supposed to make for quick front end development using a virtual DOM of sorts.
+
 ReactJS tells you [how to get started](https://facebook.github.io/react/docs/getting-started.html)
 and they offer a [tutorial here](https://facebook.github.io/react/docs/tutorial.html) but they basically assume you 
 develop with NodeJS. I wanted to integrate ReactJS with my Django project and for those who are like me and are not 

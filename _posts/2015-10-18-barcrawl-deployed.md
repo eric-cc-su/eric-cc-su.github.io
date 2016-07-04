@@ -4,6 +4,8 @@ category: tech
 tags: [website, bar, barcrawl, app]
 ---
 
+I am pleased to announce that gobarcrawl.com has become official!
+
 In my [previous post]({% post_url 2015-10-16-barcrawl-announcement %})
 announcing the Barcrawl project, I mentioned that a web app was in the works
 to create a bar crawl route based on the most popular bars found by Yelp and

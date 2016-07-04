@@ -5,9 +5,10 @@ tags: [gay-marriage, gay-rights]
 mtime: 12:46
 ---
 
-Yesterday I wrote about [why the opposing justices on the Supreme Court voted against the decision to legalize gay marriage]({% post_url 2015-06-26-gay-marriage-decision %}).
-If you read the article, it explains that the justices primarily opposed the
-decision because they did not think that the Supreme Court should have the power
+Yesterday I wrote about why the opposing justices on the Supreme Court voted against the decision to legalize gay marriage.
+
+If you [read the article]({% post_url 2015-06-26-gay-marriage-decision %}), it explains that the justices 
+primarily opposed the decision because they did not think that the Supreme Court should have the power
  to make a decision about marriage for the entire nation. There seems to be
  little or no indication that the opposing justices were opposed to the idea of
  gay marriage.

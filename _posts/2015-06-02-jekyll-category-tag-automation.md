@@ -5,9 +5,9 @@ tags: [jekyll, programming, automation, ruby, tags, categories]
 mtime: 12:00
 ---
 
-This website and blog is built with the static web page generator
-[Jekyll](http://jekyllrb.com/) and published through GitHub Pages. Jekyll is a blog aware static site generator that provides support for tags and categories, but this is a feature that needs to be manually implemented
-by the user.
+This website and blog is built with Jekyll, the static web page generator, and published through GitHub Pages. 
+Jekyll is a blog aware static site generator that provides support for tags and categories, but this is a feature 
+that needs to be manually implemented by the user.
 
 I used instructions and code provided by
 [Minddust](http://www.minddust.com/post/tags-and-categories-on-github-pages/) to put together the infrastructure

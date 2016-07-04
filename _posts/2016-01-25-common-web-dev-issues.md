@@ -3,6 +3,7 @@ title: Common Web Dev Issues and Solutions
 category: tech
 tags: [python, django, web-development, mysql]
 ---
+<p></p>
 
 UPDATE: Thanks to reddit user awesomeo1989's idea, I've turned this article into it's own 
 [Git repository](https://github.com/eric-cc-su/common-web-dev-issues) so others can contribute.

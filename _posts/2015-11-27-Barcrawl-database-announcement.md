@@ -6,7 +6,7 @@ tags: [barcrawl, database, mysql, back-end]
 
 I am pleased to announce that I have started developing a database back-end for
 the Barcrawl web app and have been making good progress. Since I have deployed
-Barcrawl using [Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
+Barcrawl using Elastic Beanstalk
  on Amazon AWS, I am limited to a MySQL database. But that is not a problem
  since my only previous experience is in MySQL. This database is meant to 
  reduce the application's dependency on API calls in the Python back-end. This

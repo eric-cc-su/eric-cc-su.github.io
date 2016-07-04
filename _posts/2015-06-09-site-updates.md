@@ -5,7 +5,7 @@ tags: [sotw, state-of-the-website, update]
 mtime: 14:10
 ---
 
-The exciting news today is that the website is now being hosted on the custom domain (ericsu.me)[http://ericsu.me/]
+The exciting news today is that the website is now being hosted on the custom domain ericsu.me
 and that gems have been added to utilize GitHub Pages' support plugins! The plugins include support for emojis 
 :smile:, @ mentions, and page redirection. In addition, a sitemap has also been generated 
 automatically in the background by the jekyll-sitemap plugin.

@@ -4,8 +4,9 @@ category: tech
 tags: [python, django, migrations, web-development, git]
 ---
 
-This is a continuation of [Part 1]({% post_url 2016-02-01-django-migrations-squashing %}) on squashing
-Django migrations to lighten the memory load on your system.
+This is part two of a previous article on squashing Django migrations to lighten the memory load on your system.
+
+You can read [Part 1 here]({% post_url 2016-02-01-django-migrations-squashing %}).
 
 ## Update Django's Migrations Table
 

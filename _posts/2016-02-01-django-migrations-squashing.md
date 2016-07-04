@@ -6,9 +6,10 @@ tags: [python, django, migrations, web-development, git]
 
 Today at work I realized that my virtual machine didn't have enough memory to process all the Django migrations that
 had built up over time. So I decided that the best solution 
-would be to [squash the migrations](https://docs.djangoproject.com/en/1.9/topics/migrations/#squashing-migrations), 
-which would hopefully reduce the memory load required to migrate changes. But since I was working
-on a repository that everyone else uses, I didn't want to completely remove
+would be to squash the migrations, which would hopefully reduce the memory load required to migrate changes. 
+
+Django provides [documentation on squashing migrations]([squash the migrations](https://docs.djangoproject.com/en/1.9/topics/migrations/#squashing-migrations), 
+but since I was working on a repository that everyone else uses, I didn't want to completely remove
 all the past migrations in case someone else's environment is not caught up. Using Git and Django,
 I was able to temporarily squash migrations so I could apply and make migrations within my virtual
 machine's memory limits before reverting everything and only committing the migrations I added. All

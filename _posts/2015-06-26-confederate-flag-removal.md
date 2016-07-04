@@ -4,6 +4,7 @@ category: general
 tags: [apple]
 mtime: 10:10
 ---
+<p></p>
 
 **UPDATE**: *According to [TechCrunch](http://techcrunch.com/2015/06/25/apple-bans-games-and-apps-featuring-the-confederate-flag/#.46jsai:U0R4), Apple has been working to reinstate apps that portray the Confederate flag in historical or educational manners.*
 

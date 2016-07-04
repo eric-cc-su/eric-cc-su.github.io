@@ -4,10 +4,10 @@ category: tech
 tags: [python, django, web-development, reactjs]
 ---
 
-This is part two of a two part introduction on how to integrate [ReactJS](https://facebook.github.io/react/index.html)
- with your Django project. You can read [part one here]({% post_url 2016-02-14-reactjs-with-django %}).
+This is part two of a two part introduction on how to integrate ReactJS with your Django project.
 
-In part one I went over how you can install ReactJS since it requires a little bit of work if you don't 
+In [part one]({% post_url 2016-02-14-reactjs-with-django %}) I went over how you can install ReactJS since it 
+requires a little bit of work if you don't 
 primarily develop in node.js. In this article I want to go through ReactJS's [tutorial](https://facebook.github.io/react/docs/tutorial.html)
 and include my own notes about how you can get the test code working with a Django back-end. This article assumes
 that you either have an existing Django project running or you have experience in Django/Python so I won't go over
