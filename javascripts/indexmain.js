@@ -24,20 +24,20 @@ var main = function() {
         }
     });
 
-    $('a[href="#work"').click(function() {
-        $("#home-top").animate({opacity: 0},{duration: 400, complete: transition("home-work")});
-        console.log("work");
-    });
-
-    $('a[href="#skills"').click(function() {
-        $("#home-top").animate({opacity: 0},{duration: 400, complete: transition("home-skills")});
-        console.log("skills");
-    });
-
-    $('a[href="#projects"').click(function() {
-        $("#home-top").animate({opacity: 0},{duration: 400, complete: transition("home-projects")});
-        console.log("projects");
-    });
+    // $('a[href="#work"').click(function() {
+    //     $("#home-top").animate({opacity: 0},{duration: 400, complete: transition("home-work")});
+    //     console.log("work");
+    // });
+    //
+    // $('a[href="#skills"').click(function() {
+    //     $("#home-top").animate({opacity: 0},{duration: 400, complete: transition("home-skills")});
+    //     console.log("skills");
+    // });
+    //
+    // $('a[href="#projects"').click(function() {
+    //     $("#home-top").animate({opacity: 0},{duration: 400, complete: transition("home-projects")});
+    //     console.log("projects");
+    // });
 };
 
 $(document).ready(main);
