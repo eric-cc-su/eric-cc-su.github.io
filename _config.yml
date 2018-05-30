@@ -13,8 +13,9 @@ defaults:
     values:
       layout: "posts"
 
-gems:
+plugins:
   - jemoji
   - jekyll-mentions
+  - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
