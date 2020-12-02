@@ -71,11 +71,12 @@ module CatTag
 
         def compile_post_data(data_array)
             data_array.each do |item|
-                if not @cat_list.include?(item['category'])
-                    @pcat_list << item['category']
+                categoryitem = item['category'].downcase
+                if not @cat_list.include?(categoryitem)
+                    @pcat_list << categoryitem
                 end
                 item['tags'].gsub("[", "").gsub("]", "").split(",").each do |subitem|
-                    subitem = subitem.strip
+                    subitem = subitem.strip.downcase
                     if not @tag_list.include?(subitem)
                         @ptag_list << subitem
                     end
@@ -98,22 +99,20 @@ module CatTag
                 yfname = File.join($base, "_data/", ytype+".yml")
 
                 data_array.each do |filename|
-                    begin
-                        fname = File.join(dpath, String.try_convert(filename)+".md")
-                        newfile = open(fname, "w")
-                        newfile.puts("---")
-                        newfile.puts("layout: "+type)
-                        newfile.puts(type+": "+filename)
-                        newfile.puts("permalink: " + File.join("/blog", type, filename)+"/")
-                        newfile.puts("---")
-                        newfile.close()
+                    sysname = filename.downcase # lowercased to avoid case issues on regeneration
+                    fname = File.join(dpath, String.try_convert(sysname)+".md")
+                    newfile = open(fname, "w")
+                    newfile.puts("---")
+                    newfile.puts("layout: "+type)
+                    newfile.puts(type+": "+sysname)
+                    newfile.puts("permalink: " + File.join("/blog", type, sysname)+"/")
+                    newfile.puts("---")
+                    newfile.close()
 
-                        ycfile = open(yfname, "a")
-                        ycfile.puts("\n\n- slug: " + filename)
-                        ycfile.write("  name: " + filename.capitalize.gsub("-", " "))
-                        ycfile.close()
-                    rescue
-                    end
+                    ycfile = open(yfname, "a")
+                    ycfile.puts("\n\n- slug: " + sysname)
+                    ycfile.write("  name: " + sysname.gsub("-", " "))
+                    ycfile.close()
                 end
             end
         end

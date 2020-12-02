@@ -1,5 +1,5 @@
 ---
 layout: tag
-tag: OPM
-permalink: /blog/tag/OPM/
+tag: opm
+permalink: /blog/tag/opm/
 ---

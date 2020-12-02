@@ -1,5 +1,5 @@
 ---
 layout: tag
-tag: HTML
-permalink: /blog/tag/HTML/
+tag: html
+permalink: /blog/tag/html/
 ---

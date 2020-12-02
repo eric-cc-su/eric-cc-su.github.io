@@ -2,7 +2,7 @@
 title: Creating an Image Placeholder with CSS
 category: tech
 meta_description: Create a custom image placeholder using just HTML and CSS 
-tags: [CSS, HTML, Bootstrap, front-end, flex]
+tags: [css, html, bootstrap, front-end, flex]
 ---
 
 If you're familiar with wireframes, mockups, documentation, etc. for web design then you've probably seen 

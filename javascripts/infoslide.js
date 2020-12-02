@@ -8,13 +8,15 @@ var calculate_win = function() {
     screenheight = window.innerHeight;
 
     var landing = [$('.landing:first'), $('.infoslide')];
+    var smallScreenWidth = 768;
+    var navbarHeight = 60;
 
     if (screenheight > landing[0].outerHeight()) {
         for (i=0; i<landing.length; i++) {
-            var diff2 = (screenheight - landing[i].height())/2;
+            var diff2 = (screenheight - landing[i].height())/3;
             landing[i].css("height", screenheight.toString() + "px");
-            if (window.innerWidth > 768 && (diff2 - 60) > 60) {
-                landing[i].css("padding-top", (diff2 - 60).toString() + "px");
+            if (window.innerWidth > smallScreenWidth && (diff2 - navbarHeight) > navbarHeight) {
+                landing[i].css("padding-top", (diff2 - navbarHeight).toString() + "px");
             }
         }
     }
