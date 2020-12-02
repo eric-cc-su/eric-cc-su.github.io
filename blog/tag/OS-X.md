@@ -1,5 +1,5 @@
 ---
 layout: tag
-tag: OS-X
-permalink: /blog/tag/OS-X/
+tag: os-x
+permalink: /blog/tag/os-x/
 ---

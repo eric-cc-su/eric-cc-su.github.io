@@ -1,7 +1,7 @@
 ---
 title: Why I Upgraded to Mac OS X Instead of Windows 8 (Part 2)
 category: tech
-tags: [apple, macbook, OS-X, macbook-pro, windows, microsoft]
+tags: [apple, macbook, os-x, macbook-pro, windows, microsoft]
 mtime: 15:11
 ---
 

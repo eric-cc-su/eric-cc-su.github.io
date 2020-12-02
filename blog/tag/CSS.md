@@ -1,5 +1,5 @@
 ---
 layout: tag
-tag: CSS
-permalink: /blog/tag/CSS/
+tag: css
+permalink: /blog/tag/css/
 ---

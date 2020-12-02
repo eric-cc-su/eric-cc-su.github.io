@@ -11,4 +11,4 @@ Code for tag and category implementation in Jekyll thanks to
 
 This project is licensed under the terms of the MIT license. 
 
-&copy; 2016 Eric Su
+&copy; 2020 Eric Su
