@@ -11,14 +11,14 @@ grey image placeholders to indicate where an image should go. If you go to
 what I'm talking about. 
 
 <p class="blog-image">
-<img class="img-responsive" alt="Bootstrap image placeholder" src="/images/blog/posts/070416_bootstrap.png" />
+<img class="img-responsive" alt="Bootstrap image placeholder" src="{{ site.url }}/assets/images/posts/070416_bootstrap.png" />
 (<a href="http://getbootstrap.com/components/#thumbnails">Bootstrap</a>)*
 </p>
 
 If you look at the Bootstrap websites's source code, you'll notice that their placeholder is an image. 
 However it is quite easy to create you own HTML/CSS-based image placeholder with some simple styling.
 
-<img class="img-responsive" alt="Custom image placeholder" src="/images/blog/posts/070416_self.png" />
+<img class="img-responsive" alt="Custom image placeholder" src="{{ site.url }}/assets/images/posts/070416_self.png" />
 
 ## Structure
 

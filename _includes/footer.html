@@ -1,16 +1,16 @@
 <!-- FOOTER -->
-<footer>
+<!-- <footer>
     <ul style="float: left">
         <li>
-            <div class="smlogo"><img src="/images/index/In-White-21px-TM.png" alt="LinkedIn"></div>
+            <div class="smlogo"><img src="{{ site.url }}/assets/images/index/In-White-21px-TM.png" alt="LinkedIn"></div>
             <a class="proflink" href="https://www.linkedin.com/in/ericcsu">LinkedIn</a>
         </li>
         <li>
-            <div class="smlogo"><img src="/images/index/GitHub-Mark-Light-32px.png" alt="GitHub"></div>
+            <div class="smlogo"><img src="{{ site.url }}/assets/images/index/GitHub-Mark-Light-32px.png" alt="GitHub"></div>
             <a class="proflink" href="https://github.com/eric-cc-su">GitHub</a>
         </li>
         <li>
-            <div class="smlogo"><img src="/images/index/tumblr_logo_white_20.png" alt="tumblr"></div>
+            <div class="smlogo"><img src="{{ site.url }}/assets/images/index/tumblr_logo_white_20.png" alt="tumblr"></div>
             <a class="proflink" href="http://suphotography.tumblr.com/">Eric Su Photography</a>
         </li>
     </ul>
@@ -19,4 +19,18 @@
         <li>Licensed under MIT license</li>
     </ul>
 </footer>
-<!-- END FOOTER -->
+END FOOTER -->
+
+<footer class="footer-main">
+    {{ site.title }} © {{ site.time | date: '%Y' }}
+
+    <a class="link" href="{{ site.url }}/feed.xml" target="_blank">
+        <i class="fa-solid fa-rss"></i>
+    </a>
+
+    <p class="extra">
+        <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a>
+        by
+        <a class="link" href="https://github.com/sergiokopplin/indigo">Kopplin</a>
+    </p>
+</footer>

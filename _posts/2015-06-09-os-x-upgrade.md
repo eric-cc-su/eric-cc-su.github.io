@@ -16,7 +16,7 @@ which I still upgrade and use every day, and the computers I've used at work hav
 biggest thing that has kept me on board? The Windows 7 operating system. 
 
 <p class="blog-image">
-<img class="img-responsive" src="/images/blog/posts/win7.png" alt="Windows 7">
+<img class="img-responsive" src="{{ site.url }}/assets/images/posts/win7.png" alt="Windows 7">
 Windows 7 (<a href="http://cdn5.howtogeek.com/wp-content/uploads/2010/01/1default.png">source</a>)
 </p>
 
@@ -39,7 +39,7 @@ that the rise of mobile meant that everything should be immediately changed to b
 operating systems on desktops. 
 
 <p class="blog-image">
-<img class="img-responsive" src="/images/blog/posts/win8.png" alt="Windows 8">
+<img class="img-responsive" src="{{ site.url }}/assets/images/posts/win8.png" alt="Windows 8">
 The image of Windows 8 shown in <a href="http://windows.microsoft.com/en-us/windows/history#T1=era9">
 A history of Windows
 </a>

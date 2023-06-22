@@ -16,7 +16,7 @@ If you don't need to define an entire source folder, you can check
 1. Go to "Preferences -> Project: 'project_name'" and open "Project Structure"
 2. You will see your project structure, a row labelled "Mark as: " with four categories: Sources, Excluded, Templates, Resources, and a column that says "Add Content Root" at the top.
 
-    <img src="/images/blog/posts/pycharm-project-structure.png" alt="PyCharm project structure" style="max-height: 400px">
+    <img src="{{ site.url }}/assets/images/posts/pycharm-project-structure.png" alt="PyCharm project structure" style="max-height: 400px">
 
 3. Select the folder that you want to label as a source, then select the "Sources" label in the "Mark as:"
 row.

@@ -23,7 +23,7 @@ One of Wall Street Journal's tech columnists just wrote an article titled
  about the role of Macs, and of PCs in general, in today's world. 
 
 <p class="blog-image">
-<img class="img-responsive" src="/images/blog/posts/macpage.png" alt="Windows 7">
+<img class="img-responsive" src="{{ site.url }}/assets/images/posts/macpage.png" alt="Windows 7">
 (source: <a href="https://www.apple.com/mac/" alt="Mac website">Apple.com</a>)
 </p>
 

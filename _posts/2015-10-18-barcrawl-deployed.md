@@ -27,7 +27,7 @@ For those of you who are curious, the technologies used are:
 - Google Maps Javascript API
 
 <p class="blog-image">
-    <img src="/images/blog/posts/barcrawl.gif"
+    <img src="{{ site.url }}/assets/images/posts/barcrawl.gif"
              class="img-responsive center-block"
              alt="Barcrawl Web App"
              style="box-shadow: 0 0 1px #111">
