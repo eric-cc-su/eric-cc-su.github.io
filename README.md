@@ -16,5 +16,7 @@ Refer to [Jekyll](https://jekyllrb.com/docs/step-by-step/01-setup/) for setup ti
 - Ruby install on MacOS should use a version manager ([rbenv](https://github.com/rbenv/rbenv) was last used)
 - Ruby 3.2.2 used
 
+To run dev server: `bundle exec jekyll serve`
+
 ---
 &copy; 2023 Eric Su
