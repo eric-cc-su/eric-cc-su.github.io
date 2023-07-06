@@ -3,7 +3,11 @@ title: Common Web Dev Issues and Solutions
 layout: post
 date: 2016-01-25
 category: blog
-tags: [python, django, web-development, mysql]
+tags:
+  - python
+  - django
+  - web development
+  - MySQL
 author: ericsu
 ---
 

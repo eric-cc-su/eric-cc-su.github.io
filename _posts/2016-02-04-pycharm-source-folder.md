@@ -3,7 +3,10 @@ title: Quick Tip - Defining Source Folders in PyCharm
 layout: post
 date: 2016-02-04
 category: blog
-tags: [python, pycharm, web-development]
+tags:
+  - python
+  - PyCharm
+  - webdevelopment
 author: ericsu
 ---
 

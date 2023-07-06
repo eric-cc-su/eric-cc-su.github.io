@@ -3,7 +3,11 @@ title: Integrating ReactJS with Your Django Project (Part 1)
 layout: post
 date: 2016-02-14
 category: blog
-tags: [python, django, web-development, reactjs]
+tags:
+  - python
+  - django
+  - web development
+  - ReactJS
 author: ericsu
 ---
 

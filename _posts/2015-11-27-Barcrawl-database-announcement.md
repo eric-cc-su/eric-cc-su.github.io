@@ -3,7 +3,7 @@ title: Barcrawl Update - Databases
 layout: post
 date: 2015-11-27
 category: blog
-tags: [database, mysql, back-end]
+tags: [database, MySQL, back-end]
 ---
 
 I am pleased to announce that I have started developing a database back-end for

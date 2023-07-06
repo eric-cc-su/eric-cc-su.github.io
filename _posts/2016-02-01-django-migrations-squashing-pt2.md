@@ -3,7 +3,12 @@ title: Fun with Squashing Django Migrations Pt. 2
 layout: post
 date: 2016-02-01
 category: blog
-tags: [python, django, migrations, web-development, git]
+tags:
+  - python
+  - django
+  - migrations
+  - web development
+  - git
 author: ericsu
 ---
 
