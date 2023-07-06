@@ -1,12 +1,19 @@
 ---
 title: Automating the Implementation of Tags and Categories in Jekyll
-category: tech
-tags: [jekyll, programming, automation, ruby, tags, categories]
-mtime: 12:00
+layout: post
+date: 2015-06-02
+category: blog
+tags:
+  - jekyll
+  - programming
+  - automation
+  - ruby
+author: ericsu
+description: Automating tags and categories in Jekyll
 ---
 
-This website and blog is built with Jekyll, the static web page generator, and published through GitHub Pages. 
-Jekyll is a blog aware static site generator that provides support for tags and categories, but this is a feature 
+This website and blog is built with Jekyll, the static web page generator, and published through GitHub Pages.
+Jekyll is a blog aware static site generator that provides support for tags and categories, but this is a feature
 that needs to be manually implemented by the user.
 
 I used instructions and code provided by
@@ -45,12 +52,12 @@ In addition to the YAML lists, each T&C item must have its own file in the forma
     ---
 
 The permalink is relative to the project root so it should start at `/blog`. The format is the same for both tags and
- categories.These files produce a landing page for each T&C where all the corresponding articles will be presented.
- Unless you plan on using your default layout for the T&C landing pages you should also create and define your custom
-  layouts, which would be defined in these files.
+categories.These files produce a landing page for each T&C where all the corresponding articles will be presented.
+Unless you plan on using your default layout for the T&C landing pages you should also create and define your custom
+layouts, which would be defined in these files.
 
 Without automation, each new T&C requires defining the T&C in the proper YAML
-file and creating its own file  by hand. Failing to update the YAML file means
+file and creating its own file by hand. Failing to update the YAML file means
 that the tag may not show up in blog posts while failing to create T&C file
 means that there will be no web page to compile the articles that belong to the
 T&C.
@@ -58,7 +65,7 @@ T&C.
 ## Automation
 
 So there are two things that have to be automated for each T&C: the YAML entry
-and the Markdown file.  The plugin is written in Ruby in order to easily
+and the Markdown file. The plugin is written in Ruby in order to easily
 integrate the plugin with the development Jekyll environment and is kept in
 the root `_plugin` directory for Jekyll's access, it does not matter what the
 file is named. The only Ruby module required is `fileutils` for path lookups.
@@ -67,7 +74,7 @@ We are techincally writing a generator for Jekyll, so the Jekyll-recommended
 structure is to define everything within one module. I decided not to name the
 module as `Jekyll` because I was too afraid of any possible side effects.
 Instead, the primary class is inherited from `Jekyll::Generator`. The basic
-structure of the  plugin is as follows:
+structure of the plugin is as follows:
 
     require 'fileutils'
 
@@ -103,12 +110,12 @@ is a good idea to save the root project path into a global variable so that it c
 needed.
 
 Next is the `generate(site)` function. This is the only function that is
-required by Jekyll so the name of this  function **can not be changed**. The
+required by Jekyll so the name of this function **can not be changed**. The
 `site` parameter is actually not needed in this code, but it is required by
-Jekyll  since we are inheriting from its Generator. This function acts as the
-class' constructor, so class-wide variables will  be defined here and I have
+Jekyll since we are inheriting from its Generator. This function acts as the
+class' constructor, so class-wide variables will be defined here and I have
 also written the function to parse through all of the posts in the `_posts`
-directory and   save their YAML front matter. I have defined one master list
+directory and save their YAML front matter. I have defined one master list
 that will house all of the parsed front matter, two lists that will house all
 the T&C currently implemented, and two most lists that house any T&C that needs
 to be integrated. Except for the master list, all lists will be defined by
@@ -121,7 +128,7 @@ method has the following code structure:
             data = Hash.new                         # new Hash for file
             file_object = open(*filepath*)
             oneline = onepost.readline              # Start at the first line
-            *if '---' not in oneline*        
+            *if '---' not in oneline*
                 * while '---' not in oneline *       # Search for opening ---
                     oneline = onepost.readline
                 end
@@ -139,9 +146,9 @@ method has the following code structure:
     }
 
 Any pseudo-code is contained within asterisks. The reason I read every line individually is because it allows the plugin
- to parse only the first bit of every post we need instead of flooding the memory with loads of text it's not going
- to use. Once the master list has been constructed with each file's front matter, `generate(list)` calls upon its
- sibling methods to complete the automation.
+to parse only the first bit of every post we need instead of flooding the memory with loads of text it's not going
+to use. Once the master list has been constructed with each file's front matter, `generate(list)` calls upon its
+sibling methods to complete the automation.
 
 ### Checking Currently Implemented T&C
 
@@ -162,9 +169,9 @@ method below the constructor as it is the first step in adding new T&C.
     end
 
 It is important to note that the `source_path` parameter is the path of the T&C
-directory currently being searched, *relative* to the root project path.
+directory currently being searched, _relative_ to the root project path.
 `$base` is the global directory holding the root directory path. We are simply
-constructing the T&C directory path, reading the file names, and shaving off the file extensions to give us  the T&C name. This method needs to be called twice, once for tags and once for categories.
+constructing the T&C directory path, reading the file names, and shaving off the file extensions to give us the T&C name. This method needs to be called twice, once for tags and once for categories.
 
 ### Compare Current and Needed T&C
 

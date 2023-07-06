@@ -1,7 +1,10 @@
 ---
 title: Quick Tip - Defining Source Folders in PyCharm
-category: tech
+layout: post
+date: 2016-02-04
+category: blog
 tags: [python, pycharm, web-development]
+author: ericsu
 ---
 
 If you're getting unresolved reference warnings in your project but it's simply because you're importing a module
@@ -16,9 +19,9 @@ If you don't need to define an entire source folder, you can check
 1. Go to "Preferences -> Project: 'project_name'" and open "Project Structure"
 2. You will see your project structure, a row labelled "Mark as: " with four categories: Sources, Excluded, Templates, Resources, and a column that says "Add Content Root" at the top.
 
-    <img src="{{ site.url }}/assets/images/posts/pycharm-project-structure.png" alt="PyCharm project structure" style="max-height: 400px">
+<img src="{{ site.url }}/assets/images/posts/pycharm-project-structure.png" alt="PyCharm project structure" style="max-height: 400px">
 
 3. Select the folder that you want to label as a source, then select the "Sources" label in the "Mark as:"
-row.
+   row.
 
 4. Your new source folder should now be listed in the column that says "Add Content Root" at the top under the "Source Folders" category.

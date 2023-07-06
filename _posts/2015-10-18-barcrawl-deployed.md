@@ -1,7 +1,9 @@
 ---
 title: Barcrawl - Deploy!
-category: tech
-tags: [website, bar, barcrawl, app]
+layout: post
+date: 2015-10-18
+category: blog
+author: ericsu
 ---
 
 I am pleased to announce that gobarcrawl.com has become official!
@@ -19,6 +21,7 @@ since the app is currently relying on the Google Maps Directions API and
 won't be able to get directions for international travel.
 
 For those of you who are curious, the technologies used are:
+
 - Python 2
 - Django
 - Yelp API

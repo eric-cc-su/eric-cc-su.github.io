@@ -1,16 +1,16 @@
 # main text of home
 title: Eric Su
-bio: Eric Su. MBA, Software Engineer, and Triathlete.
+bio: Eric Su. MBA, Software Engineer, and dog dad. I help build stuff for high-growth teams.
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: Eric Su. MBA and software engineer building for high-growth teams.
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
 picture: assets/images/profile.jpg
 
-# your site color theme, true for dark theme, 
+# your site color theme, true for dark theme,
 # false to light theme, auto to switch with system.
 dark-theme: auto
 
@@ -25,11 +25,11 @@ url: https://ericsu.me
 permalink: /:title/
 
 # To enable google analytics, supply your token below
-analytics-google: 'UA-63928844-1'
+analytics-google: "UA-63928844-1"
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname:  # enter this from your disqus account
+  shortname: # enter this from your disqus account
   categories: [] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
@@ -41,9 +41,9 @@ github: eric-cc-su
 # email: myemail@gmail.com
 
 authors:
-  johndoe:
+  ericsu:
     name: Eric Su
-    bio: A Man who travels the world eating noodles
+    bio: MBA and software engineer building products for high-growth teams.
     external-image: false
     picture: assets/images/profile.jpg
 
@@ -111,11 +111,4 @@ compress_html:
       - development
       - stage
 
-exclude:
-  [
-    "README.md",
-    "Gemfile",
-    "Gemfile.lock",
-    "FAQ.md",
-    "vendor",
-  ]
+exclude: ["README.md", "Gemfile", "Gemfile.lock", "FAQ.md", "vendor"]
