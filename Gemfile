@@ -1,12 +1,16 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
-# gem "rails"
-gem "jekyll"
-# gem 'github-pages', group: :jekyll_plugins
-gem "jemoji"
-gem "jekyll-mentions"
-gem "jekyll-paginate"
-gem "jekyll-redirect-from"
-gem "jekyll-sitemap"
+group :jekyll_plugins do
+    gem 'github-pages'
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-gist'
+    gem 'jekyll-feed'
+    gem 'jemoji'
+    gem "jekyll-paginate-v2", "~> 2.0"
+    gem "jekyll-mentions"
+    gem "jekyll-redirect-from"
+    gem "jekyll-sitemap"
+    gem "html-proofer"
+end
+
+gem "webrick", "~> 1.7"

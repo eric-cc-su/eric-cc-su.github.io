@@ -1,13 +1,20 @@
 ---
 title: Integrating ReactJS with Your Django Project (Part 2)
-category: tech
-tags: [python, django, web-development, reactjs]
+layout: post
+date: 2016-02-15
+category: blog
+tags:
+  - python
+  - django
+  - web development
+  - ReactJS
+author: ericsu
 ---
 
 This is part two of a two part introduction on how to integrate ReactJS with your Django project.
 
-In [part one]({% post_url 2016-02-14-reactjs-with-django %}) I went over how you can install ReactJS since it 
-requires a little bit of work if you don't 
+In [part one]({% post_url 2016-02-14-reactjs-with-django %}) I went over how you can install ReactJS since it
+requires a little bit of work if you don't
 primarily develop in node.js. In this article I want to go through ReactJS's [tutorial](https://facebook.github.io/react/docs/tutorial.html)
 and include my own notes about how you can get the test code working with a Django back-end. This article assumes
 that you either have an existing Django project running or you have experience in Django/Python so I won't go over
@@ -30,10 +37,10 @@ just returns a TemplateResponse.
         def get_context_data(self, request=None, **kwargs):
             ...
             return context
-    
+
         def get(self, request):
             context = self.get_context_data(request)
-    
+
             return TemplateResponse(request, template="test.html", context=context)
 
 Now you should be able to run your development environment and see the test template (It'll probably be blank).
@@ -45,11 +52,11 @@ Continue through the tutorial until you get to [**Fetching from the Server**](ht
 Follow the tutorial and use whatever endpoint you want as the source URL. For example, I set the source url to be `/react-test`:
 
     ReactDOM.render(<CommentBox url="/react-test"/>, document.getElementById('content'));
-    
-Now in your `urls.py` file, you will need to declare the url endpoint and attach it to a view. 
+
+Now in your `urls.py` file, you will need to declare the url endpoint and attach it to a view.
 But you will not be attaching your new url to the view that serves your test template. Instead you will need to define
 a new view that returns HttpResponse objects instead of TemplateResponse objects. This view will only serve as a data
-endpoint, so you do not need it to return a TemplateResponse. 
+endpoint, so you do not need it to return a TemplateResponse.
 
 Here is my url declaration:
 
@@ -73,20 +80,20 @@ Continue the tutorial until you reach [Adding New Comments - Submitting the Form
 ## Adding New Comments - Submitting the Form
 
 Follow the tutorial's instructions to add more HTML and JSX code to your text template. But when you define the
- `handleSubmit` callback, you will need to add a CSRF token to the POST data so Django knows your React code isn't an 
- attempt at [Cross Site Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting). Therefore in your handleSubmit function,
- modify the `this.props.onCommentSubmit` line with the following:
- 
+`handleSubmit` callback, you will need to add a CSRF token to the POST data so Django knows your React code isn't an
+attempt at [Cross Site Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting). Therefore in your handleSubmit function,
+modify the `this.props.onCommentSubmit` line with the following:
+
 `this.props.onCommentSubmit({author: author, text: text, csrfmiddlewaretoken: {{ "{% csrf_token " }}%}.props.value});`
 
 This is kind of a hacky solution, so this might not be the most secure for production and I encourage you to find a
 solution that works better for your project. But this will do for the tutorial code.
 
-Now continue through the rest of the tutorial. You should be all set with integrating ReactJS with you Django project for 
+Now continue through the rest of the tutorial. You should be all set with integrating ReactJS with you Django project for
 this simple tutorial.
 
 ## Congrats!
 
 You've now integrated ReactJS with Django! Now you should have a baseline to further integrate ReactJS
-into the rest of your project structure. Since this is also only tutorial code, you can keep it for future reference or 
+into the rest of your project structure. Since this is also only tutorial code, you can keep it for future reference or
 you can easily delete it. I'm learning as a I go so I'll be sure to write up any further ReactJS tips I come across.

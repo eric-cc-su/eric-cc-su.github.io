@@ -2,3 +2,7 @@
 _site/
 .DS_Store
 _posts/.DS_Store
+.sass-cache
+Gemfile.lock
+.bundle
+vendor/

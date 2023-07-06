@@ -1,11 +1,19 @@
 ---
 title: Common Web Dev Issues and Solutions
-category: tech
-tags: [python, django, web-development, mysql]
+layout: post
+date: 2016-01-25
+category: blog
+tags:
+  - python
+  - django
+  - web development
+  - MySQL
+author: ericsu
 ---
+
 <p></p>
 
-UPDATE: Thanks to reddit user awesomeo1989's idea, I've turned this article into it's own 
+UPDATE: Thanks to reddit user awesomeo1989's idea, I've turned this article into it's own
 [Git repository](https://github.com/eric-cc-su/common-web-dev-issues) so others can contribute.
 
 So you're having some issues in your web environment. Before you start diving
@@ -16,7 +24,7 @@ out some other issues that other developers or other configurations usually run 
 
 # **General**
 
-### Browser shows "502 Bad Gateway" 
+### Browser shows "502 Bad Gateway"
 
 Try starting/restarting your server or any server modules you use (e.g. nginx and uwsgi).
 
@@ -44,9 +52,9 @@ development server. This is as simple as calling `. /dir/to/env/activate` on the
 
 ### 'No module named...' elsewhere
 
-It is convenient to have a "requirements.txt" file that keeps track of the modules that your environment needs. If 
-you're getting a "no module named..." error, check if the module is listed in your requirements and add it if it's not. 
-Then try installing the module with pip or another appropriate package manager. 
+It is convenient to have a "requirements.txt" file that keeps track of the modules that your environment needs. If
+you're getting a "no module named..." error, check if the module is listed in your requirements and add it if it's not.
+Then try installing the module with pip or another appropriate package manager.
 
 UNIX: `sudo pip install module`
 
@@ -60,7 +68,7 @@ UNIX: `sudo pip install module`
 
 ### MySQL errors
 
-If you've made any changes to your models you will have to make and apply 
+If you've made any changes to your models you will have to make and apply
 [django migrations](https://docs.djangoproject.com/en/1.9/topics/migrations/) to update your MySQL tables
 unless you have a custom configuration.
 
@@ -71,15 +79,15 @@ unless you have a custom configuration.
 
 jQuery is very commonly used with Javascript so I've decided to combine the two.
 Especially since there is always the possibility of accidentally mixing up Javascript and
- jQuery syntax.
+jQuery syntax.
 
-### '_' is not a function
+### '\_' is not a function
 
 If you're using a built-in function, make sure that you're using the proper notation/function
- name for either Javascript or jQuery. For example, `html()` is a jQuery function that
- will return the HTML contents of the selected element. But it will not work if you did
- not select your element with the jQuery selector syntax `$('#id'/'.class')`.
- 
+name for either Javascript or jQuery. For example, `html()` is a jQuery function that
+will return the HTML contents of the selected element. But it will not work if you did
+not select your element with the jQuery selector syntax `$('#id'/'.class')`.
+
 If you're using a function that you have defined yourself, make sure you've spelled
 the function name correctly and the that the function exists in the scope of your
 function call. This error may come up if you're calling a function that's not in the right
@@ -89,12 +97,12 @@ script.
 ### Nothing gets selected when I try selecting an element
 
 There are two ways that I select elements. You can either use the
-[document object](https://developer.mozilla.org/en-US/docs/Web/API/Document), 
+[document object](https://developer.mozilla.org/en-US/docs/Web/API/Document),
 or you can use [jQuery](https://learn.jquery.com/using-jquery-core/selecting-elements/).
 
 If you are using the document interface, you will need to make sure that you are using
 the [proper function](http://www.w3schools.com/js/js_htmldom_document.asp) and that you
-are NOT including the ID/class selector in your text. 
+are NOT including the ID/class selector in your text.
 (`document.getElementById("the_id")` NOT `document.getElementById("#the_id")`)
 
 If you are using jQuery, you will need to inclde the ID/class select and you will
@@ -127,8 +135,8 @@ database you need.
 ### "Field Doesn't Have a Default Value"
 
 This sometimes occurs if you're applying new changes and for some reason your database doesn't get
- the memo that a column was given a default value. This can be fixed with an 
- [ALTER TABLE](http://dev.mysql.com/doc/refman/5.7/en/alter-table.html) command.
+the memo that a column was given a default value. This can be fixed with an
+[ALTER TABLE](http://dev.mysql.com/doc/refman/5.7/en/alter-table.html) command.
 
 ex. `ALTER TABLE table_name ALTER column_name SET DEFAULT NULL;` would set the default as NULL
 
@@ -144,4 +152,4 @@ on a virtual machine.
 
 In your nginx.conf (`/etc/nginx/nginx.conf`), set "sendfile" to off, or remove the line entirely.
 
-*This article will continue to be updated as I find or remember more typical issues*
+_This article will continue to be updated as I find or remember more typical issues_
