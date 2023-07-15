@@ -1,13 +1,13 @@
 ---
-title: The 10 Most Common Mistakes That Python Developers Make
+title: "The 10 Most Common Mistakes That Python Developers Make"
 layout: post
 date: 2016-06-24
 category: blog
 description: Python can be misinterpreted by beginners and regular programmers alike. This article presents a top 10 list of mistakes that even experienced Python programmers can make.
 meta_description: Python can be misinterpreted by beginners and regular programmers alike. This article presents a top 10 list of mistakes that even experienced Python programmers can make.
-referrer: Originally posted on <a href="https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make">Toptal</a>
-referrer_author: By <a href="https://www.toptal.com/resume/martin-chikilian">Martin Chikilian</a> - Python Software Engineer @ <a href="https://www.toptal.com/">Toptal</a>
-meta_image: {{ site.url }}/assets/images/posts/toptal-bi-python10.png
+referrer: 'Originally posted on <a href="https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make">Toptal</a>'
+referrer_author: 'By <a href="https://www.toptal.com/resume/martin-chikilian">Martin Chikilian</a> - Python Software Engineer @ <a href="https://www.toptal.com/">Toptal</a>'
+meta_image: "{{ site.url }}/assets/images/posts/toptal-bi-python10.png"
 tcard_type: summary_large_image
 tags: [python, programming]
 ---
